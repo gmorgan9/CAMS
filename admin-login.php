@@ -65,7 +65,7 @@
                       <!-- <span class="input-group-text" id="inputGroupPrepend"></span> -->
                       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                       <div class="invalid-feedback">
-                        Please enter a username.
+                        Please enter a password.
                       </div>
                     </div>
                   </div>

@@ -80,7 +80,7 @@
                       <!-- <span class="input-group-text" id="inputGroupPrepend"></span> -->
                       <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                       <div class="invalid-feedback">
-                        Please enter a username.
+                        Please enter a password.
                       </div>
                     </div>
                   </div>
@@ -105,6 +105,9 @@
            <div class="valid-feedback">
              Looks good!
            </div>
+           <div class="invalid-feedback">
+               Please enter a valid first name.
+             </div>
          </div>
          <div class="col-md-4">
            <label for="validationCustom02" class="form-label">Last name</label>
@@ -112,14 +115,20 @@
            <div class="valid-feedback">
              Looks good!
            </div>
+           <div class="invalid-feedback">
+               Please enter a valid last name.
+             </div>
          </div>
          <div class="col-md-4">
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend">@</span>
              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+             <div class="valid-feedback">
+             Looks good!
+             </div>
              <div class="invalid-feedback">
-               Please choose a username.
+               Please choose a valid username.
              </div>
            </div>
          </div>
@@ -128,8 +137,11 @@
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+             <div class="valid-feedback">
+             Looks good!
+             </div>
              <div class="invalid-feedback">
-               Please choose an email.
+               Please enter a valid email.
              </div>
            </div>
          </div>
@@ -141,22 +153,31 @@
              <option>Female</option>
              <option>Rather not say</option>
            </select>
+           <div class="valid-feedback">
+             Looks good!
+             </div>
            <div class="invalid-feedback">
-             Please select a valid state.
+             Please select a valid gender.
            </div>
          </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" class="form-control" id="validationCustom03" required>
+           <div class="valid-feedback">
+             Looks good!
+             </div>
            <div class="invalid-feedback">
-             Please provide a valid city.
+             Please enter a valid password.
            </div>
          </div>
          <div class="col-md-6">
              <label for="validationCustom03" class="form-label">Confirm Password</label>
              <input type="text" class="form-control" id="validationCustom03" required>
+             <div class="valid-feedback">
+             Looks good!
+             </div>
              <div class="invalid-feedback">
-               Please provide a valid city.
+               Please enter a valid confirmed password.
              </div>
            </div>
      
