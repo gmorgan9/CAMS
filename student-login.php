@@ -25,20 +25,7 @@
 </head>
 <body>
     
-    <header>
-        <div class="logo">
-            <h1>
-                <i class="bi bi-file-earmark-check"></i> CAMS
-            </h1>
-        </div>
-        <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
-                <li class="nav-list-item"><a class="nav-list-item-link" href="student-login.php">Students</a></li>
-                <li class="nav-list-item"><a class="nav-list-item-link" href="admin-login.php">Admin</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php include("../includes/header.php"); ?>
     <br><br>
     
 <h2 class="text-center">
