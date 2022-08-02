@@ -123,7 +123,7 @@
              </div>
            </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
