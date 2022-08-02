@@ -18,7 +18,7 @@
 </head>
 <body>
     
-    <?php include("../includes/header.php"); ?>
+    <?php include("../includes/logged-header.php"); ?>
 
     <div class="container text-end">
         <br><br><br><br><br><br><br>
