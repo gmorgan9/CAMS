@@ -123,6 +123,25 @@
              </div>
            </div>
          </div>
+         <div class="col-md-4">
+           <label for="validationCustom02" class="form-label">Email</label>
+           <input type="text" class="form-control" id="validationCustom02" value="" required>
+           <div class="valid-feedback">
+             Looks good!
+           </div>
+         </div>
+         <div class="col-md-3 mx-auto">
+           <label for="validationCustom04" class="form-label">Gender</label>
+           <select class="form-select" id="validationCustom04" required>
+             <option selected disabled value="">Choose...</option>
+             <option>Male</option>
+             <option>Female</option>
+             <option>Rather not say</option>
+           </select>
+           <div class="invalid-feedback">
+             Please select a valid state.
+           </div>
+         </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" class="form-control" id="validationCustom03" required>
@@ -137,18 +156,6 @@
                Please provide a valid city.
              </div>
            </div>
-         <div class="col-md-3 mx-auto">
-           <label for="validationCustom04" class="form-label">Gender</label>
-           <select class="form-select" id="validationCustom04" required>
-             <option selected disabled value="">Choose...</option>
-             <option>Male</option>
-             <option>Female</option>
-             <option>Rather not say</option>
-           </select>
-           <div class="invalid-feedback">
-             Please select a valid state.
-           </div>
-         </div>
      
          <div class="col-12 d-flex justify-content-center">
            <div class="form-check">
