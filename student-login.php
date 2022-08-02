@@ -32,8 +32,8 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
-                <li class="nav-list-item"><a class="nav-list-item-link" href="student-login.html">Students</a></li>
-                <li class="nav-list-item"><a class="nav-list-item-link" href="admin-login.html">Admin</a></li>
+                <li class="nav-list-item"><a class="nav-list-item-link" href="student-login.php">Students</a></li>
+                <li class="nav-list-item"><a class="nav-list-item-link" href="admin-login.php">Admin</a></li>
             </ul>
         </nav>
     </header>
