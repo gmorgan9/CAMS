@@ -9,6 +9,9 @@
     --secondary-color: #17181C; 
     /* --font-color: #FFFFFF; */
 }
+body {
+    background-color: #17181C;
+}
 
 header {
     /* background-color: #17181c84; */
