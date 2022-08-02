@@ -123,14 +123,14 @@
              </div>
            </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-6">
            <label for="validationCustom02" class="form-label">Email</label>
            <input type="text" class="form-control" id="validationCustom02" value="" required>
            <div class="valid-feedback">
              Looks good!
            </div>
          </div>
-         <div class="col-md-3 mx-auto">
+         <div class="col-md-6 mx-auto">
            <label for="validationCustom04" class="form-label">Gender</label>
            <select class="form-select" id="validationCustom04" required>
              <option selected disabled value="">Choose...</option>
