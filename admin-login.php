@@ -25,7 +25,7 @@
 </head>
 <body>
     
-<?php include("/includes/header.php"); ?>
+<?php include("includes/header.php"); ?>
     <br><br>
 <h2 class="login-signup-title text-center">
     Admin Login
