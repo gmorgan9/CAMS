@@ -12,10 +12,6 @@
 body {
     background-color: #000000;
   }
-header {
-    background-color: #17181c84;
-    height: 60px;
-}
 
 .logo {
     color: var(--font-color);
