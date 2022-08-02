@@ -123,11 +123,14 @@
              </div>
            </div>
          </div>
-         <div class="col-md-6">
-           <label for="validationCustom02" class="form-label">Email</label>
-           <input type="text" class="form-control" id="validationCustom02" value="" required>
-           <div class="valid-feedback">
-             Looks good!
+         <div class="col-md-4">
+           <label for="validationCustomUsername" class="form-label">Email</label>
+           <div class="input-group has-validation">
+             <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
+             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+             <div class="invalid-feedback">
+               Please choose an email.
+             </div>
            </div>
          </div>
          <div class="col-md-6 mx-auto">
