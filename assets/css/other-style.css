@@ -21,10 +21,12 @@ header {
 }
 
 .logo {
-    color: var(--dark-color);
     float: left;
     margin-left: 5em;
     margin-top: 15px;
+}
+.logo-link {
+   color: var(--dark-color);
 }
 
 /* Navigation */
