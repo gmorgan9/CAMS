@@ -132,7 +132,7 @@ require_once "database/validation.php";
              </div>
            </div>
          </div>
-         <div class="row">
+         <div class="row d-flex justify-content-center">
          <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
