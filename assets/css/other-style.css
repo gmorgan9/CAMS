@@ -43,7 +43,7 @@ header {
 }
 .nav-list-item-link {
     text-decoration: none;
-    /* color: var(--font-color); */
+    color: var(--dark-color);
     text-transform: uppercase;
 }
 .nav-list-item-link:hover {
