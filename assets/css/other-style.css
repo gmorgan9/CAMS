@@ -12,7 +12,7 @@
 }
 body {
     /* background-color: #333 !important; */
-    color: var(--dark-font);
+    color: #000;
 }
 
 header {
