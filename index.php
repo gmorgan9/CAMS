@@ -23,7 +23,7 @@ session_start();
 </head>
 <body>
     
-<?php include("includes/header.php"); ?>
+<?php include("app/includes/header.php"); ?>
 
     <div class="container text-end">
         <br><br><br><br><br><br><br>
@@ -55,7 +55,7 @@ session_start();
       </div>
 
 
-      <?php include("includes/footer.php"); ?>
+      <?php include("app/includes/footer.php"); ?>
 
 
 </body>
