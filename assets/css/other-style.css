@@ -10,7 +10,7 @@
     --font-color: #FFFFFF;
 }
 body {
-    background-color: #333;
+    background-color: #333 !important;
 }
 
 header {
