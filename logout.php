@@ -12,7 +12,7 @@ require_once "app/database/connection.php";
 // $uname = $_session['uname'];
 // $sql = "UPDATE students SET loggedin = '0' WHERE uname={$_POST['uname']}";
 // mysqli_query($conn, $sql);
-unset($_SESSION['loggedin']);
+$_SESSION['loggedin'] = 0;
 session_unset();
 session_destroy();
 header('location:student-login.php');
