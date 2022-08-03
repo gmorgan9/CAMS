@@ -6,7 +6,7 @@ require_once "app/database/functions.php";
 session_start();
 
 if(isLoggedIn()){
-   header('location: dashboard.php');
+   header('location: admin_page.php');
 }
 
 $loggedin = $_SESSION['loggedin'];
