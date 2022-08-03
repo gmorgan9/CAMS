@@ -9,7 +9,8 @@ require_once "app/database/connection.php";
 //   } else {
 //     echo "Error updating record: " . mysqli_error($conn);
 //   }
-$sql = "UPDATE students SET loggedin = '0' WHERE uname={$_SESSION['uname']}";
+$uname = $_POST['uname'];
+$sql = "UPDATE students SET loggedin = '0' WHERE uname=$uname";
   mysqli_query($conn, $sql);
   mysqli_close($conn);
 session_start();
