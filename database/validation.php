@@ -18,7 +18,7 @@ $result = mysqli_query($conn, $select);
 $num = mysqli_num_rows($result);
 
 if($num == 1) {
-    echo "Username is already taken";
+    // echo "Username is already taken";
 } else {
     $register = "insert into students (fName, lName, uName, email, gender, password) values ('$fName', '$lName', '$uName', '$email', '$gender', '$password')";
     mysqli_query($conn, $register);
