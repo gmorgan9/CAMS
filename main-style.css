@@ -130,7 +130,7 @@ footer {
 }
 
 .land-container .content .btn:hover{
-   background: crimson;
+   background: var(--primary-color);
 }
 
 .form-container{
