@@ -59,6 +59,7 @@ if(isset($_POST['submit'])){
          $_SESSION['sID'] = $row['sID'];
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['user_lname'] = $row['lname'];
+         $_SESSION['isadmin'] = $row['isadmin'];
          header('location:user_page.php');
       }
      
