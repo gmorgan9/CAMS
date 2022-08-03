@@ -27,12 +27,12 @@ if(!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true){
 </head>
 <body>
     
-<?php include("../includes/header.php"); ?>
+<?php include("app/includes/header.php"); ?>
 
-    <h1>Dashboaed</h1>
+    <h1>Dashboard</h1>
 
 
-      <?php include("../includes/footer.php"); ?>
+      <?php include("app/includes/footer.php"); ?>
 
 
 </body>

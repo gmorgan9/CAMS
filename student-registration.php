@@ -6,7 +6,7 @@ if(isset($_SESSION['username'])){
    header('location:dashboard .php');
 }
 
-require_once "database/connection.php";
+require_once "app/database/connection.php";
 
 if(isset($_POST['submit'])){
 
@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-<?php include("includes/header.php"); ?>
+<?php include("app/includes/header.php"); ?>
    
 <br><br><br>
 <div class="form-container mx-auto">
@@ -91,7 +91,7 @@ if(isset($_POST['submit'])){
 
 </div>
 
-<?php include("includes/footer.php"); ?>
+<?php include("app/includes/footer.php"); ?>
 
 </body>
 </html>
