@@ -44,7 +44,7 @@ if(isLoggedIn()){
       ?>
       <input type="text" name="uname" required placeholder="enter your user name">
       <input type="password" name="password" required placeholder="enter your password">
-      <input type="submit" name="login_btn" value="Login" class="form-btn">
+      <button type="submit" name="login_btn" class="btn btn-big">Login</button>
       <p>don't have an account? <a href="register.php">register now</a></p>
    </form>
 
