@@ -100,8 +100,8 @@ require_once "database/validation.php";
         <!-- <h2>Signup</h2> -->
      <form class="row g-3 needs-validation" novalidate method="POST" action="validation.php">
          <div class="col-md-6">
-           <label for="validationCustom01" class="form-label">First name</label>
-           <input type="text" name="fName" class="form-control" id="validationCustom01" value="" required>
+           <label for="fName" class="form-label">First name</label>
+           <input type="text" name="fName" class="form-control" id="fName" value="" required>
            <div class="valid-feedback">
              Looks good!
            </div>
@@ -110,8 +110,8 @@ require_once "database/validation.php";
              </div>
          </div>
          <div class="col-md-6">
-           <label for="validationCustom02" class="form-label">Last name</label>
-           <input type="text" name="lName" class="form-control" id="validationCustom02" value="" required>
+           <label for="lName" class="form-label">Last name</label>
+           <input type="text" name="lName" class="form-control" id="lName" value="" required>
            <div class="valid-feedback">
              Looks good!
            </div>
@@ -120,10 +120,8 @@ require_once "database/validation.php";
              </div>
          </div>
          <div class="col-md-6">
-           <label for="validationCustomUsername" class="form-label">Username</label>
-           <div class="input-group has-validation">
-             <span class="input-group-text" id="inputGroupPrepend">@</span>
-             <input type="text" name="uName" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+           <label for="uName" class="form-label">Username</label>
+             <input type="text" name="uName" class="form-control" id="uName" aria-describedby="inputGroupPrepend" required>
              <div class="valid-feedback">
              Looks good!
              </div>
@@ -131,11 +129,8 @@ require_once "database/validation.php";
                Please choose a valid username.
              </div>
            </div>
-         </div>
          <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
-           <div class="input-group has-validation">
-             <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
              <input type="text" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
              <div class="valid-feedback">
              Looks good!
@@ -144,7 +139,6 @@ require_once "database/validation.php";
                Please enter a valid email.
              </div>
            </div>
-         </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" name="password" class="form-control" id="validationCustom03" required>
