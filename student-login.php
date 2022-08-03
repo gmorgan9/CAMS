@@ -3,7 +3,6 @@
 session_start();
 // Include config file
 require_once "database/connection.php";
-require_once "database/validation.php";
  
 ?>
 
