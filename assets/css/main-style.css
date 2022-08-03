@@ -28,6 +28,9 @@ header {
 .logo-link {
    color: var(--font-color);
 }
+.logo-link:hover {
+   color: var(--font-color);
+}
 
 /* Navigation */
 .nav {
