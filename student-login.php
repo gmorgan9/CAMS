@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_SESSION['user_fname']) && isset($_SESSION['user_lname'])){
+if(isset($_SESSION['username'])){
    header('location:dashboard .php');
 }
 
