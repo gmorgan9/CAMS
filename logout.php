@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once "app/database/connection.php";
 
 // $uname = $_SESSION['uname'];
@@ -11,8 +11,8 @@ require_once "app/database/connection.php";
 //   }
 $uname = $_session['uname'];
 $sql = "UPDATE students SET loggedin = '0' WHERE uname=$uname";
-  mysqli_query($conn, $sql);
-session_start();
+mysqli_query($conn, $sql);
+
 session_unset();
 session_destroy();
 header('location:student-login.php');
