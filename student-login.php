@@ -38,7 +38,7 @@ if(isset($_POST['submit'])){
             echo "Error updating record: " . mysqli_error($conn);
           }
          $_SESSION['admin_fname'] = $row['fname'];
-         $_SESSION['sID'] = $row['sID'];
+         $_SESSION['sID'] = $row['studentID'];
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
