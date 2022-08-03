@@ -30,22 +30,16 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
 
-      $loggedin = "UPDATE students SET loggedin = 1 where uname = '$uname";
       if($row['isadmin'] == 1){
-         $log_result = mysqli_query($conn, $loggedin);
-            if(mysqli_num_rows($log_result) > 0){
+         mysqli_query("UPDATE students SET loggedin = 1 where uname = '$uname");
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
-            }
-
       }elseif($row['isadmin'] == 0){
-         $log_result = mysqli_query($conn, $loggedin);
-         if(mysqli_num_rows($log_result) > 0){
+         mysqli_query("UPDATE students SET loggedin = 1 where uname = '$uname");
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
-         }
       }
      
    }else{
