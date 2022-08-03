@@ -38,7 +38,7 @@ if(!isset($_SESSION['admin_fname']) && !isset($_SESSION['admin_lname'])){
       <h1 style="color: white;">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
       <p style="color: white;">this is an admin page</p>
       <a style="color: white;" href="function.php?loggedin='0'" class="btn">logout</a>
-      <input type="submit" name="logout" value="register now" class="form-btn">
+      <button type="submit" name="logout" value="register now" class="form-btn">logout</button>
    </div>
 
 </div>
