@@ -47,7 +47,7 @@ if(isset($_POST['submit'])){
          $_SESSION['sID'] = $row['studentID'];
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['admin_lname'] = $row['lname'];
-         header('location:admin_page.php');
+         header('location:admin/dashboard.php');
       }elseif($row['isadmin'] == 0){
          if (mysqli_query($conn, $sql)) {
             echo "Record updated successfully";
