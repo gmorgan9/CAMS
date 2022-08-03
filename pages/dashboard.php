@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="../assets/css/mainStyle.css?v=10">
+    <link rel="stylesheet" href="main-style.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -14,47 +18,17 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
 
+
     <title>CAMS | Home Page</title>
 </head>
 <body>
     
-    <?php include("../includes/logged-header.php"); ?>
+<?php include("includes/header.php"); ?>
 
-    <div class="container text-end">
-        <br><br><br><br><br><br><br>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col">
-            <h1 style="color: white;">The Best Place to Track your <span style="color:#48ceff;">Assignments</span></h1>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col">
-              <p style="color: white; font-weight: 100 !important;">Successful Careers start with Proactive Education</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col" style="margin-top: -23px;">
-                <span style="border-bottom: 3px solid #ffffff; color: rgba(0, 0, 0, 0);">color</span><span style="border-bottom: 3px solid #48ceff; margin-top: -150px !important; color: rgba(0, 0, 0, 0);">color</span>
-            </div>
-          </div>
-      </div>
+    dashboard
 
 
-      <footer class="fixed-bottom py-3">
-        <div class="text-center text-muted" style="background-color: rgba(0, 0, 0, 0.05);">
-            &copy; 2022 Course Assignment Management System
-          </div>
-        </footer>
+      <?php include("includes/footer.php"); ?>
 
 
 </body>
