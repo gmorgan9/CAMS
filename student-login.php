@@ -190,7 +190,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
      <form class="row g-3 needs-validation" novalidate method="POST" action="student-login.php">
          <div class="col-md-4">
            <label for="validationCustom01" class="form-label">First name</label>
-           <input type="text" class="form-control" id="validationCustom01" value="" required>
+           <input type="text" name="fName" class="form-control" id="validationCustom01" value="" required>
            <div class="valid-feedback">
              Looks good!
            </div>
@@ -200,7 +200,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          </div>
          <div class="col-md-4">
            <label for="validationCustom02" class="form-label">Last name</label>
-           <input type="text" class="form-control" id="validationCustom02" value="" required>
+           <input type="text" name="lName" class="form-control" id="validationCustom02" value="" required>
            <div class="valid-feedback">
              Looks good!
            </div>
@@ -212,7 +212,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend">@</span>
-             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+             <input type="text" name="uName" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
              <div class="valid-feedback">
              Looks good!
              </div>
@@ -225,7 +225,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
-             <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+             <input type="text" name="email" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
              <div class="valid-feedback">
              Looks good!
              </div>
@@ -236,7 +236,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          </div>
          <div class="col-md-6 mx-auto">
            <label for="validationCustom04" class="form-label">Gender</label>
-           <select class="form-select" id="validationCustom04" required>
+           <select class="form-select" name="gender" id="validationCustom04" required>
              <option selected disabled value="">Choose...</option>
              <option>Male</option>
              <option>Female</option>
@@ -251,7 +251,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
-           <input type="text" class="form-control" id="validationCustom03" required>
+           <input type="text" name="password" class="form-control" id="validationCustom03" required>
            <div class="valid-feedback">
              Looks good!
              </div>
@@ -261,7 +261,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
          </div>
          <div class="col-md-6">
              <label for="validationCustom03" class="form-label">Confirm Password</label>
-             <input type="text" class="form-control" id="validationCustom03" required>
+             <input type="text" name="confirm_password" class="form-control" id="validationCustom03" required>
              <div class="valid-feedback">
              Looks good!
              </div>
