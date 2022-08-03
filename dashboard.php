@@ -1,9 +1,11 @@
 <?php
 session_start();
+require_once "app/database/functions.php";
 
-if(!isset($_SESSION["loggedin"]) && !$_SESSION["loggedin"] === true){
-  header("location: student-login.php");
+if(!isLoggedIn()) {
+  header('location:student-login.php');
 }
+
 ?>
 
 <!DOCTYPE html>
