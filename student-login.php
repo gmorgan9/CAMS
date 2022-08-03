@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $user_type = $_POST['user_type'];
+   $user_type = $_POST['isadmin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
 
@@ -22,13 +22,13 @@ if(isset($_POST['submit'])){
 
       $row = mysqli_fetch_array($result);
 
-      if($row['user_type'] == 'admin'){
+      if($row['isadmin'] == 1){
 
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
 
-      }elseif($row['user_type'] == 'user'){
+      }elseif($row['isadmin'] == 0){
 
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
