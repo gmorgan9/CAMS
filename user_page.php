@@ -4,8 +4,8 @@ require_once "database/connection.php";
 
 session_start();
 
-if(!isset($_SESSION['user_name'])){
-   header('location:login_form.php');
+if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
+   header('location:student-login.php');
 }
 
 ?>
