@@ -2,7 +2,9 @@
 session_start();
 require_once "app/database/functions.php";
 
-if(!isLoggedIn()) {
+if(isLoggedIn()) {
+echo "welcome";
+}else {
   header('location: student-login.php');
 }
 
