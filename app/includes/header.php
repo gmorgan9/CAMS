@@ -12,7 +12,7 @@
                     <?php if($_SESSION['isadmin'] === 1){ ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>"><i class="bi bi-globe2"></i>  Profile</a></li>
                     <?php } else { ?>
-                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>"><i class="bi bi-globe2"></i>  not Profile</a></li>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>">  not Profile</a></li>
                     <?php }?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>">Logout</a></li>
                 <?php } else { ?>

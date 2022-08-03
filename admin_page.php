@@ -34,7 +34,7 @@ if(!isLoggedIn()){
 <div class="land-container">
 
    <div class="content">
-      <h3 style="color: white;">hi, <span>admin</span> <?php echo $_SESSION['sID'] ?></h3>
+      <h3 style="color: white;">hi, <span>admin</span> <?php echo $_SESSION['isadmin'] ?></h3>
       <?php 
 
       if(isLoggedIn()) {
