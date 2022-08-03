@@ -2,7 +2,8 @@
 
 session_start();
 
-if($_SESSION['loggedin'] == 1){
+$loggedin = $_SESSION['loggedin'];
+if($loggedin === 1){
    header("location: dashboard.php");
    exit;
 }
