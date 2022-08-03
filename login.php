@@ -1,4 +1,5 @@
 <?php
+include(ROOT_PATH . "/app/database/path.php"); 
 
 require_once "app/database/functions.php";
 
