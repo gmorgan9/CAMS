@@ -2,8 +2,8 @@
 session_start();
 require_once "app/database/functions.php";
 
-if(!isLoggedIn()) {
-  header('location:student-login.php');
+if(isLoggedIn()) {
+  header('location: student-login.php');
 }
 
 ?>
