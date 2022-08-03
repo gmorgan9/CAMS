@@ -33,7 +33,7 @@ if(isLoggedIn()){
 <br><br><br>
 <div class="form-container mx-auto">
 
-   <form action="" method="post">
+   <form action="login.php" method="post">
       <h3>login now</h3>
       <?php
       if(isset($error)){
