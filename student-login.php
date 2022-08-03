@@ -37,6 +37,8 @@ if(isset($_POST['submit'])){
             echo "Error updating record: " . mysqli_error($conn);
           }
          $_SESSION['admin_fname'] = $row['fname'];
+         $_SESSION['sID'] = $row['sID'];
+         $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
       }elseif($row['isadmin'] == 0){
@@ -46,6 +48,8 @@ if(isset($_POST['submit'])){
             echo "Error updating record: " . mysqli_error($conn);
           }
          $_SESSION['user_fname'] = $row['fname'];
+         $_SESSION['sID'] = $row['sID'];
+         $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
       }
