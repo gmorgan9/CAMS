@@ -1,4 +1,6 @@
 <?php
+
+require("/app/database/path.php");
 session_start();
 ?>
 
