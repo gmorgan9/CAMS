@@ -99,7 +99,7 @@ require_once "database/validation.php";
     <div class="form w-50 d-flex mx-auto" style="background-color: rgba(28, 28, 28, 0.7); color: white; padding: 20px; border-radius:15px;">
         <!-- <h2>Signup</h2> -->
      <form class="row g-3 needs-validation" novalidate method="POST" action="validation.php">
-         <div class="col-md-4">
+         <div class="col-md-5">
            <label for="validationCustom01" class="form-label">First name</label>
            <input type="text" name="fName" class="form-control" id="validationCustom01" value="" required>
            <div class="valid-feedback">
@@ -109,7 +109,7 @@ require_once "database/validation.php";
                Please enter a valid first name.
              </div>
          </div>
-         <div class="col-md-4">
+         <div class="col-md-5">
            <label for="validationCustom02" class="form-label">Last name</label>
            <input type="text" name="lName" class="form-control" id="validationCustom02" value="" required>
            <div class="valid-feedback">
@@ -119,8 +119,7 @@ require_once "database/validation.php";
                Please enter a valid last name.
              </div>
          </div>
-         </div>
-         <div class="col-md-4">
+         <div class="col-md-5">
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend">@</span>
@@ -132,7 +131,7 @@ require_once "database/validation.php";
                Please choose a valid username.
              </div>
            </div>
-         
+         </div>
          <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
