@@ -23,7 +23,7 @@ if(isset($_POST['submit'])){
    $isadmin = $_POST['isadmin'];
    $loggedin = $_POST['loggedin'];
 
-   $select = " SELECT * FROM students WHERE studentID = '$sID' && uname = '$uname' && password = '$pass' ";
+   $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
