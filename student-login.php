@@ -2,8 +2,9 @@
 
 session_start();
 
-if(isset($_SESSION['username'])){
-   header('location:dashboard .php');
+if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+   header("location: dashboard.php");
+   exit;
 }
 
 require_once "database/connection.php";
@@ -29,13 +30,13 @@ if(isset($_POST['submit'])){
       $row = mysqli_fetch_array($result);
 
       if($row['isadmin'] == 1){
-
+         $_SESSION["loggedin"] = true;
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
 
       }elseif($row['isadmin'] == 0){
-
+         $_SESSION["loggedin"] = true;
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
