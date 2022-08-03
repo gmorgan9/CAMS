@@ -47,6 +47,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
+<?php include("includes/header.php"); ?>
    
 <div class="form-container">
 

@@ -23,6 +23,7 @@ if(!isset($_SESSION['user_name'])){
 
 </head>
 <body>
+<?php include("includes/header.php"); ?>
    
 <div class="container">
 
