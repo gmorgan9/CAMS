@@ -143,7 +143,7 @@ footer {
    border-radius: 15px;
    padding-bottom: 30px;
    translate:calc(-50%, 50%);
-   background: rgba(238, 238, 238, 0.5);
+   /* background: rgba(238, 238, 238, 0.5); */
 }
 
 .form-container form{
