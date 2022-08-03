@@ -29,14 +29,22 @@ if(isset($_POST['submit'])){
    if(mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_array($result);
-
+      $sql = "UPDATE students SET loggedin='1' WHERE uname='$uname'";
       if($row['isadmin'] == 1){
-         mysqli_query("UPDATE students SET loggedin = 1 where uname = '$uname");
+         if (mysqli_query($conn, $sql)) {
+            echo "Record updated successfully";
+          } else {
+            echo "Error updating record: " . mysqli_error($conn);
+          }
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
       }elseif($row['isadmin'] == 0){
-         mysqli_query("UPDATE students SET loggedin = 1 where uname = '$uname");
+         if (mysqli_query($conn, $sql)) {
+            echo "Record updated successfully";
+          } else {
+            echo "Error updating record: " . mysqli_error($conn);
+          }
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
