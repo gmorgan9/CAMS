@@ -31,13 +31,13 @@ if(isset($_POST['submit'])){
       $row = mysqli_fetch_array($result);
 
       if($row['isadmin'] == 1){
-         $_SESSION['loggedin'] = 1;
+         $_POST['loggedin'] = 1;
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
 
       }elseif($row['isadmin'] == 0){
-         $_SESSION['loggedin'] = 1;
+         $_POST['loggedin'] = 1;
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
