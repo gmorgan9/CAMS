@@ -5,7 +5,7 @@ require_once "app/database/functions.php";
 
 session_start();
 
-if(!isset($_SESSION['admin_fname']) && !isset($_SESSION['admin_lname'])){
+if(!isLoggedIn()){
    header('location:student-login.php');
 }
 
