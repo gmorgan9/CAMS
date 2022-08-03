@@ -13,7 +13,7 @@ require_once "app/database/connection.php";
 
 if(isset($_POST['submit'])){
 
-   $sID = $_POST['sID'];
+   $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
