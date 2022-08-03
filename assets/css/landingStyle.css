@@ -80,7 +80,7 @@ footer {
    text-decoration: none;
 }
 
-.container{
+.land-container{
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -89,23 +89,23 @@ footer {
    padding-bottom: 60px;
 }
 
-.container .content{
+.land-container .content{
    text-align: center;
 }
 
-.container .content h3{
+.land-container .content h3{
    font-size: 30px;
    color:#333;
 }
 
-.container .content h3 span{
+.land-container .content h3 span{
    background: crimson;
    color:#fff;
    border-radius: 5px;
    padding:0 15px;
 }
 
-.container .content h1{
+.land-container .content h1{
    font-size: 50px;
    color:#333;
 }
@@ -114,12 +114,12 @@ footer {
    color:crimson;
 }
 
-.container .content p{
+.land-container .content p{
    font-size: 25px;
    margin-bottom: 20px;
 }
 
-.container .content .btn{
+.land-container .content .btn{
    display: inline-block;
    padding:10px 30px;
    font-size: 20px;
@@ -129,7 +129,7 @@ footer {
    text-transform: capitalize;
 }
 
-.container .content .btn:hover{
+.land-container .content .btn:hover{
    background: crimson;
 }
 

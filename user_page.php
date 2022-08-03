@@ -30,7 +30,7 @@ if(!isset($_SESSION['user_name'])){
 <body>
 <?php include("includes/header.php"); ?>
    
-<div class="container">
+<div class="land-container">
 
    <div class="content">
       <h3>hi, <span>user</span></h3>
