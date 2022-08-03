@@ -1,6 +1,6 @@
 <?php
 
-require_once "database/connection.php";
+require_once "app/database/connection.php";
 
 session_start();
 
@@ -28,7 +28,7 @@ if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
 
 </head>
 <body>
-<?php include("includes/header.php"); ?>
+<?php include("app/includes/header.php"); ?>
    
 <div class="land-container">
 
@@ -43,7 +43,7 @@ if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
 
 </div>
 
-<?php include("includes/footer.php"); ?>
+<?php include("app/includes/footer.php"); ?>
 
 </body>
 </html>
