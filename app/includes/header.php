@@ -1,7 +1,7 @@
 <header>
         <div class="logo">
             <h1>
-                <a style="color:white; text-decoration:none;" href=""><i class="bi bi-file-earmark-check"></i> CAMS</a>
+                <a style="text-decoration:none;" href=""><i class="bi bi-file-earmark-check"></i> CAMS</a>
             </h1>
         </div>
         <nav class="nav">
