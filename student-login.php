@@ -145,21 +145,6 @@ require_once "database/validation.php";
              </div>
            </div>
          </div>
-         <div class="col-md-6 mx-auto">
-           <label for="validationCustom04" class="form-label">Gender</label>
-           <select class="form-select" name="gender" id="validationCustom04" required>
-             <option selected disabled value="">Choose...</option>
-             <option>Male</option>
-             <option>Female</option>
-             <option>Rather not say</option>
-           </select>
-           <div class="valid-feedback">
-             Looks good!
-             </div>
-           <div class="invalid-feedback">
-             Please select a valid gender.
-           </div>
-         </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" name="password" class="form-control" id="validationCustom03" required>

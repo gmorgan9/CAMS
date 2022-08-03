@@ -7,7 +7,6 @@ $fName    = $_POST['fName'];
 $lName    = $_POST['lName'];
 $uName    = $_POST['uName'];
 $email    = $_POST['email'];
-$gender   = $_POST['gender'];
 $password = $_POST['password'];
 
 
@@ -20,7 +19,7 @@ $num = mysqli_num_rows($result);
 if($num == 1) {
     // echo "Username is already taken";
 } else {
-    $register = "insert into students (fName, lName, uName, email, gender, password) values ('$fName', '$lName', '$uName', '$email', '$gender', '$password')";
+    $register = "insert into students (fName, lName, uName, email, password) values ('$fName', '$lName', '$uName', '$email', '$password')";
     mysqli_query($conn, $register);
     echo "registration Successful";
 }
