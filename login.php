@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['admin_lname'] = $row['lname'];
          $_SESSION['isadmin'] = $row['isadmin'];
-         header('location: admin/profile.php');
+         header('location: /admin/profile.php');
       }elseif($row['isadmin'] == 0){
          if (mysqli_query($conn, $sql)) {
             echo "Record updated successfully";
@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['user_lname'] = $row['lname'];
          $_SESSION['isadmin'] = $row['isadmin'];
-         header('location: profile.php');
+         header('location: /profile.php');
       }
      
    }else{
