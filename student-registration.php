@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
    $cpass = md5($_POST['cpassword']);
    $user_type = $_POST['user_type'];
 
-   $select = " SELECT * FROM user_form WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $error[] = 'passwords do not match!';
       }else{
-         $insert = "INSERT INTO user_form(fname, lname, uname, email, password, user_type) VALUES('$fname','$lname','$uname','$email','$pass','$user_type')";
+         $insert = "INSERT INTO students (fname, lname, uname, email, password, user_type) VALUES('$fname','$lname','$uname','$email','$pass','$user_type')";
          mysqli_query($conn, $insert);
          header('location:student-login.php');
       }
