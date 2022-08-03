@@ -33,7 +33,7 @@ if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
 <div class="land-container">
 
    <div class="content">
-      <h3>hi, <span>user</span></h3>
+      <h3 style="color: white;">hi, <span>user</span></h3>
       <h1>welcome <span><?php echo $_SESSION['user_fname'] ?></span></h1>
       <p>this is an user page</p>
       <a href="login_form.php" class="btn">login</a>
