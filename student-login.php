@@ -60,7 +60,7 @@ if(isset($_POST['submit'])){
 
 <?php include("includes/header.php"); ?>
    
-<div class="form-container">
+<div class="form-container mx-auto">
 
    <form action="" method="post">
       <h3>login now</h3>
