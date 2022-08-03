@@ -14,61 +14,51 @@ function isLoggedIn()
 }
 
 
-// if(isset($_POST['login_btn'])){
+// // call the login() function if register_btn is clicked
+// if (isset($_POST['login_btn'])) {
 // 	login();
 // }
 
-// function login() {
+// // LOGIN USER
+// function login(){
+// 	global $db, $username, $errors;
 
-// 	$sID = mysqli_real_escape_string($conn, $_POST['studentID']);
-// 	$fname = mysqli_real_escape_string($conn, $_POST['fname']);
-// 	$lname = mysqli_real_escape_string($conn, $_POST['lname']);
-// 	$uname = mysqli_real_escape_string($conn, $_POST['uname']);
-// 	$email = mysqli_real_escape_string($conn, $_POST['email']);
-// 	$pass = md5($_POST['password']);
-// 	$cpass = md5($_POST['cpassword']);
-// 	$isadmin = $_POST['isadmin'];
-// 	$loggedin = $_POST['loggedin'];
- 
-// 	$select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
- 
-// 	$result = mysqli_query($conn, $select);
- 
-// 	if(mysqli_num_rows($result) > 0){
- 
-// 	   $row = mysqli_fetch_array($result);
-// 	   $sql = "UPDATE students SET loggedin='1' WHERE uname='$uname'";
-// 	   if($row['isadmin'] == 1){
-// 		  if (mysqli_query($conn, $sql)) {
-// 			 echo "Record updated successfully";
-// 		   } else {
-// 			 echo "Error updating record: " . mysqli_error($conn);
-// 		   }
-// 		  $_SESSION['admin_fname'] = $row['fname'];
-// 		  $_SESSION['sID'] = $row['studentID'];
-// 		  $_SESSION['loggedin'] = $row['loggedin'];
-// 		  $_SESSION['admin_lname'] = $row['lname'];
-// 		  $_SESSION['isadmin'] = $row['isadmin'];
-// 		  header('location: admin/profile.php');
-// 	   }elseif($row['isadmin'] == 0){
-// 		  if (mysqli_query($conn, $sql)) {
-// 			 echo "Record updated successfully";
-// 		   } else {
-// 			 echo "Error updating record: " . mysqli_error($conn);
-// 		   }
-// 		  $_SESSION['user_fname'] = $row['fname'];
-// 		  $_SESSION['sID'] = $row['sID'];
-// 		  $_SESSION['loggedin'] = $row['loggedin'];
-// 		  $_SESSION['user_lname'] = $row['lname'];
-// 		  $_SESSION['isadmin'] = $row['isadmin'];
-// 		  header('location: profile.php');
-// 	   }
-	  
-// 	}else{
-// 	   $error[] = 'incorrect email or password!';
+// 	// grap form values
+// 	$username = e($_POST['username']);
+// 	$password = e($_POST['password']);
+
+// 	// make sure form is filled properly
+// 	if (empty($username)) {
+// 		array_push($errors, "Username is required");
 // 	}
- 
-//  };
+// 	if (empty($password)) {
+// 		array_push($errors, "Password is required");
+// 	}
 
+// 	// attempt login if no errors on form
+// 	if (count($errors) == 0) {
+// 		$password = md5($password);
 
-?>
+// 		$query = "SELECT * FROM users WHERE username='$username' AND password='$password' LIMIT 1";
+// 		$results = mysqli_query($db, $query);
+
+// 		if (mysqli_num_rows($results) == 1) { // user found
+// 			// check if user is admin or user
+// 			$logged_in_user = mysqli_fetch_assoc($results);
+// 			if ($logged_in_user['user_type'] == 'admin') {
+
+				
+// 				$_SESSION['user'] = $logged_in_user;
+// 				$_SESSION['success']  = "You are now logged in";
+// 				header('location: /');		  
+// 			}else{
+// 				$_SESSION['user'] = $logged_in_user;
+// 				$_SESSION['success']  = "You are now logged in";
+
+// 				header('location: /');
+// 			}
+// 		}else {
+// 			array_push($errors, "Wrong username/password combination");
+// 		}
+// 	}
+// }
