@@ -1,5 +1,11 @@
 <?php
 
+session_start();
+
+if(isset($_SESSION['username'])){
+   header('location:dashboard .php');
+}
+
 require_once "database/connection.php";
 
 if(isset($_POST['submit'])){
