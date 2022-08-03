@@ -188,7 +188,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <div class="form w-50 d-flex mx-auto" style="background-color: rgba(28, 28, 28, 0.7); color: white; padding: 20px; border-radius:15px;">
         <!-- <h2>Signup</h2> -->
      <form class="row g-3 needs-validation" novalidate method="POST" action="student-login.php">
-         <div class="col-md-4">
+         <!-- <div class="col-md-4">
            <label for="validationCustom01" class="form-label">First name</label>
            <input type="text" name="fName" class="form-control" id="validationCustom01" value="" required>
            <div class="valid-feedback">
@@ -197,8 +197,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
                Please enter a valid first name.
              </div>
-         </div>
-         <div class="col-md-4">
+         </div> -->
+         <!-- <div class="col-md-4">
            <label for="validationCustom02" class="form-label">Last name</label>
            <input type="text" name="lName" class="form-control" id="validationCustom02" value="" required>
            <div class="valid-feedback">
@@ -207,7 +207,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
                Please enter a valid last name.
              </div>
-         </div>
+         </div> -->
          <div class="col-md-4">
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
@@ -221,7 +221,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              </div>
            </div>
          </div>
-         <div class="col-md-6">
+         <!-- <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
@@ -233,8 +233,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                Please enter a valid email.
              </div>
            </div>
-         </div>
-         <div class="col-md-6 mx-auto">
+         </div> -->
+         <!-- <div class="col-md-6 mx-auto">
            <label for="validationCustom04" class="form-label">Gender</label>
            <select class="form-select" name="gender" id="validationCustom04" required>
              <option selected disabled value="">Choose...</option>
@@ -248,7 +248,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
              Please select a valid gender.
            </div>
-         </div>
+         </div> -->
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" name="password" class="form-control" id="validationCustom03" required>
