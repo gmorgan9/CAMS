@@ -6,7 +6,7 @@ require_once "app/database/functions.php";
 session_start();
 
 if(isLoggedIn()){
-   header('location: dashboard.php');
+   header('location: profile.php');
 }
 
 if(isset($_POST['submit'])){
@@ -34,7 +34,7 @@ if(isset($_POST['submit'])){
       }else{
          $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
-         header('location:student-login.php');
+         header('location:login.php');
       }
    }
 
@@ -87,7 +87,7 @@ if(isset($_POST['submit'])){
          <option value="admin">admin</option>
       </select> -->
       <input type="submit" name="submit" value="register now" class="form-btn">
-      <p>already have an account? <a href="student-login.php">login now</a></p>
+      <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
 </div>
