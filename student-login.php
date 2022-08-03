@@ -1,16 +1,19 @@
 <?php
 
+require_once "app/database/connection.php";
+require_once "app/database/functions.php";
+
 session_start();
 
-$loggedin = $_SESSION['loggedin'];
+if(isLoggedIn()){
+   header('location: dashboard.php');
+}
 
-echo("<script>console.log('PHP: " . $loggedin . "');</script>");
+$loggedin = $_SESSION['loggedin'];
 if($loggedin === 1){
    header("location: dashboard.php");
    exit;
 }
-
-require_once "app/database/connection.php";
 
 
 

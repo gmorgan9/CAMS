@@ -1,10 +1,11 @@
 <?php
-session_start();
+require_once "app/database/connection.php";
 require_once "app/database/functions.php";
 
-if (!isLoggedIn()) {
-  // $_SESSION['msg'] = "You must log in first";
-  header('location: student-login.php');
+session_start();
+
+if(!isLoggedIn()){
+   header('location:student-login.php');
 }
 
 ?>
