@@ -69,9 +69,9 @@ if(isset($_POST['submit'])){
          };
       };
       ?>
-      <input type="text" name="fName" required placeholder="enter your first name">
-      <input type="text" name="lName" required placeholder="enter your last name">
-      <input type="text" name="uName" required placeholder="enter your user name">
+      <input type="text" name="fname" required placeholder="enter your first name">
+      <input type="text" name="lname" required placeholder="enter your last name">
+      <input type="text" name="uname" required placeholder="enter your user name">
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="password" required placeholder="enter your password">
       <input type="password" name="cpassword" required placeholder="confirm your password">
