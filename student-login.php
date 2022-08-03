@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $user_type = $_POST['isadmin'];
+   $isadmin = $_POST['isadmin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
 
