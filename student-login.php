@@ -119,6 +119,7 @@ require_once "database/validation.php";
                Please enter a valid last name.
              </div>
          </div>
+         </div>
          <div class="col-md-4">
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
@@ -131,8 +132,7 @@ require_once "database/validation.php";
                Please choose a valid username.
              </div>
            </div>
-         </div>
-         <div class="row d-flex justify-content-center">
+         
          <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
@@ -145,7 +145,6 @@ require_once "database/validation.php";
                Please enter a valid email.
              </div>
            </div>
-         </div>
          </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
