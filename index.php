@@ -51,11 +51,7 @@
       </div>
 
 
-      <footer class="fixed-bottom py-3">
-        <div class="text-center text-muted" style="background-color: rgba(0, 0, 0, 0.05);">
-            &copy; 2022 Course Assignment Management System
-          </div>
-        </footer>
+      <?php include("includes/footer.php"); ?>
 
 
 </body>

@@ -43,5 +43,7 @@ if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
 
 </div>
 
+<?php include("includes/footer.php"); ?>
+
 </body>
 </html>
