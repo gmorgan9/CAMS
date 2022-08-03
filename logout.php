@@ -6,11 +6,9 @@ $sID = $_SESSION['sID'];
 $sql = "UPDATE students SET loggedin='0' WHERE studentID='$sID'";
 if (mysqli_query($conn, $sql)) {
     echo "Record updated successfully";
-  } else {
+} else {
     echo "Error updating record: " . mysqli_error($conn);
-  }
-
-
+}
 
 session_unset();
 session_destroy();
