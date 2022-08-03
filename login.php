@@ -1,6 +1,5 @@
 <?php
 
-require_once "app/database/connection.php";
 require_once "app/database/functions.php";
 
 session_start();
@@ -8,10 +7,6 @@ session_start();
 if(isLoggedIn()){
    header('location: admin_page.php');
 }
-
-
-
-
 ?>
 
 <!DOCTYPE html>
