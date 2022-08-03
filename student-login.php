@@ -1,99 +1,10 @@
 
 <?php
+session_start();
 // Include config file
 require_once "database/connection.php";
+require_once "database/validation.php";
  
-// Define variables and initialize with empty values
-$fName = $lName = $uName = $email = $password = $confirm_password = $gender = "";
-$fName_err = $lName_err = $uName_err = $email_err = $password_err = $confirm_password_err = $gender_err = "";
- 
-// Processing form data when form is submitted
-if($_SERVER["REQUEST_METHOD"] == "POST"){
- 
-    // Validate username
-    if(empty(trim($_POST["uName"]))){
-        $uName_err = "Please enter a username.";
-    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["uName"]))){
-        $uName_err = "Username can only contain letters, numbers, and underscores.";
-    } else{
-        // Prepare a select statement
-        $sql = "SELECT studentID FROM students WHERE uName = ?";
-        
-        if($stmt = mysqli_prepare($conn, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "s", $param_uName);
-            
-            // Set parameters
-            $param_uName = trim($_POST["uName"]);
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                /* store result */
-                mysqli_stmt_store_result($stmt);
-                
-                if(mysqli_stmt_num_rows($stmt) == 1){
-                    $uName_err = "This username is already taken.";
-                } else{
-                    $uName = trim($_POST["uName"]);
-                }
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-    }
-    
-    // Validate password
-    if(empty(trim($_POST["password"]))){
-        $password_err = "Please enter a password.";     
-    } elseif(strlen(trim($_POST["password"])) < 6){
-        $password_err = "Password must have atleast 6 characters.";
-    } else{
-        $password = trim($_POST["password"]);
-    }
-    
-    // Validate confirm password
-    if(empty(trim($_POST["confirm_password"]))){
-        $confirm_password_err = "Please confirm password.";     
-    } else{
-        $confirm_password = trim($_POST["confirm_password"]);
-        if(empty($password_err) && ($password != $confirm_password)){
-            $confirm_password_err = "Password did not match.";
-        }
-    }
-    
-    // Check input errors before inserting in database
-    if(empty($uName_err) && empty($password_err) && empty($confirm_password_err)){
-        
-        // Prepare an insert statement
-        $sql = "INSERT INTO students (uName, password) VALUES (?, ?)";
-         
-        if($stmt = mysqli_prepare($conn, $sql)){
-            // Bind variables to the prepared statement as parameters
-            mysqli_stmt_bind_param($stmt, "ss", $param_uName, $param_password);
-            
-            // Set parameters
-            $param_uName = $uName;
-            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
-            
-            // Attempt to execute the prepared statement
-            if(mysqli_stmt_execute($stmt)){
-                // Redirect to login page
-                header("location: student-login.php");
-            } else{
-                echo "Oops! Something went wrong. Please try again later.";
-            }
-
-            // Close statement
-            mysqli_stmt_close($stmt);
-        }
-    }
-    
-    // Close connection
-    mysqli_close($conn);
-}
 ?>
 
 
@@ -187,8 +98,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     
     <div class="form w-50 d-flex mx-auto" style="background-color: rgba(28, 28, 28, 0.7); color: white; padding: 20px; border-radius:15px;">
         <!-- <h2>Signup</h2> -->
-     <form class="row g-3 needs-validation" novalidate method="POST" action="student-login.php">
-         <!-- <div class="col-md-4">
+     <form class="row g-3 needs-validation" novalidate method="POST" action="validation.php">
+         <div class="col-md-4">
            <label for="validationCustom01" class="form-label">First name</label>
            <input type="text" name="fName" class="form-control" id="validationCustom01" value="" required>
            <div class="valid-feedback">
@@ -197,8 +108,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
                Please enter a valid first name.
              </div>
-         </div> -->
-         <!-- <div class="col-md-4">
+         </div>
+         <div class="col-md-4">
            <label for="validationCustom02" class="form-label">Last name</label>
            <input type="text" name="lName" class="form-control" id="validationCustom02" value="" required>
            <div class="valid-feedback">
@@ -207,7 +118,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
                Please enter a valid last name.
              </div>
-         </div> -->
+         </div>
          <div class="col-md-4">
            <label for="validationCustomUsername" class="form-label">Username</label>
            <div class="input-group has-validation">
@@ -221,7 +132,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
              </div>
            </div>
          </div>
-         <!-- <div class="col-md-6">
+         <div class="col-md-6">
            <label for="validationCustomUsername" class="form-label">Email</label>
            <div class="input-group has-validation">
              <span class="input-group-text" id="inputGroupPrepend"><i class="bi bi-envelope"></i></span>
@@ -233,8 +144,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                Please enter a valid email.
              </div>
            </div>
-         </div> -->
-         <!-- <div class="col-md-6 mx-auto">
+         </div>
+         <div class="col-md-6 mx-auto">
            <label for="validationCustom04" class="form-label">Gender</label>
            <select class="form-select" name="gender" id="validationCustom04" required>
              <option selected disabled value="">Choose...</option>
@@ -248,7 +159,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
            <div class="invalid-feedback">
              Please select a valid gender.
            </div>
-         </div> -->
+         </div>
          <div class="col-md-6">
            <label for="validationCustom03" class="form-label">Password</label>
            <input type="text" name="password" class="form-control" id="validationCustom03" required>
