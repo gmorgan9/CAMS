@@ -56,8 +56,7 @@ $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
 	}else{
 	   $error[] = 'incorrect email or password!';
 	}
- 
- };
+
 ?>
 
 <!DOCTYPE html>
