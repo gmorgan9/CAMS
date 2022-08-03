@@ -3,11 +3,8 @@
 session_start();
 
 $loggedin = $_SESSION['loggedin'];
-?>
-<script>
-   console.log(<?= json_encode($loggedin); ?>);
-</script>
-<?php
+
+echo("<script>console.log('PHP: " . $loggedin . "');</script>");
 if($loggedin === 1){
    header("location: dashboard.php");
    exit;
