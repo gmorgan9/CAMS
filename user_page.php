@@ -4,7 +4,7 @@ require_once "app/database/connection.php";
 
 session_start();
 
-if(!isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
+if(!isLoggedIn()){
    header('location:student-login.php');
 }
 
