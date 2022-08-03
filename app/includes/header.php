@@ -9,7 +9,7 @@
                 
                 <?php if(isset($_SESSION['user_fname']) || isset($_SESSION['admin_fname'])){ ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="logout.php"><i class="bi bi-globe2"></i> Dashboard</a></li>
-                    <li class="nav-list-item"><a class="nav-list-item-link" href="logout.php"><i class="bi bi-box-arrow-right"></i> Logout</a></li>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="logout.php"><i class="bi bi-box-arrow-right"></i></a></li>
 
 
                 <?php } else { ?>
