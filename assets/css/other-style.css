@@ -8,9 +8,11 @@
     --primary-color: #48ceff;
     --secondary-color: #17181C; 
     --font-color: #FFFFFF;
+    --dark-font: #000;
 }
 body {
-    background-color: #333 !important;
+    /* background-color: #333 !important; */
+    color: var(--dark-font);
 }
 
 header {
@@ -19,7 +21,7 @@ header {
 }
 
 .logo {
-    color: var(--font-color);
+    /* color: var(--font-color); */
     float: left;
     margin-left: 5em;
     margin-top: 15px;
