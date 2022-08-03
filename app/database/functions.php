@@ -1,8 +1,8 @@
 <?php
 
 session_start();
-require_once "connection.php";
-require_once "path.php";
+require('connection.php');
+require("path.php");
 
 function isLoggedIn()
 {
