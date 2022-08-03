@@ -7,7 +7,7 @@
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
-                <?php if(!isset($_SESSION['user_fname']) || !isset($_SESSION['admin_fname'])){ ?>
+                <?php if(isset($_SESSION['user_fname']) || !isset($_SESSION['admin_fname'])){ ?>
 
                     <li class="nav-list-item"><a class="nav-list-item-link" href="logout.php">Logout</a></li>
 

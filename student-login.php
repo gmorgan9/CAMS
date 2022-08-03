@@ -1,5 +1,9 @@
 <?php
 
+if(isset($_SESSION['user_fname']) && !isset($_SESSION['user_lname'])){
+   header('location:dashboard.php');
+}
+
 require_once "database/connection.php";
 
 session_start();
