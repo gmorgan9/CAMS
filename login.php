@@ -1,5 +1,6 @@
 <?php
 
+require_once "app/database/connection.php";
 require_once "app/database/functions.php";
 
 session_start();
@@ -8,55 +9,65 @@ if(isLoggedIn()){
    header('location: admin_page.php');
 }
 
+$loggedin = $_SESSION['loggedin'];
+if($loggedin === 1){
+   header("location: dashboard.php");
+   exit;
+}
 
-$sID = mysqli_real_escape_string($conn, $_POST['studentID']);
-	$fname = mysqli_real_escape_string($conn, $_POST['fname']);
-	$lname = mysqli_real_escape_string($conn, $_POST['lname']);
-	$uname = mysqli_real_escape_string($conn, $_POST['uname']);
-	$email = mysqli_real_escape_string($conn, $_POST['email']);
-	$pass = md5($_POST['password']);
-	$cpass = md5($_POST['cpassword']);
-	$isadmin = $_POST['isadmin'];
-	$loggedin = $_POST['loggedin'];
- 
-	$select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
- 
-	$result = mysqli_query($conn, $select);
- 
-	if(mysqli_num_rows($result) > 0){
- 
-	   $row = mysqli_fetch_array($result);
-	   $sql = "UPDATE students SET loggedin='1' WHERE uname='$uname'";
-	   if($row['isadmin'] == 1){
-		  if (mysqli_query($conn, $sql)) {
-			 echo "Record updated successfully";
-		   } else {
-			 echo "Error updating record: " . mysqli_error($conn);
-		   }
-		  $_SESSION['admin_fname'] = $row['fname'];
-		  $_SESSION['sID'] = $row['studentID'];
-		  $_SESSION['loggedin'] = $row['loggedin'];
-		  $_SESSION['admin_lname'] = $row['lname'];
-		  $_SESSION['isadmin'] = $row['isadmin'];
-		  header('location: admin/profile.php');
-	   }elseif($row['isadmin'] == 0){
-		  if (mysqli_query($conn, $sql)) {
-			 echo "Record updated successfully";
-		   } else {
-			 echo "Error updating record: " . mysqli_error($conn);
-		   }
-		  $_SESSION['user_fname'] = $row['fname'];
-		  $_SESSION['sID'] = $row['sID'];
-		  $_SESSION['loggedin'] = $row['loggedin'];
-		  $_SESSION['user_lname'] = $row['lname'];
-		  $_SESSION['isadmin'] = $row['isadmin'];
-		  header('location: profile.php');
-	   }
-	  
-	}else{
-	   $error[] = 'incorrect email or password!';
-	}
 
+
+if(isset($_POST['submit'])){
+
+   $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
+   $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+   $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+   $uname = mysqli_real_escape_string($conn, $_POST['uname']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $pass = md5($_POST['password']);
+   $cpass = md5($_POST['cpassword']);
+   $isadmin = $_POST['isadmin'];
+   $loggedin = $_POST['loggedin'];
+
+   $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $row = mysqli_fetch_array($result);
+      $sql = "UPDATE students SET loggedin='1' WHERE uname='$uname'";
+      if($row['isadmin'] == 1){
+         if (mysqli_query($conn, $sql)) {
+            echo "Record updated successfully";
+          } else {
+            echo "Error updating record: " . mysqli_error($conn);
+          }
+         $_SESSION['admin_fname'] = $row['fname'];
+         $_SESSION['sID'] = $row['studentID'];
+         $_SESSION['loggedin'] = $row['loggedin'];
+         $_SESSION['admin_lname'] = $row['lname'];
+         $_SESSION['isadmin'] = $row['isadmin'];
+         header('location: /admin/profile.php');
+      }elseif($row['isadmin'] == 0){
+         if (mysqli_query($conn, $sql)) {
+            echo "Record updated successfully";
+          } else {
+            echo "Error updating record: " . mysqli_error($conn);
+          }
+         $_SESSION['user_fname'] = $row['fname'];
+         $_SESSION['sID'] = $row['sID'];
+         $_SESSION['loggedin'] = $row['loggedin'];
+         $_SESSION['user_lname'] = $row['lname'];
+         $_SESSION['isadmin'] = $row['isadmin'];
+         header('location: /profile.php');
+      }
+     
+   }else{
+      $error[] = 'incorrect email or password!';
+   }
+
+};
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +94,7 @@ $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
 <br><br><br>
 <div class="form-container mx-auto">
 
-   <form action="login.php" method="post">
+   <form action="" method="post">
       <h3>login now</h3>
       <?php
       if(isset($error)){
@@ -94,7 +105,7 @@ $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
       ?>
       <input type="text" name="uname" required placeholder="enter your user name">
       <input type="password" name="password" required placeholder="enter your password">
-      <button type="submit" name="login_btn" class="btn btn-big">Login</button>
+      <input type="submit" name="submit" value="Login" class="form-btn">
       <p>don't have an account? <a href="register.php">register now</a></p>
    </form>
 
