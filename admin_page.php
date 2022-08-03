@@ -1,6 +1,7 @@
 <?php
 
 require_once "app/database/connection.php";
+require_once "app/database/functions.php";
 
 session_start();
 
@@ -34,6 +35,16 @@ if(!isset($_SESSION['admin_fname']) && !isset($_SESSION['admin_lname'])){
 
    <div class="content">
       <h3 style="color: white;">hi, <span>admin</span> <?php echo $_SESSION['sID'] ?></h3>
+      <?php 
+
+      if(isLoggedIn()) {
+         echo "<h2> HI </h2>";
+      }
+      else {
+         echo "<h2> not logged in </h2>"; 
+      }
+
+      ?>
       <h1 style="color: white;">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
       <p style="color: white;">this is an admin page</p>
       <a style="color: white;" href="logout.php" class="btn">logout</a>
