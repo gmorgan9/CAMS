@@ -3,7 +3,7 @@ session_start();
 require_once "app/database/functions.php";
 
 if(isLoggedIn()) {
-echo "welcome";
+  echo "welcome";
 }else {
   header('location: student-login.php');
 }
