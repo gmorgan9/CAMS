@@ -13,6 +13,7 @@ require_once "app/database/connection.php";
 
 if(isset($_POST['submit'])){
 
+   $sID = $_POST['sID'];
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
@@ -22,7 +23,7 @@ if(isset($_POST['submit'])){
    $isadmin = $_POST['isadmin'];
    $loggedin = $_POST['loggedin'];
 
-   $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
+   $select = " SELECT * FROM students WHERE sID = '$sID' && uname = '$uname' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
