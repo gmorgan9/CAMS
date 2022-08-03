@@ -6,7 +6,7 @@ require_once "app/database/functions.php";
 session_start();
 
 if(isLoggedIn()){
-   header('location: profile.php');
+   header('location: admin_page.php');
 }
 
 if(isset($_POST['submit'])){
@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 <div class="form-container mx-auto">
 
 
-   <form action="" method="post">
+   <form action="register.php" method="post">
       <h3>register now</h3>
       <?php
       if(isset($error)){

@@ -9,12 +9,6 @@ if(isLoggedIn()){
    header('location: admin_page.php');
 }
 
-$loggedin = $_SESSION['loggedin'];
-if($loggedin === 1){
-   header("location: dashboard.php");
-   exit;
-}
-
 
 
 if(isset($_POST['submit'])){
