@@ -141,6 +141,7 @@ footer {
    padding:20px;
    border-radius: 15px;
    padding-bottom: 30px;
+   translate:calc(-50%, 50%);
    background: rgba(238, 238, 238, 0.5);
 }
 
