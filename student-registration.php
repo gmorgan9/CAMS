@@ -1,12 +1,13 @@
 <?php
 
+require_once "app/database/connection.php";
+require_once "app/database/functions.php";
+
 session_start();
 
-if(isset($_SESSION['username'])){
-   header('location:dashboard .php');
+if(isLoggedIn()){
+   header('location: dashboard.php');
 }
-
-require_once "app/database/connection.php";
 
 if(isset($_POST['submit'])){
 
