@@ -1,3 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+:root {
+    --primary-color: #48ceff;
+    --secondary-color: #17181C; 
+    --font-color: #FFFFFF;
+}
+body {
+    background-image: url("/assets/img/bg-img.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+header {
+    /* background-color: #17181c84; */
+    height: 60px;
+}
+
+.logo {
+    color: var(--font-color);
+    float: left;
+    margin-left: 5em;
+    margin-top: 15px;
+}
+
+/* Navigation */
+.nav {
+    float: right;
+    margin-right: 5em;
+    margin-top: 25px;
+}
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 65px;
+}
+.nav-list-item {
+    list-style-type: none;
+}
+.nav-list-item-link {
+    text-decoration: none;
+    color: var(--font-color);
+    text-transform: uppercase;
+}
+.nav-list-item-link:hover {
+    color: var(--secondary-color);
+    margin-bottom: 45px;
+    padding-bottom: 4px;
+    border-bottom: 4px solid var(--secondary-color);
+}
+
+
+.active {
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+}
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
 
 *{
@@ -8,7 +80,7 @@
    text-decoration: none;
 }
 
-.container{
+.land-container{
    min-height: 100vh;
    display: flex;
    align-items: center;
@@ -17,23 +89,23 @@
    padding-bottom: 60px;
 }
 
-.container .content{
+.land-container .content{
    text-align: center;
 }
 
-.container .content h3{
+.land-container .content h3{
    font-size: 30px;
    color:#333;
 }
 
-.container .content h3 span{
+.land-container .content h3 span{
    background: crimson;
    color:#fff;
    border-radius: 5px;
    padding:0 15px;
 }
 
-.container .content h1{
+.land-container .content h1{
    font-size: 50px;
    color:#333;
 }
@@ -42,12 +114,12 @@
    color:crimson;
 }
 
-.container .content p{
+.land-container .content p{
    font-size: 25px;
    margin-bottom: 20px;
 }
 
-.container .content .btn{
+.land-container .content .btn{
    display: inline-block;
    padding:10px 30px;
    font-size: 20px;
@@ -57,7 +129,7 @@
    text-transform: capitalize;
 }
 
-.container .content .btn:hover{
+.land-container .content .btn:hover{
    background: crimson;
 }
 
