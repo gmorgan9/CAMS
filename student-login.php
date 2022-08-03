@@ -5,7 +5,7 @@ session_start();
 $loggedin = $_SESSION['loggedin'];
 ?>
 <script>
-   console.log($loggedin);
+   console.log(<?= json_encode($loggedin); ?>);
 </script>
 <?php
 if($loggedin === 1){
