@@ -1,3 +1,103 @@
+
+<?php
+// Include config file
+require_once "database/connection.php";
+ 
+// Define variables and initialize with empty values
+$fName = $lName = $uName = $email = $password = $confirm_password = $gender = "";
+$fName_err = $lName_err = $uName_err = $email_err = $password_err = $confirm_password_err = $gender_err = "";
+ 
+// Processing form data when form is submitted
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+ 
+    // Validate username
+    if(empty(trim($_POST["uName"]))){
+        $uName_err = "Please enter a username.";
+    } elseif(!preg_match('/^[a-zA-Z0-9_]+$/', trim($_POST["uName"]))){
+        $uName_err = "Username can only contain letters, numbers, and underscores.";
+    } else{
+        // Prepare a select statement
+        $sql = "SELECT studentID FROM students WHERE uName = ?";
+        
+        if($stmt = mysqli_prepare($conn, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "s", $param_uName);
+            
+            // Set parameters
+            $param_uName = trim($_POST["uName"]);
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                /* store result */
+                mysqli_stmt_store_result($stmt);
+                
+                if(mysqli_stmt_num_rows($stmt) == 1){
+                    $uName_err = "This username is already taken.";
+                } else{
+                    $uName = trim($_POST["uName"]);
+                }
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Validate password
+    if(empty(trim($_POST["password"]))){
+        $password_err = "Please enter a password.";     
+    } elseif(strlen(trim($_POST["password"])) < 6){
+        $password_err = "Password must have atleast 6 characters.";
+    } else{
+        $password = trim($_POST["password"]);
+    }
+    
+    // Validate confirm password
+    if(empty(trim($_POST["confirm_password"]))){
+        $confirm_password_err = "Please confirm password.";     
+    } else{
+        $confirm_password = trim($_POST["confirm_password"]);
+        if(empty($password_err) && ($password != $confirm_password)){
+            $confirm_password_err = "Password did not match.";
+        }
+    }
+    
+    // Check input errors before inserting in database
+    if(empty($uName_err) && empty($password_err) && empty($confirm_password_err)){
+        
+        // Prepare an insert statement
+        $sql = "INSERT INTO students (uName, password) VALUES (?, ?)";
+         
+        if($stmt = mysqli_prepare($conn, $sql)){
+            // Bind variables to the prepared statement as parameters
+            mysqli_stmt_bind_param($stmt, "ss", $param_uName, $param_password);
+            
+            // Set parameters
+            $param_uName = $uName;
+            $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+            
+            // Attempt to execute the prepared statement
+            if(mysqli_stmt_execute($stmt)){
+                // Redirect to login page
+                header("location: student-login.php");
+            } else{
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+
+            // Close statement
+            mysqli_stmt_close($stmt);
+        }
+    }
+    
+    // Close connection
+    mysqli_close($conn);
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,7 +187,7 @@
     
     <div class="form w-50 d-flex mx-auto" style="background-color: rgba(28, 28, 28, 0.7); color: white; padding: 20px; border-radius:15px;">
         <!-- <h2>Signup</h2> -->
-     <form class="row g-3 needs-validation" novalidate>
+     <form class="row g-3 needs-validation" novalidate method="POST" action="student-login.php">
          <div class="col-md-4">
            <label for="validationCustom01" class="form-label">First name</label>
            <input type="text" class="form-control" id="validationCustom01" value="" required>
