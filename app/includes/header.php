@@ -17,7 +17,7 @@
                     <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>">Logout</a></li>
                 <?php } else { ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
-                    <li class="nav-list-item"><a class="nav-list-item-link" href="student-login.php">Login/Signup</a></li>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="login.php">Login/Signup</a></li>
                 <?php } ?>
 
 
