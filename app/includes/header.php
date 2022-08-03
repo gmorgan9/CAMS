@@ -8,7 +8,12 @@
             <ul class="nav-list">
                 
                 <?php if(isset($_SESSION['user_fname']) || isset($_SESSION['admin_fname'])){ ?>
-                    <li class="nav-list-item"><a class="nav-list-item-link" href="../dashboard.php"><i class="bi bi-globe2"></i>  Dashboard</a></li>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/dashboard.php' ?>"><i class="bi bi-globe2"></i>  Dashboard</a></li>
+                    <?php if($_SESSION['isadmin'] === 1){ ?>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>"><i class="bi bi-globe2"></i>  Profile</a></li>
+                    <?php } else { ?>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>"><i class="bi bi-globe2"></i>  not Profile</a></li>
+                    <?php }?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php' ?>">Logout</a></li>
                 <?php } else { ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
