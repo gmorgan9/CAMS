@@ -20,6 +20,7 @@ if(isset($_POST['submit'])){
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
    $isadmin = $_POST['isadmin'];
+   // $loggedin = $_POST['loggedin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
 
@@ -30,13 +31,13 @@ if(isset($_POST['submit'])){
       $row = mysqli_fetch_array($result);
 
       if($row['isadmin'] == 1){
-         $_SESSION["loggedin"] = true;
+         $_SESSION['loggedin'] = 1;
          $_SESSION['admin_fname'] = $row['fname'];
          $_SESSION['admin_lname'] = $row['lname'];
          header('location:admin_page.php');
 
       }elseif($row['isadmin'] == 0){
-         $_SESSION["loggedin"] = true;
+         $_SESSION['loggedin'] = 1;
          $_SESSION['user_fname'] = $row['fname'];
          $_SESSION['user_lname'] = $row['lname'];
          header('location:user_page.php');
