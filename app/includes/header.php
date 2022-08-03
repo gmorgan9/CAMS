@@ -12,7 +12,7 @@
                     <?php if(isset($_SESSION['isadmin']) === 1){ ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="../dashboard.php"><i class="bi bi-globe2"></i>  Admin Dashboard</a></li>
                     <?php } else {} ?>
-                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo BASE_URL . '/logout.php'?>">Logout</a></li>
+                    <li class="nav-list-item"><a class="nav-list-item-link" href="<?php echo ROOT_PATH . '/logout.php'?>">Logout</a></li>
                 <?php } else { ?>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="/">Home</a></li>
                     <li class="nav-list-item"><a class="nav-list-item-link" href="student-login.php">Login/Signup</a></li>
