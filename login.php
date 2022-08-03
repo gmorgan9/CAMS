@@ -5,9 +5,9 @@ require_once "app/database/functions.php";
 
 session_start();
 
-if(isLoggedIn()){
-   header('location: admin_page.php');
-}
+// if(isLoggedIn()){
+//    header('location: admin_page.php');
+// }
 
 
 
