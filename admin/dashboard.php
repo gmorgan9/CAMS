@@ -1,12 +1,12 @@
 <?php
 
-require_once "app/database/connection.php";
-require_once "app/database/functions.php";
+require_once "../app/database/connection.php";
+require_once "../app/database/functions.php";
 
 session_start();
 
 if(!isLoggedIn()){
-   header('location:student-login.php');
+   header('location:../student-login.php');
 }
 
 ?>
@@ -20,7 +20,7 @@ if(!isLoggedIn()){
    <title>admin page</title>
 
    <!-- Custom Styles -->
-   <link rel="stylesheet" href="main-style.css">
+   <link rel="stylesheet" href="../main-style.css">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -29,7 +29,7 @@ if(!isLoggedIn()){
 
 </head>
 <body>
-<?php include("app/includes/header.php"); ?>
+<?php include("../app/includes/header.php"); ?>
    
 <div class="land-container">
 
@@ -42,7 +42,7 @@ if(!isLoggedIn()){
 
 </div>
 
-<?php include("app/includes/footer.php"); ?>
+<?php include("../app/includes/footer.php"); ?>
 
 </body>
 </html>
