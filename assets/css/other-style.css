@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-    /* color: var(--font-color); */
+    color: var(--dark-color);
     float: left;
     margin-left: 5em;
     margin-top: 15px;
