@@ -65,14 +65,11 @@ require_once "database/validation.php";
             <form class="row g-3 needs-validation mx-auto" novalidate>
                 <div class="col-md-6 mx-auto">
                   <label for="validationCustomUsername" class="form-label">Username</label>
-                  <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend">@</span>
                     <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                     <div class="invalid-feedback">
                       Please enter a username.
                     </div>
                   </div>
-                </div>
                 <div class="row"></div>
                 <div class="col-md-6 mx-auto">
                     <label for="validationCustomUsername" class="form-label">Password</label>
