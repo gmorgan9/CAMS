@@ -3,6 +3,11 @@
 session_start();
 
 $loggedin = $_SESSION['loggedin'];
+?>
+<script>
+   console.log($loggedin);
+</script>
+<?php
 if($loggedin === 1){
    header("location: dashboard.php");
    exit;
