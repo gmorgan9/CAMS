@@ -25,7 +25,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $error[] = 'passwords do not match!';
       }else{
-         $insert = "INSERT INTO students (fname, lname, uname, email, password, isadmin) VALUES('$fname','$lname','$uname','$email','$pass','$isadmin')";
+         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
          header('location:student-login.php');
       }
