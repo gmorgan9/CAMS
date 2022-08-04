@@ -84,7 +84,11 @@ if(isset($_POST['update-profile'])){
 <!-- start MAIN -->
 <div class="main"> 
    
+<?php 
 
+if (mysqli_num_rows($result) > 0) {
+   while($row = mysqli_fetch_assoc($result)) {
+?>
 
   <div class="page-header mx-auto">
     <p class="page_title" style="float: left; padding-top: 2px;">Profile</p>
@@ -115,10 +119,6 @@ if(isset($_POST['update-profile'])){
             echo '<span class="error-msg">'.$success.'</span>';
          };
       };
-
-      
-      if (mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($result)) {
 
       ?>
       <p><?php if ($success) echo $success; ?></p>
