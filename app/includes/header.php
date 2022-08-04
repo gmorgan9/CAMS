@@ -51,7 +51,7 @@
 
 <!-- Brand -->
 <a class="navbar-brand" href="/">
-  <h3>Course Assignment Management System</h3>
+<i class="bi bi-file-earmark-check"></i> <h3>Course Assignment Management System</h3>
 </a>
 
         <ul class="navbar-nav ms-auto d-flex flex-row">
