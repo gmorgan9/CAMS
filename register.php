@@ -1,6 +1,6 @@
 <?php
-include("app/database/connection.php");
-include("path.php");
+include "app/database/connection.php";
+require_once "path.php";
 
 
 session_start();
