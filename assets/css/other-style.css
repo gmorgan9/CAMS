@@ -130,7 +130,7 @@ footer {
 .dash-wrapper .left-sidebar {
 	flex: 2;
 	height: 100%;
-	background: var(--dark-color);
+	background: var(--secondary-color);
 }
 
 .dash-wrapper .left-sidebar ul {
@@ -143,11 +143,11 @@ footer {
 .dash-wrapper .left-sidebar ul li a {
 	padding: 18px;
 	display: block;
-	border-bottom: 1px solid var(--hover-color);
+	border-bottom: 1px solid var(--secondary-color);
 }
 
 .dash-wrapper .left-sidebar ul li a:hover {
-	background: var(--hover-color);
+	background: var(--secondary-color);
 }
 
 .dash-wrapper .admin-content {
