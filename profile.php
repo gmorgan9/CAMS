@@ -36,7 +36,7 @@ if(!isLoggedIn()){
    <div class="content">
       <h3><span>Standard Profile Page</span></h3>
       <h1>welcome <span><?php echo $_SESSION['user_fname'] ?></span></h1>
-      <p>this is an admin page</p>
+      <p>this is a standard profile</p>
       <a href="logout.php" class="btn">logout</a>
    </div>
 
