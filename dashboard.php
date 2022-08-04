@@ -40,7 +40,7 @@ if(!isLoggedIn()){
 <div class="main">
   <div class="page-header" style="display:inline-block;">
     <p class="page_title" style="float: left;">Dashboard</p>
-    <nav aria-label="breadcrumb mx-auto">
+    <nav aria-label="breadcrumb col-md-8">
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Library</li>
