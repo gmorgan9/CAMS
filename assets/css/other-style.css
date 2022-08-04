@@ -29,19 +29,6 @@ header {
     height: 60px;
 }
 
-/* .logo {
-    float: left;
-    margin-left: 5em;
-    margin-top: 15px;
-} */
-/* .logo-link {
-   color: var(--dark-color);
-} */
-
-/* .active {
-    color: var(--primary-color);
-} */
-
 footer {
     background-color: var(--secondary-color);
 }
@@ -53,8 +40,8 @@ footer {
    display: flex;
    align-items: center;
    justify-content: center;
-   /* padding:20px; */
-   /* padding-bottom: 60px; */
+   margin-top: 25px;
+   background-color: #eee;
 }
 
 .land-container .content{
