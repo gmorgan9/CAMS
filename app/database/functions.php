@@ -2,7 +2,6 @@
 
 session_start();
 require('connection.php');
-require("../../path.php");
 
 function isLoggedIn()
 {
