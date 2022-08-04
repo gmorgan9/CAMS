@@ -13,7 +13,7 @@ if(!isLoggedIn()){
 
 
 $sID = $_SESSION['sID'];
-$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+$result = " SELECT * FROM students WHERE studentID = '$sID' ";
 
 ?>
 
@@ -82,7 +82,7 @@ $select = " SELECT * FROM students WHERE studentID = '$sID' ";
          };
       };
       if (mysqli_num_rows($result) > 0) {
-      while($row = mysqli_fetch_assoc($select)) {
+      while($row = mysqli_fetch_assoc($result)) {
 
       ?>
       <div class="form-group" style="margin-left: 30px;">
