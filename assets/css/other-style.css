@@ -12,7 +12,7 @@
     --dark-font: #000;
 }
 body {
-    /* background-color: #333 !important; */
+    background-color: #eee !important;
     color: #000;
 }
 
@@ -154,7 +154,7 @@ footer {
     padding: 5px 8px;
     height: 40px;
     width: 98%;
-    background-color: #eee;
+    /* background-color: #eee; */
 }
 ul.breadcrumb {
     padding-top: 5px;
