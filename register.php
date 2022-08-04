@@ -1,6 +1,6 @@
 <?php
 
-require_once "database/connection.php";
+require_once "app/database/connection.php";
 
 if(isset($_POST['submit'])){
 
