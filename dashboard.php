@@ -51,6 +51,8 @@ if(!isLoggedIn()){
 
 
 
+<div class="row">
+
 
   <div class="card" style="width: 18rem;">
   <div class="card-body">
@@ -82,6 +84,8 @@ if(!isLoggedIn()){
   </div>
 </div>
 
+
+</div>
 
 
 </div>
