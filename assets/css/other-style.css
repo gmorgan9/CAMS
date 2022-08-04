@@ -152,7 +152,7 @@ ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: #eee;
-    text-align: right !important;
+    float: right !important;
   }
   ul.breadcrumb li {
     display: inline;
