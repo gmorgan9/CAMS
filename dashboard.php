@@ -73,7 +73,7 @@ if(!isLoggedIn()){
     <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Total Assignments Due</h5>
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">6</h6>
-    <p class="card-text text-end">View Details</p> 
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
     </div>
     <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
