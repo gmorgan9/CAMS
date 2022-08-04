@@ -13,7 +13,8 @@ if(!isLoggedIn()){
 
 
 $sID = $_SESSION['sID'];
-$result = " SELECT * FROM students WHERE studentID = '$sID' ";
+$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+$result = mysqli_query($conn, $select);
 
 ?>
 
