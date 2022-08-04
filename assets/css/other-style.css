@@ -136,7 +136,7 @@ footer {
 
 /* Sidebar */
 .sidebar {
-    background-color: #eee;
+    /* background-color: #eee; */
     position:fixed;
     top: 0;
     bottom: 0;
@@ -154,7 +154,7 @@ footer {
     padding: 5px 8px;
     height: 40px;
     width: 98%;
-    /* background-color: #eee; */
+    background-color: #fff;
 }
 ul.breadcrumb {
     padding-top: 5px;
