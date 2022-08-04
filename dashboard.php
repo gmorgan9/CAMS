@@ -56,22 +56,23 @@ if(!isLoggedIn()){
 
   <div class="card" style="width: 24.1rem; margin-right: 20px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
+  <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Total Courses</h5>
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
     <p class="card-text text-end">View Details</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    </div>
+    <p style="float: left; font-size: 40px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
 </div>
 
 <div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
     <div class="card-content" style="float: right;">
-    <h5 class="card-title text-end">Total Assignments Due</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text text-end" >View Details</p> 
+    <h5 class="card-title text-end">Total Courses</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
+    <p class="card-text text-end">View Details</p> 
     </div>
-    <p style="float: left;"><i class="bi bi-file-earmark-text"></i></p>
+    <p style="float: left; font-size: 40px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
     
 </div>
