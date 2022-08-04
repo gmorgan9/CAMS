@@ -11,6 +11,10 @@ if(!isLoggedIn()){
    header('location: /login.php');
 }
 
+
+$sID = $_SESSION['sID'];
+$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+
 ?>
 
 <!DOCTYPE html>
@@ -77,10 +81,14 @@ if(!isLoggedIn()){
             echo '<span class="error-msg">'.$error.'</span>';
          };
       };
+
+      while($rows=$select->fetch_assoc())
+                {
+
       ?>
       <div class="form-group" style="margin-left: 30px;">
          <label for="studentID">Student ID</label>
-         <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $_SESSION['sID']; ?>" name="studentID" disabled>
+         <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
       </div>
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
@@ -115,6 +123,7 @@ if(!isLoggedIn()){
       </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
+      <?php }?>
    </form>
 </div>
 
