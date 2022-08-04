@@ -130,14 +130,14 @@ footer {
 .dash-wrapper .left-sidebar {
 	flex: 2;
 	height: 100%;
-	background: var(--hover-color);
+	background: var(--dark-color);
 }
 
 .dash-wrapper .left-sidebar ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
-	color: aliceblue;
+	color: aliceblue !important;
 }
 
 .dash-wrapper .left-sidebar ul li a {
