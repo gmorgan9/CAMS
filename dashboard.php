@@ -39,7 +39,7 @@ if(!isLoggedIn()){
         
 <div class="main">
   <div class="page-header mx-auto">
-    <p class="page_title" style="float: left;">Dashboard</p>
+    <p class="page_title" style="float: left; padding-top: 2px;">Dashboard</p>
     <ul class="breadcrumb">
       <li><a href="#">Home</a></li>
       <li><a href="#">Pictures</a></li>
