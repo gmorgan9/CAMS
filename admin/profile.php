@@ -100,13 +100,15 @@ if(!isLoggedIn()){
          <label for="fname">Email Address</label>
          <input class="form-control" id="email" type="email" name="email" required>
       </div>   
-      <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <div class="row" style="margin-left: 20px;">
+      <div class="form-group pt-3" style="width: 48.6%;">
          <label for="fname">Password</label>
          <input class="form-control" id="password" type="password" name="password" required>
       </div>   
       <div class="form-group pt-3 mx-auto" style="width: 95%;">
-         <label for="fname">Cnfirm Password</label>
+         <label for="fname">Confirm Password</label>
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
+      </div>
       </div>
       <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
