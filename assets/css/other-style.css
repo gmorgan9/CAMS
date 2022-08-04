@@ -121,7 +121,9 @@ footer {
 }
 
 /* SideBar */
-
+header {
+	background: var(--primary-color);
+}
 .dash-wrapper {
 	display: flex;
 	height: calc(100% - 66px);
