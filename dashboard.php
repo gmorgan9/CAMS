@@ -56,17 +56,7 @@ if(!isLoggedIn()){
 
   <div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">View Details</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
-  </div>
-</div>
-
-<div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Total Courses</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text text-end">View Details</p>
     <a href="#" class="card-link">Card link</a>
@@ -74,15 +64,25 @@ if(!isLoggedIn()){
   </div>
 </div>
 
-<div class="card" style="width: 24.1em; border-radius: 0 !important; border-color: #fff;">
+<div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
+    <h5 class="card-title">Total Assignments Due</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text">View Details</p>
+    <p class="card-text text-end">View Details</p>
     <a href="#" class="card-link">Card link</a>
     <a href="#" class="card-link">Another link</a>
   </div>
 </div>
+
+<!-- <div class="card" style="width: 24.1em; border-radius: 0 !important; border-color: #fff;">
+  <div class="card-body">
+    <h5 class="card-title">Total </h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text text-end">View Details</p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div> -->
 
 
 </div>
