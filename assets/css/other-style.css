@@ -122,22 +122,41 @@ footer {
 
 /* SideBar */
 
-.left-sidebar {
+.dash-wrapper {
+	display: flex;
+	height: calc(100% - 66px);
+}
+
+.dash-wrapper .left-sidebar {
 	flex: 2;
 	height: 100%;
 	background: var(--hover-color);
 }
-.left-sidebar ul {
+
+.dash-wrapper .left-sidebar ul {
 	list-style: none;
 	margin: 0px;
 	padding: 0px;
 	color: aliceblue;
 }
-.left-sidebar ul li a {
+
+.dash-wrapper .left-sidebar ul li a {
 	padding: 18px;
 	display: block;
 	border-bottom: 1px solid var(--hover-color);
 }
-.left-sidebar ul li a:hover {
+
+.dash-wrapper .left-sidebar ul li a:hover {
 	background: var(--hover-color);
+}
+
+.dash-wrapper .admin-content {
+	flex: 8;
+	height: 100%;
+	padding: 40px 100px 100px;
+	overflow-y: scroll;
+}
+.dash-content .page-title {
+	text-align: center;
+	margin-bottom: 1.5rem;
 }
