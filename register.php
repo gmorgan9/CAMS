@@ -1,7 +1,4 @@
 <?php
-
-require_once "app/database/connection.php";
-require_once "app/database/path.php";
 require_once "app/database/functions.php";
 
 session_start();
@@ -10,38 +7,38 @@ if(isLoggedIn()){
    header('location: dashboard.php');
 }
 
-if(isset($_POST['register'])){
+// if(isset($_POST['register'])){
 
-   $fname = mysqli_real_escape_string($conn, $_POST['fname']);
-   $lname = mysqli_real_escape_string($conn, $_POST['lname']);
-   $uname = mysqli_real_escape_string($conn, $_POST['uname']);
-   $email = mysqli_real_escape_string($conn, $_POST['email']);
-   $pass = md5($_POST['password']);
-   $cpass = md5($_POST['cpassword']);
-   $loggedin = 0;
-   //$user_type = $_POST['user_type'];
+//    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+//    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+//    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
+//    $email = mysqli_real_escape_string($conn, $_POST['email']);
+//    $pass = md5($_POST['password']);
+//    $cpass = md5($_POST['cpassword']);
+//    $loggedin = 0;
+//    //$user_type = $_POST['user_type'];
 
-   $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
+//    $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
 
-   $result = mysqli_query($conn, $select);
+//    $result = mysqli_query($conn, $select);
 
-   if(mysqli_num_rows($result) > 0){
+//    if(mysqli_num_rows($result) > 0){
 
-      $error[] = 'user already exist!';
+//       $error[] = 'user already exist!';
 
-   }else{
+//    }else{
 
-      if($pass != $cpass){
-         $error[] = 'Passwords do not match!';
-      }else{
-         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type')";
-         mysqli_query($conn, $insert);
-         echo "success";
-         header('location:login.php');
-      }
-   }
+//       if($pass != $cpass){
+//          $error[] = 'Passwords do not match!';
+//       }else{
+//          $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type')";
+//          mysqli_query($conn, $insert);
+//          echo "success";
+//          header('location:login.php');
+//       }
+//    }
 
-};
+// };
 
 
 ?>
@@ -89,7 +86,7 @@ if(isset($_POST['register'])){
          <option value="user">user</option>
          <option value="admin">admin</option>
       </select> -->
-      <input type="submit" name="register" value="register now" class="form-btn">
+      <input type="submit" name="register_btn" value="register now" class="form-btn">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
