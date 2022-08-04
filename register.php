@@ -1,5 +1,5 @@
 <?php
-require_once "app/database/functions.php";
+// require_once "app/database/functions.php";
 
 session_start();
 
@@ -39,6 +39,20 @@ if(isLoggedIn()){
 //    }
 
 // };
+
+
+$servername = "localhost";
+$username = "garrett";
+$password = "BIGmorgan1999!";
+$database = "cams";
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+  die("Connection failed: " . mysqli_connect_error());
+}
 
 
 // receive all input values from the form. Call the e() function
