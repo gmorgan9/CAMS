@@ -38,7 +38,7 @@ if(!isLoggedIn()){
 <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
         
 <div class="main">
-  <div class="page-header">
+  <div class="page-header mx-auto">
     <p class="page_title" style="float: left;">Dashboard</p>
     <ul class="breadcrumb">
       <li><a href="#">Home</a></li>
