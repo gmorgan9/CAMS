@@ -102,11 +102,11 @@ if(isset($_POST['update-profile'])){
 <form action="" method="post">
       <h3 class="mx-auto" style="width: 95%;">Admin Profile</h3>
       <?php
-      if(isset($error)){
-         foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
-         };
-      };
+      // if(isset($error)){
+      //    foreach($error as $error){
+      //       echo '<span class="error-msg">'.$error.'</span>';
+      //    };
+      // };
 
       if(isset($success)){
          foreach($success as $success){
