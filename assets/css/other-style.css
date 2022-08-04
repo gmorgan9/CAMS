@@ -154,12 +154,13 @@ footer {
     background-color: #eee;
 }
 ul.breadcrumb {
+    padding-top: 15px;
     list-style: none;
     float: right !important;
   }
   ul.breadcrumb li {
     display: inline;
-    font-size: 10px;
+    font-size: 12px;
   }
   ul.breadcrumb li+li:before {
     padding: 8px;
