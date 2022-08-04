@@ -44,7 +44,7 @@
     <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
 
     <?php } else { ?>
-        <nav id="main-navbar" class="navbar navbar-expand-lg text-white fixed-top">
+        <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <?php }?>
   <!-- Container wrapper -->
   <div class="container-fluid">
