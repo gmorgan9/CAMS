@@ -26,49 +26,21 @@ body {
 }
 
 header {
-    /* background-color: #17181c84; */
     height: 60px;
 }
 
-.logo {
+/* .logo {
     float: left;
     margin-left: 5em;
     margin-top: 15px;
-}
-.logo-link {
+} */
+/* .logo-link {
    color: var(--dark-color);
-}
-
-/* Navigation */
-/* .nav {
-    float: right;
-    margin-right: 5em;
-    margin-top: 25px;
-} */
-/* .nav-list {
-    display: flex;
-    flex-direction: row;
-    gap: 65px;
-}
-.nav-list-item {
-    list-style-type: none;
-}
-.nav-list-item-link {
-    text-decoration: none;
-    color: var(--dark-color);
-    text-transform: uppercase;
-}
-.nav-list-item-link:hover {
-    color: var(--primary-color);
-    margin-bottom: 45px;
-    padding-bottom: 4px;
-    border-bottom: 4px solid var(--primary-color);
 } */
 
-
-.active {
+/* .active {
     color: var(--primary-color);
-}
+} */
 
 footer {
     background-color: var(--secondary-color);
