@@ -54,7 +54,7 @@ if(!isLoggedIn()){
 <div class="row">
 
 
-  <div class="card" style="width: 24rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
+  <div class="card" style="width: 24.2rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -64,7 +64,7 @@ if(!isLoggedIn()){
   </div>
 </div>
 
-<div class="card" style="width: 24rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
+<div class="card" style="width: 24.2rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
@@ -74,7 +74,7 @@ if(!isLoggedIn()){
   </div>
 </div>
 
-<div class="card" style="width: 24rem; border-radius: 0 !important; border-color: #fff;">
+<div class="card" style="width: 24.2rem; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
