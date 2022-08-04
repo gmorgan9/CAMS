@@ -103,8 +103,10 @@ if(!isLoggedIn()){
          <label for="fname">Cnfirm Password</label>
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
-      <input type="submit" name="submit" value="register now" class="btn btn-secondary mx-auto">
+      <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <input type="submit" name="submit" value="register now" class="btn btn-secondary">
       <p>already have an account? <a href="student-login.php">login now</a></p>
+   </div>
    </form>
 </div>
 
