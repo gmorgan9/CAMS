@@ -11,14 +11,45 @@
     --font-color: #FFFFFF;
     --dark-font: #000;
 }
-body {
-    /* background-color: #333 !important; */
+/* body {
+    background-color: #333 !important;
     color: #000;
+} */
+
+/* header {
+    background-color: #17181c84;
+    height: 60px;
+} */
+
+html,
+body {
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #f6f6f6;
+  font-family: "Lora", serif;
 }
 
-header {
-    /* background-color: #17181c84; */
-    height: 60px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Candal", serif;
+  color: #5c5b5b;
+  margin: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 .logo {
