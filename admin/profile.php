@@ -109,7 +109,7 @@ if(!isLoggedIn()){
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Confirm Password</label>
-            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php echo $_SESSION['cpassword']; ?>" required>
+            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php echo $_SESSION['cpass']; ?>" required>
          </div>
       </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
