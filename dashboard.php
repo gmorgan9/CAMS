@@ -32,7 +32,7 @@ if(!isLoggedIn()){
 </head>
 <body>
     
-<?php include(ROOT_PATH . "app/includes/header.php"); ?>
+<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 <!-- Admin Page Wrapper -->
 <div class="dash-wrapper">
 
