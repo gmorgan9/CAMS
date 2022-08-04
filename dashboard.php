@@ -47,14 +47,14 @@ if(!isLoggedIn()){
 
 
   <!-- stats -->
-<div class="stats d-flex justify-content-center" style="margin-left: -1px; margin-top: 5px !important; border-radius: 0 !important;">
+<div class="stats d-flex justify-content-center" style="margin-left: -1px; margin-top: 5px !important;">
 
 
 
 <div class="row">
 
 
-  <div class="card" style="width: 24rem; margin-right: 10px;">
+  <div class="card" style="width: 24rem; margin-right: 10px; border-radius: 0 !important;">
   <div class="card-body">
     <h5 class="card-title">Card title</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
