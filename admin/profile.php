@@ -135,7 +135,7 @@ if(!isLoggedIn()){
             password.setAttribute("type", type);
             
             // toggle the icon
-            this.classList.toggle("bi-check-square");
+            this.classList.toggle("bi bi-check-square");
         });
 
         // prevent form submit
