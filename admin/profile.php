@@ -63,7 +63,7 @@ if(!isLoggedIn()){
   </div>
   <div class="jumbotron jumbotron-fluid bg-white m-2 mx-auto" style="width: 98%;">
   <div class="container">
-    <h1 class="display-4">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
+    <h1 class="display-4 text-center">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
 </div>
