@@ -252,7 +252,7 @@ header {
 }
 
 .dash-wrapper .left-sidebar {
-	flex: 1;
+	flex: 2;
 	height: 100%;
 	background: var(--secondary-color);
 }
@@ -275,9 +275,9 @@ header {
 }
 
 .dash-wrapper .admin-content {
-	flex: 5;
+	flex: 8;
 	height: 100%;
-	padding: 40px 100px 100px;
+	padding: 40px 50px 50px;
 	overflow-y: scroll;
 }
 .dash-content .page-title {
