@@ -40,12 +40,12 @@ if(!isLoggedIn()){
 <div class="main">
   <div class="page-header" style="display:inline-block;">
     <p class="page_title">Dashboard</p>
-    <nav aria-label="breadcrumb" style="text-align: right;">
-      <ul class="breadcrumb" >
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Library</li>
-      </ul>
-    </nav>
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Pictures</a></li>
+      <li><a href="#">Summer 15</a></li>
+      <li>Italy</li>
+    </ul>
   </div>
 </div>
 
