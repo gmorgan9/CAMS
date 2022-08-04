@@ -12,6 +12,6 @@ if (mysqli_query($conn, $sql)) {
 
 session_unset();
 session_destroy();
-header('location:student-login.php');
+header('location:login.php');
 
 ?>
