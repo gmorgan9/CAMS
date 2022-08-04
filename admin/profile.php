@@ -78,7 +78,7 @@ if(!isLoggedIn()){
          };
       };
       ?>
-      <div class="form-group" style="margin-left: 30px; width: 20%;">
+      <div class="form-group" style="margin-left: 30px; width: 10%;">
          <label for="studentID">Student ID</label>
          <input class="form-control" id="studentID" type="text" value="<?php echo $_SESSION['sID']; ?>" name="studentID" readonly>
       </div>
