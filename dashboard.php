@@ -41,7 +41,7 @@ if(!isLoggedIn()){
   <div class="page-header" style="display:inline-block;">
     <p class="page_title" style="float: left;">Dashboard</p>
     <nav aria-label="breadcrumb">
-      <ol class="breadcrumb auto-ml">
+      <ol class="breadcrumb mx-auto">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
         <li class="breadcrumb-item active" aria-current="page">Library</li>
       </ol>
