@@ -106,6 +106,7 @@ if(!isLoggedIn()){
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Password</label>
             <input class="form-control" id="password" type="password" name="password" value="<?php echo $_SESSION['pass']; ?>" required>
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Confirm Password</label>
@@ -123,6 +124,26 @@ if(!isLoggedIn()){
 
 
 <?php include(ROOT_PATH . "app/includes/footer.php"); ?>
+
+<script>
+   const togglePassword = document.querySelector("#togglePassword");
+        const password = document.querySelector("#password");
+
+        togglePassword.addEventListener("click", function () {
+            // toggle the type attribute
+            const type = password.getAttribute("type") === "password" ? "text" : "password";
+            password.setAttribute("type", type);
+            
+            // toggle the icon
+            this.classList.toggle("bi-eye");
+        });
+
+        // prevent form submit
+        const form = document.querySelector("form");
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+        });
+</script>
 
 </body>
 </html>
