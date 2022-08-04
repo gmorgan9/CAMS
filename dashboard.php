@@ -40,14 +40,12 @@ if(!isLoggedIn()){
 <div class="main">
   <div class="page-header" style="display:inline-block;">
     <p class="page_title">Dashboard</p>
-    <div class="breadcrumb-div">
-      <ul class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Pictures</a></li>
-        <li><a href="#">Summer 15</a></li>
+    <ul class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Pictures</a></li>
+      <li><a href="#">Summer 15</a></li>
       <li>Italy</li>
-      </ul>
-    </div>
+    </ul>
   </div>
 </div>
 
