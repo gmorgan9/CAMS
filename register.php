@@ -41,7 +41,7 @@ if(isLoggedIn()){
 // };
 
 
-if(isset($_POST['register'])){
+
 
 $servername = "localhost";
 $username = "garrett";
@@ -56,7 +56,7 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-
+if(isset($_POST['register'])){
 // receive all input values from the form. Call the e() function
     // defined below to escape form values
     $fname    =  e($_POST['fname']);
