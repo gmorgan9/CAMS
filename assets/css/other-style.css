@@ -149,12 +149,13 @@ footer {
 
 /* Style the list */
 .breadcrumb.div {
-    text-align: right;
+    
 }
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
     background-color: #eee;
+    text-align: right !important;
   }
   ul.breadcrumb li {
     display: inline;
