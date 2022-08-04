@@ -265,6 +265,7 @@ header {
 }
 
 .dash-wrapper .left-sidebar ul li a {
+    text-decoration: none;
     color: aliceblue !important;
 	padding: 18px;
 	display: block;
