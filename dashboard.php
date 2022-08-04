@@ -33,8 +33,9 @@ if(!isLoggedIn()){
 <body>
     
 <?php include("app/includes/header.php"); ?>
+<?php include("app/includes/sidebar.php"); ?>
 
-    <h1>Dashboard(everyone can see this, admin or not)</h1>
+    <h1>Dashboard</h1>
 
 
       <?php include("app/includes/footer.php"); ?>
