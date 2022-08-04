@@ -61,7 +61,7 @@ if(!isLoggedIn()){
       <li>Profile</li>
     </ul>
   </div>
-  <div class="jumbotron jumbotron-fluid m-2">
+  <div class="jumbotron jumbotron-fluid bg-white m-2">
   <div class="container">
     <h1 class="display-4">Fluid jumbotron</h1>
     <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
