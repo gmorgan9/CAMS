@@ -62,7 +62,7 @@ if(!isLoggedIn()){
     </ul>
   </div>
   <div class="page-header mx-auto m-2">
-  <h1>welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
+  <p class="text-center">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></p>
   </div>
 
  
