@@ -36,8 +36,10 @@ if(isset($_POST['update-profile'])){
       // $error[] = 'user already exist!';
       $update = "UPDATE students SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
       mysqli_query($conn, $update);
-      // header('location:login.php');}else{
-         $success[] = 'Success!';
+      header('location:login.php');
+      $success[] = 'Success!';
+   } else {
+      $error[] = 'Error!';
    }
 };
 
