@@ -11,7 +11,7 @@
     --font-color: #FFFFFF;
     --dark-font: #000;
 }
-.detail-btn a:hover {
+.card-content a:hover {
     color: #48ceff;
   }
 body {
