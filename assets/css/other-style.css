@@ -15,6 +15,7 @@
     text-decoration: none; 
     color: black;
     text-align:right;
+    margin-right: 0;
 }
 .detail-btn:hover {
     color: #48ceff;
