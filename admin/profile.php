@@ -105,7 +105,7 @@ if(!isLoggedIn()){
          <label for="fname">Password</label>
          <input class="form-control" id="password" type="password" name="password" required>
       </div>   
-      <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <div class="form-group pt-3" style="width: 48.6%;">
          <label for="fname">Confirm Password</label>
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
