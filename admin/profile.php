@@ -80,27 +80,29 @@ if(!isLoggedIn()){
       };
       ?>
       <div class="form-group">
-         <input class="form-control" type="text" name="fname" required placeholder="enter your first name">
+         <label for="fname">First Name</label>
+         <input class="form-control" id="fname" type="text" name="fname" required>
       </div>
       <div class="form-group">
-         <input class="form-control" type="text" name="lname" required placeholder="enter your last name">
+         <label for="fname">Last Name</label>
+         <input class="form-control" id="lname" type="text" name="lname" required>
       </div>
       <div class="form-group">
-         <input class="form-control" type="text" name="uname" required placeholder="enter your user name">
+         <label for="fname">User Name</label>
+         <input class="form-control" id="uname" type="text" name="uname" required>
       </div>   
       <div class="form-group">
-         <input class="form-control" type="email" name="email" required placeholder="enter your email">
+         <label for="fname">Email Address</label>
+         <input class="form-control" id="email" type="email" name="email" required>
       </div>   
       <div class="form-group">
-         <input class="form-control" type="password" name="password" required placeholder="enter your password">
+         <label for="fname">Password</label>
+         <input class="form-control" id="password" type="password" name="password" required>
       </div>   
-      <div class="form-group">
-         <input class="form-control" type="password" name="cpassword" required placeholder="confirm your password">
+      <div class="form-group w-25">
+         <label for="fname">Cnfirm Password</label>
+         <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
-      <!-- <select name="user_type">
-         <option value="user">user</option>
-         <option value="admin">admin</option>
-      </select> -->
       <input type="submit" name="submit" value="register now" class="form-btn">
       <p>already have an account? <a href="student-login.php">login now</a></p>
    </form>
