@@ -82,7 +82,7 @@ $select = " SELECT * FROM students WHERE studentID = '$sID' ";
          };
       };
 
-      while($rows=$select->fetch_assoc())
+      while($row = mysqli_fetch_assoc($select))
                 {
 
       ?>
