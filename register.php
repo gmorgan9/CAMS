@@ -17,7 +17,7 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $isadmin = $_POST['isadmin'];
+   // $isadmin = $_POST['isadmin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
 
@@ -30,7 +30,7 @@ if(isset($_POST['submit'])){
    }else{
 
       if($pass != $cpass){
-         $error[] = 'passwords do not match!';
+         $error[] = 'Passwords do not match!';
       }else{
          $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
