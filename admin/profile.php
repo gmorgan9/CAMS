@@ -38,9 +38,7 @@ if(isset($_POST['update-profile'])){
       mysqli_query($conn, $update);
       header('location:' . BASE_URL . '/admin/profile.php');
       $success[] = 'Success!';
-   } else {
-      $error[] = 'Error!';
-   }
+   } 
 };
 
 ?>
