@@ -121,6 +121,7 @@ if(isset($_POST['update-profile'])){
       while($row = mysqli_fetch_assoc($result)) {
 
       ?>
+      <p><?php if ($success) echo $success; ?></p>
       <div class="form-group" style="margin-left: 30px;">
          <label for="studentID">Student ID</label>
          <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
