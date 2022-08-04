@@ -2,7 +2,7 @@
 
 require_once "app/database/connection.php";
 require_once "app/database/path.php";
-// require_once "app/database/functions.php";
+require_once "app/database/functions.php";
 
 session_start();
 
