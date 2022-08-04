@@ -106,7 +106,7 @@ if(!isLoggedIn()){
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Password</label>
             <input class="form-control" id="password" type="password" name="password" value="<?php echo $_SESSION['pass']; ?>" required>
-            <i class="bi bi-check-square" id="togglePassword" style="margin-left: -30px; cursor: pointer;"></i>
+            <i class="bi bi-eye-slash" id="togglePassword" style="cursor: pointer;"> Show/Hide Password</i>
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Confirm Password</label>
@@ -135,7 +135,7 @@ if(!isLoggedIn()){
             password.setAttribute("type", type);
             
             // toggle the icon
-            this.classList.toggle("bi-square");
+            this.classList.toggle("bi-eye");
         });
 
         // prevent form submit
