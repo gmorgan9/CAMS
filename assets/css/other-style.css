@@ -188,7 +188,7 @@ footer {
 }
 
 
-
+/* 
 .land-container{
    min-height: 100vh;
    display: flex;
@@ -240,7 +240,7 @@ footer {
 
 .land-container .content .btn:hover{
    background: var(--primary-color);
-}
+} */
 
 /* SideBar */
 header {
