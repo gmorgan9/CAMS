@@ -26,6 +26,11 @@ if(!isLoggedIn()){
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+    <style>
+      .detail-btn:hover {
+        color: #48ceff;
+      }
+    </style>
 
 
     <title>CAMS | Dashboard</title>
@@ -59,7 +64,7 @@ if(!isLoggedIn()){
   <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Total Courses</h5>
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
-    <p class="card-text text-end btn btn-primary"><a href="#" style="text-decoration: none; color: black;">View Details</a></p>
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="text-decoration: none; color: black;">View Details</a></p>
     </div>
     <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-briefcase"></i></p>
   </div>
