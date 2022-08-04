@@ -63,7 +63,7 @@ if(!isLoggedIn()){
     <h5 class="card-title text-end">Total Courses</h5>
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
     <!-- <p class="card-text text-end"> -->
-      <a href="#" style="text-decoration: none; color: black;">View Details</a>
+      <a href="#" class="detail-btn" style="">View Details</a>
     <!-- </p> -->
     </div>
     <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-briefcase"></i></p>
