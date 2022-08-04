@@ -65,13 +65,12 @@ if(!isLoggedIn()){
   <div class="jumbotron jumbotron-fluid bg-white m-2 mx-auto" style="width: 98%;">
   <div class="container">
     <h3 class="display-6 text-center" style="padding-top: 10px !important;">Welcome, <span style="text-transform: capitalize;"><?php echo $_SESSION['admin_fname'] ?>!</span></h3>
-    <p class="subtitle text-muted text-center">Admin Profile Page</p>
   </div>
 </div>
 
-<div class="page-content mx-auto" style="margin-top: -6.5px;">
+<div class="page-content mx-auto">
 <form action="" method="post">
-      <h3 class="mx-auto" style="width: 95%;">Edit Profile</h3>
+      <h3 class="mx-auto" style="width: 95%;">Admin Profile</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
