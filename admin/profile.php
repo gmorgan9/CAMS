@@ -82,7 +82,7 @@ if(!isLoggedIn()){
          <label for="fname">Student ID</label>
          <input class="form-control" id="fname" type="text" value="<?php echo $sID; ?>" name="fname" readonly>
       </div>
-      <div class="row mx-auto">
+      <div class="row" style="margin-left: 20px;">
       <div class="form-group pt-3" style="width: 40%;">
          <label for="fname">First Name</label>
          <input class="form-control" id="fname" type="text" name="fname" required>
