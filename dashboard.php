@@ -33,28 +33,13 @@ if(!isLoggedIn()){
 <body>
     
 <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
-<!-- <br><br> -->
-<!-- Admin Page Wrapper -->
-<div class="dash-wrapper">
+
 
 <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
         
-<!-- Admin Content -->
-<div class="dash-content">
-
-<div class="dash-content">
-
-    <h2 class="page-title">Dashboard</h2>
-
-    <?php //include(ROOT_PATH . '/app/includes/messages.php'); ?>
-
+<div class="main">
+    <h3 class="page_title">Dashboard</h3>
 </div>
-
-</div>
-<!-- // Admin Content -->
-
-</div>
-<!-- // Page Wrapper -->
 
 
 <?php include(ROOT_PATH . "app/includes/footer.php"); ?>

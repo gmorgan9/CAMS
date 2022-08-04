@@ -129,6 +129,10 @@ footer {
     text-align: center;
 }
 
+.main {
+    margin-left: 240px;
+}
+
 /* Sidebar */
 .sidebar {
     position:fixed;
