@@ -83,7 +83,7 @@ if(!isLoggedIn()){
   <div class="card-body">
   <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Course Schedule</h5>
-    <h6 class="card-subtitle mb-2 text-muted text-end text-wrap" style="font-size: 25px !important; width: 130px;">Course times and dates</h6>
+    <h6 class="card-subtitle mb-2 text-muted text-end text-wrap" style="font-size: 25px !important; width: 150px;">Course times and dates</h6>
     <br>
     <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
     </div>
