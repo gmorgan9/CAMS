@@ -28,7 +28,7 @@ if(isset($_POST['submit'])){
       }else{
          $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
-         header('location:student-login.php');
+         header('location:login.php');
       }
    }
 
