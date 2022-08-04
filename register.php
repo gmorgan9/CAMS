@@ -1,5 +1,5 @@
 <?php
-require_once "app/database/connection.php";
+include("app/database/connection.php");
 include("path.php");
 
 
