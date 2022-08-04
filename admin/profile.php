@@ -78,7 +78,7 @@ if(!isLoggedIn()){
          };
       };
       ?>
-      <div class="form-group w-25 ml-5" style="width: 95%;">
+      <div class="form-group w-25" style="margin-left: 15px; width: 95%;">
          <label for="fname">Student ID</label>
          <input class="form-control" id="fname" type="text" value="<?php echo $sID; ?>" name="fname" readonly>
       </div>
