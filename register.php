@@ -1,5 +1,7 @@
 <?php
 require_once "app/database/connection.php";
+include("path.php");
+
 
 session_start();
 
