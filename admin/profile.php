@@ -79,27 +79,27 @@ if(!isLoggedIn()){
          };
       };
       ?>
-      <div class="form-group">
+      <div class="form-group pl-3">
          <label for="fname">First Name</label>
          <input class="form-control" id="fname" type="text" name="fname" required>
       </div>
-      <div class="form-group pt-2">
+      <div class="form-group pl-3 pt-3">
          <label for="fname">Last Name</label>
          <input class="form-control" id="lname" type="text" name="lname" required>
       </div>
-      <div class="form-group pt-2">
+      <div class="form-group pl-3 pt-3">
          <label for="fname">User Name</label>
          <input class="form-control" id="uname" type="text" name="uname" required>
       </div>   
-      <div class="form-group pt-2">
+      <div class="form-group pl-3 pt-3">
          <label for="fname">Email Address</label>
          <input class="form-control" id="email" type="email" name="email" required>
       </div>   
-      <div class="form-group pt-2">
+      <div class="form-group pl-3 pt-3">
          <label for="fname">Password</label>
          <input class="form-control" id="password" type="password" name="password" required>
       </div>   
-      <div class="form-group pt-2">
+      <div class="form-group pl-3 pt-3">
          <label for="fname">Cnfirm Password</label>
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
