@@ -112,7 +112,7 @@ if(isset($_POST['update-profile'])){
 
       if(isset($success)){
          foreach($success as $success){
-            echo '<span class="success-msg">'.$success.'</span>';
+            echo '<span class="error-msg">'.$success.'</span>';
          };
       };
 
@@ -176,7 +176,7 @@ if(isset($_POST['update-profile'])){
 
 <?php include(ROOT_PATH . "app/includes/footer.php"); ?>
 
-<script>
+<!-- <script>
    const togglePassword = document.querySelector("#togglePassword");
         const password = document.querySelector("#password");
 
@@ -194,7 +194,7 @@ if(isset($_POST['update-profile'])){
         form.addEventListener('submit', function (e) {
             e.preventDefault();
         });
-</script>
+</script> -->
 
 </body>
 </html>
