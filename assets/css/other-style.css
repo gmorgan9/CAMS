@@ -156,6 +156,7 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: 18px;
+    float: right;
     
   }
   ul.breadcrumb li+li:before {
@@ -166,7 +167,6 @@ ul.breadcrumb {
   ul.breadcrumb li a {
     color: #0275d8;
     text-decoration: none;
-    float: right;
   }
   ul.breadcrumb li a:hover {
     color: #01447e;
