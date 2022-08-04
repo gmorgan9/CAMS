@@ -274,7 +274,8 @@ header {
 }
 
 .dash-wrapper .left-sidebar ul li a:hover {
-	background: var(--font-color);
+	background: var(--primary-color);
+    color: white;
 }
 
 .dash-wrapper .admin-content {
