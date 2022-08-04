@@ -113,12 +113,12 @@ $result = mysqli_query($conn, $select);
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Password</label>
-            <input class="form-control" id="password" type="password" name="password" value="<?php echo $row['pass']; ?>" required>
+            <input class="form-control" id="password" type="password" name="password" value="<?php echo $row['password']; ?>" required>
             <i class="bi bi-eye-slash" id="togglePassword" style="cursor: pointer;"></i>  Show/Hide Password
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Confirm Password</label>
-            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php echo $row['pass']; ?>" required>
+            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php echo $row['password']; ?>" required>
          </div>
       </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
