@@ -35,7 +35,7 @@ if(!isLoggedIn()){
 <div class="land-container">
 
    <div class="content">
-      <h3><span>Admin Profile Page</span> <?php echo $_SESSION['isadmin'] ?></h3>
+      <h3><span>Admin Profile Page</span></h3>
       <h1>welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
       <p>this is an admin page</p>
       <a href="logout.php" class="btn">logout</a>
