@@ -31,20 +31,90 @@ if(!isLoggedIn()){
 
 </head>
 <body>
-<?php include("../app/includes/header.php"); ?>
+
    
-<div class="land-container">
+<!-- <div class="land-container">
    <div class="content">
-      
+
       <h3><span>Admin Profile Page</span></h3>
-      <h1>welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
+      <h1>welcome <span><?php //echo $_SESSION['admin_fname'] ?></span></h1>
       <p>this is an admin profile</p>
       <a href="logout.php" class="btn">logout</a>
    </div>
 
+</div> -->
+
+<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
+
+
+<?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
+        
+<div class="main">
+  <div class="page-header mx-auto">
+    <p class="page_title" style="float: left; padding-top: 2px;">Dashboard</p>
+    <!-- <ul class="breadcrumb">
+      <li>Dashboard</li>
+    </ul> -->
+  </div>
+
+
+  <!-- stats -->
+<div class="stats d-flex justify-content-center" style="margin-left: -1px; margin-top: 5px !important;">
+
+
+
+<div class="row">
+
+
+  <div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
+  <div class="card-body">
+  <div class="card-content" style="float: right;">
+    <h5 class="card-title text-end">Total Courses</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
+    </div>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-briefcase"></i></p>
+  </div>
 </div>
 
-<?php include("../app/includes/footer.php"); ?>
+<div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
+  <div class="card-body">
+    <div class="card-content" style="float: right;">
+    <h5 class="card-title text-end">Total Assignments Due</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">6</h6>
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
+    </div>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
+  </div>
+</div>
+
+<div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
+  <div class="card-body">
+  <div class="card-content" style="float: right;">
+    <h5 class="card-title text-end">Course Schedule</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-end text-wrap" style="font-size: 20px !important; width: 170px;">Course times and dates</h6>
+    <!-- <br> -->
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
+    </div>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-calendar-week"></i></p>
+  </div>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+<?php include(ROOT_PATH . "app/includes/footer.php"); ?>
 
 </body>
 </html>
