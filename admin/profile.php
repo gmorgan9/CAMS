@@ -110,9 +110,11 @@ if(isset($_POST['update-profile'])){
 
       if(isset($success)){
          foreach($success as $success){
-            echo '<span class="error-msg">'.$success.'</span>';
+            echo '<span class="success-msg">'.$success.'</span>';
          };
       };
+
+      
       if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
 
