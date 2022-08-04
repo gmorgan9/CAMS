@@ -149,7 +149,7 @@ footer {
 
 /* Style the list */
 .breadcrumb.div {
-    float: right;
+    text-align: right;
 }
 ul.breadcrumb {
     padding: 10px 16px;
