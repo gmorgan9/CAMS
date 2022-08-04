@@ -104,7 +104,7 @@ if(!isLoggedIn()){
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
       <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <input type="submit" name="submit" value="register now" class="btn btn-secondary">
+      <input type="submit" name="submit" value="register now" class="btn btn-secondary mx-auto">
       <p>already have an account? <a href="student-login.php">login now</a></p>
    </div>
    </form>
