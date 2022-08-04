@@ -10,7 +10,7 @@ session_start();
 //    header('location: dashboard.php');
 // }
 
-if(isset($_POST['submit'])){
+if(isset($_POST['register'])){
 
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
@@ -34,12 +34,11 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $error[] = 'Passwords do not match!';
       }else{
-         $insert = "INSERT INTO students(fname, lname, uname, email, password, loggedin) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type', '$loggedin')";
+         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type')";
          mysqli_query($conn, $insert);
          echo "success";
          header('location:login.php');
       }
-      echo "not";
    }
 
 };
@@ -90,7 +89,7 @@ if(isset($_POST['submit'])){
          <option value="user">user</option>
          <option value="admin">admin</option>
       </select> -->
-      <input type="submit" name="submit" value="register now" class="form-btn">
+      <input type="submit" name="register" value="register now" class="form-btn">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
