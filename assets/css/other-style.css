@@ -150,7 +150,8 @@ footer {
 /* Style the list */
 .page-header {
     padding: 5px 8px;
-    height: 30px;
+    height: 40px;
+    width: 80%;
     background-color: #eee;
 }
 ul.breadcrumb {
