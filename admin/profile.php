@@ -69,7 +69,7 @@ if(!isLoggedIn()){
   </div>
 </div>
 
-<div class="page-content mx-auto">
+<div class="page-content mx-auto" style="margin-top: -5px;">
     <p class="page_title" style="float: left; padding-top: 2px;">Profile</p>
     <ul class="breadcrumb">
       <li><a href="<?php echo BASE_URL . '/dashboard.php' ?>">Dashboard</a></li>
