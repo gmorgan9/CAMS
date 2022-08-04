@@ -2,65 +2,97 @@
 
 require_once "app/database/connection.php";
 require_once "app/database/functions.php";
-require_once "path.php";
+
 session_start();
+
+if(isLoggedIn()){
+   header('location: profile.php');
+}
+
+if(isset($_POST['submit'])){
+
+   $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+   $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+   $uname = mysqli_real_escape_string($conn, $_POST['uname']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   $pass = md5($_POST['password']);
+   $cpass = md5($_POST['cpassword']);
+   $isadmin = $_POST['isadmin'];
+
+   $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
+
+   $result = mysqli_query($conn, $select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'user already exist!';
+
+   }else{
+
+      if($pass != $cpass){
+         $error[] = 'passwords do not match!';
+      }else{
+         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
+         mysqli_query($conn, $insert);
+         header('location:login.php');
+      }
+   }
+
+};
+
+
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Custom Styles -->
-   <link rel="stylesheet" href="<?php echo BASE_URL . '/assets/css/main-style.css?v='. time(); ?>">
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>register form</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+   <!-- Custom Styles -->
+<link rel="stylesheet" href="main-style.css?v=1.16">
 
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
-
-    <title>CAMS | Home Page</title>
 </head>
 <body>
-    
 <?php include("app/includes/header.php"); ?>
-
-    <div class="container text-end">
-        <br><br><br><br><br><br><br>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col"></div>
-          <div class="col"></div>
-        </div>
-        <div class="row">
-          <div class="col"></div>
-          <div class="col">
-            <h1 style="color: white;">The Best Place to Track your <span style="color:#48ceff;">Assignments</span></h1>
-          </div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col">
-              <p style="color: white; font-weight: 100 !important;">Successful Careers start with Proactive Education</p>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col"></div>
-            <div class="col"></div>
-            <div class="col" style="margin-top: -23px;">
-                <span style="border-bottom: 3px solid #ffffff; color: rgba(0, 0, 0, 0);">color</span><span style="border-bottom: 3px solid #48ceff; margin-top: -150px !important; color: rgba(0, 0, 0, 0);">color</span>
-            </div>
-          </div>
-      </div>
+   
+<br><br><br>
+<div class="form-container mx-auto">
 
 
-      <?php include("app/includes/footer.php"); ?>
+   <form action="" method="post">
+      <h3>register now</h3>
+      <?php
+      if(isset($error)){
+         foreach($error as $error){
+            echo '<span class="error-msg">'.$error.'</span>';
+         };
+      };
+      ?>
+      <input type="text" name="fname" required placeholder="enter your first name">
+      <input type="text" name="lname" required placeholder="enter your last name">
+      <input type="text" name="uname" required placeholder="enter your user name">
+      <input type="email" name="email" required placeholder="enter your email">
+      <input type="password" name="password" required placeholder="enter your password">
+      <input type="password" name="cpassword" required placeholder="confirm your password">
+      <!-- <select name="user_type">
+         <option value="user">user</option>
+         <option value="admin">admin</option>
+      </select> -->
+      <input type="submit" name="submit" value="register now" class="form-btn">
+      <p>already have an account? <a href="login.php">login now</a></p>
+   </form>
 
+</div>
+
+<?php include("app/includes/footer.php"); ?>
 
 </body>
 </html>
