@@ -1,3 +1,4 @@
+<!-- WORKING -->
 <?php
 session_start();
 require_once "app/database/connection.php";
