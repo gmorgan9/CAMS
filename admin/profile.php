@@ -16,6 +16,32 @@ $sID = $_SESSION['sID'];
 $select = " SELECT * FROM students WHERE studentID = '$sID' ";
 $result = mysqli_query($conn, $select);
 
+if(isset($_POST['update-profile'])){
+
+   //$sID   = mysqli_real_escape_string($conn, $_POST['studentID']);
+   $fname = mysqli_real_escape_string($conn, $_POST['fname']);
+   $lname = mysqli_real_escape_string($conn, $_POST['lname']);
+   $uname = mysqli_real_escape_string($conn, $_POST['uname']);
+   $email = mysqli_real_escape_string($conn, $_POST['email']);
+   // $pass = md5($_POST['password']);
+   // $cpass = md5($_POST['cpassword']);
+   // $isadmin = $_POST['isadmin'];
+
+   $update_select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' ";
+
+   $update_result = mysqli_query($conn, $update_select);
+
+   if(mysqli_num_rows($result) > 0){
+
+      $error[] = 'user already exist!';
+
+   }else{
+      $update = "UPDATE students SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
+      mysqli_query($conn, $update);
+      // header('location:login.php');
+   }
+};
+
 ?>
 
 <!DOCTYPE html>
@@ -124,7 +150,7 @@ $result = mysqli_query($conn, $select);
       <!-- end ROW -->
 
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
-      <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
+      <input type="submit" name="update-profile" value="Update User" class="btn btn-secondary">
       <?php 
       }
    } else {
