@@ -34,8 +34,8 @@ if(!isLoggedIn()){
 <?php include("../app/includes/header.php"); ?>
    
 <div class="land-container">
-
    <div class="content">
+      
       <h3><span>Admin Profile Page</span></h3>
       <h1>welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
       <p>this is an admin profile</p>
