@@ -12,13 +12,15 @@ if(isLoggedIn()){
 
 if(isset($_POST['submit'])){
 
+   $sID = mysqli_real_escape_string($conn, $_POST['studentID']);
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   // $isadmin = $_POST['isadmin'];
+   $isadmin = $_POST['isadmin'];
+   $loggedin= $_POST['loggedin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
 
