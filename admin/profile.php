@@ -81,9 +81,8 @@ $select = " SELECT * FROM students WHERE studentID = '$sID' ";
             echo '<span class="error-msg">'.$error.'</span>';
          };
       };
-
-      while($row = mysqli_fetch_assoc($select))
-                {
+      if (mysqli_num_rows($result) > 0) {
+      while($row = mysqli_fetch_assoc($select)) {
 
       ?>
       <div class="form-group" style="margin-left: 30px;">
@@ -123,7 +122,12 @@ $select = " SELECT * FROM students WHERE studentID = '$sID' ";
       </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
-      <?php }?>
+      <?php 
+      }
+   } else {
+     echo "0 results";
+   }
+      ?>
    </form>
 </div>
 
