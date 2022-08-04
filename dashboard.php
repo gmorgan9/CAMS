@@ -57,7 +57,7 @@ if(!isLoggedIn()){
 <div class="row">
 
 
-  <div class="card" style="width: 24.1rem; margin-right: 20px; border-radius: 0 !important; border-color: #fff;">
+  <div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
   <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Total Courses</h5>
@@ -68,7 +68,7 @@ if(!isLoggedIn()){
   </div>
 </div>
 
-<div class="card" style="width: 24.1rem; margin-right: 20px; border-radius: 0 !important; border-color: #fff;">
+<div class="card" style="width: 24.1rem; margin-right: 10px; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
     <div class="card-content" style="float: right;">
     <h5 class="card-title text-end">Total Assignments Due</h5>
