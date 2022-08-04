@@ -1,12 +1,12 @@
 <?php
 
-require("app/database/connection.php");
-// require("app/database/functions.php");
+require_once "app/database/connection.php";
+require_once "app/database/functions.php";
 
 session_start();
 
 if(isLoggedIn()){
-   header('location: dashboard.php');
+   header('location: admin_page.php');
 }
 
 if(isset($_POST['submit'])){
@@ -67,8 +67,8 @@ if(isset($_POST['submit'])){
 <div class="form-container mx-auto">
 
 
-   <form action="register.php" method="post">
-      <h3>register now</h3>
+   <form action="" method="post">
+      <h3>Register Now</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
