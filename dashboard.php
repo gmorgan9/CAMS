@@ -65,14 +65,13 @@ if(!isLoggedIn()){
 </div>
 
 <div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
-  <div class="card-body" style="float: right;">
-    <h5 class="card-title text-end">Total Assignments Due</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text text-end">View Details</p> 
+  <div class="card-body">
+    <h5 class="card-title text-end" style="float: right;">Total Assignments Due</h5>
+    <h6 class="card-subtitle mb-2 text-muted" style="float: right;">Card subtitle</h6>
+    <p class="card-text text-end" style="float: right;">View Details</p> 
+    <p style="float: left;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
-  <div class="icon" style="float: left;">
-    <i class="bi bi-file-earmark-text" ></i>
-  </div>
+    
 </div>
 
 <!-- <div class="card" style="width: 24.1em; border-radius: 0 !important; border-color: #fff;">
