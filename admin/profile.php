@@ -99,7 +99,7 @@ $result = mysqli_query($conn, $select);
             <label for="fname">Last Name</label>
             <input class="form-control" id="lname" type="text" name="lname" value="<?php echo $row['lname']; ?>" required>
          </div>
-      </div><!-- end ROW -->
+      <!-- </div>end ROW -->
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">User Name</label>
@@ -109,7 +109,7 @@ $result = mysqli_query($conn, $select);
             <label for="fname">Email Address</label>
             <input class="form-control" id="email" type="email" name="email" value="<?php echo $row['email']; ?>" required>
          </div> 
-      </div> <!-- end ROW -->
+      <!-- </div> end ROW -->
       <!-- <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Password</label>
@@ -122,7 +122,7 @@ $result = mysqli_query($conn, $select);
          </div>
       </div> -->
       <!-- end ROW -->
-      
+
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
       <?php 
