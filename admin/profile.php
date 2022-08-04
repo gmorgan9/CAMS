@@ -83,33 +83,35 @@ if(!isLoggedIn()){
          <input class="form-control" id="fname" type="text" value="<?php echo $sID; ?>" name="fname" readonly>
       </div>
       <div class="row" style="margin-left: 20px;">
-      <div class="form-group pt-3" style="width: 48.6%;">
-         <label for="fname">First Name</label>
-         <input class="form-control" id="fname" type="text" name="fname" required>
-      </div>
-      <div class="form-group pt-3" style="width: 48.6%;">
-         <label for="fname">Last Name</label>
-         <input class="form-control" id="lname" type="text" name="lname" required>
-      </div>
-      </div>
-      <div class="form-group pt-3 mx-auto" style="width: 95%;">
-         <label for="fname">User Name</label>
-         <input class="form-control" id="uname" type="text" name="uname" required>
-      </div>   
-      <div class="form-group pt-3 mx-auto" style="width: 95%;">
-         <label for="fname">Email Address</label>
-         <input class="form-control" id="email" type="email" name="email" required>
-      </div>   
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">First Name</label>
+            <input class="form-control" id="fname" type="text" name="fname" required>
+         </div>
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">Last Name</label>
+            <input class="form-control" id="lname" type="text" name="lname" required>
+         </div>
+      </div><!-- end ROW -->
       <div class="row" style="margin-left: 20px;">
-      <div class="form-group pt-3" style="width: 48.6%;">
-         <label for="fname">Password</label>
-         <input class="form-control" id="password" type="password" name="password" required>
-      </div>   
-      <div class="form-group pt-3" style="width: 48.6%;">
-         <label for="fname">Confirm Password</label>
-         <input class="form-control" id="cpassword" type="password" name="cpassword" required>
-      </div>
-      </div>
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">User Name</label>
+            <input class="form-control" id="uname" type="text" name="uname" required>
+         </div>   
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">Email Address</label>
+            <input class="form-control" id="email" type="email" name="email" required>
+         </div> 
+      </div> <!-- end ROW -->
+      <div class="row" style="margin-left: 20px;">
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">Password</label>
+            <input class="form-control" id="password" type="password" name="password" required>
+         </div>   
+         <div class="form-group pt-3" style="width: 48.6%;">
+            <label for="fname">Confirm Password</label>
+            <input class="form-control" id="cpassword" type="password" name="cpassword" required>
+         </div>
+      </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
    </form>
