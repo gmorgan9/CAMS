@@ -37,7 +37,7 @@ if(isset($_POST['update-profile'])){
       $update = "UPDATE students SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
       mysqli_query($conn, $update);
       // header('location:login.php');}else{
-         $error[] = 'Success!';
+         $success[] = 'Success!';
    }
 };
 
@@ -105,6 +105,12 @@ if(isset($_POST['update-profile'])){
       if(isset($error)){
          foreach($error as $error){
             echo '<span class="error-msg">'.$error.'</span>';
+         };
+      };
+
+      if(isset($success)){
+         foreach($success as $success){
+            echo '<span class="error-msg">'.$success.'</span>';
          };
       };
       if (mysqli_num_rows($result) > 0) {
