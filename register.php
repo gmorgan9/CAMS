@@ -4,7 +4,7 @@ require_once "app/database/connection.php";
 require_once "path.php";
 
 if(isLoggedIn()){
-   header('location:' . BASE_URL .' /dashboard.php');
+   header('location:/dashboard.php');
 }
 
 if(isset($_POST['submit'])){
