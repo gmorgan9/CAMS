@@ -44,6 +44,10 @@ if(isset($_POST['submit'])){
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['admin_lname'] = $row['lname'];
          $_SESSION['isadmin'] = $row['isadmin'];
+         $_SESSION['uname'] = $row['uname'];
+         $_SESSION['email'] = $row['email'];
+         $_SESSION['pass'] = $row['password'];
+         $_SESSION['cpass'] = $row['cpassword'];
          header('location: /admin/profile.php');
       }elseif($row['isadmin'] == 0){
          if (mysqli_query($conn, $sql)) {
@@ -56,6 +60,10 @@ if(isset($_POST['submit'])){
           $_SESSION['loggedin'] = $row['loggedin'];
           $_SESSION['user_lname'] = $row['lname'];
           $_SESSION['isadmin'] = $row['isadmin'];
+          $_SESSION['uname'] = $row['uname'];
+         $_SESSION['email'] = $row['email'];
+         $_SESSION['pass'] = $row['password'];
+         $_SESSION['cpass'] = $row['cpassword'];
          header('location: profile.php');
       }
      
