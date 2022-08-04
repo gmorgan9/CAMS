@@ -70,7 +70,7 @@ if(isset($_POST['register'])){
 <div class="form-container mx-auto">
 
 
-   <form action="" method="post">
+   <form action="register.php" method="post">
       <h3>Register Now</h3>
       <?php
       if(isset($error)){
