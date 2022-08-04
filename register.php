@@ -39,6 +39,7 @@ if(isset($_POST['submit'])){
          echo "success";
          header('location:login.php');
       }
+      echo "not";
    }
 
 };
