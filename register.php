@@ -1,15 +1,8 @@
 <?php
-include "app/database/connection.php";
-require_once "path.php";
 
+require_once "database/connection.php";
 
-session_start();
-
-if(isLoggedIn()){
-   header('location: dashboard.php');
-}
-
-if(isset($_POST['register'])){
+if(isset($_POST['submit'])){
 
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
@@ -17,8 +10,7 @@ if(isset($_POST['register'])){
    $email = mysqli_real_escape_string($conn, $_POST['email']);
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
-   $loggedin = 0;
-   //$user_type = $_POST['user_type'];
+   $isadmin = $_POST['isadmin'];
 
    $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
 
@@ -31,17 +23,15 @@ if(isset($_POST['register'])){
    }else{
 
       if($pass != $cpass){
-         $error[] = 'Passwords do not match!';
+         $error[] = 'passwords do not match!';
       }else{
-         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type')";
+         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
-         echo "success";
-         header('location:login.php');
+         header('location:student-login.php');
       }
    }
 
 };
-
 
 
 ?>
@@ -52,10 +42,10 @@ if(isset($_POST['register'])){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>CAMS | Register</title>
+   <title>register form</title>
 
    <!-- Custom Styles -->
-   <link rel="stylesheet" href="<?php echo BASE_URL . '/assets/css/main-style.css?v='. time(); ?>">
+<link rel="stylesheet" href="main-style.css?v=1.16">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 
@@ -64,14 +54,14 @@ if(isset($_POST['register'])){
 
 </head>
 <body>
-<?php include("app/includes/header.php"); ?>
+<?php include("includes/header.php"); ?>
    
 <br><br><br>
 <div class="form-container mx-auto">
 
 
-   <form action="register.php" method="post">
-      <h3>Register Now</h3>
+   <form action="" method="post">
+      <h3>register now</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
@@ -89,13 +79,13 @@ if(isset($_POST['register'])){
          <option value="user">user</option>
          <option value="admin">admin</option>
       </select> -->
-      <input type="submit" name="register" value="register now" class="form-btn">
-      <p>already have an account? <a href="login.php">login now</a></p>
+      <input type="submit" name="submit" value="register now" class="form-btn">
+      <p>already have an account? <a href="student-login.php">login now</a></p>
    </form>
 
 </div>
 
-<?php include("app/includes/footer.php"); ?>
+<?php include("includes/footer.php"); ?>
 
 </body>
 </html>
