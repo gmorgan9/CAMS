@@ -65,12 +65,13 @@ if(!isLoggedIn()){
 </div>
 
 <div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
-  <div class="card-body">
+  <div class="card-body" style="float: ;eft;">
     <h5 class="card-title text-end">Total Assignments Due</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text text-end">View Details</p>
-    <i class="bi bi-file-earmark-text" style="text-align: left; float: left;"></i>
+    
   </div>
+  <i class="bi bi-file-earmark-text" style="text-align: left; float: left;"></i>
 </div>
 
 <!-- <div class="card" style="width: 24.1em; border-radius: 0 !important; border-color: #fff;">
