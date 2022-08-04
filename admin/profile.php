@@ -110,7 +110,7 @@ if(isset($_POST['update-profile'])){
 
       if(isset($success)){
          foreach($success as $success){
-            echo '<span class="alert alert-success">'.$success.'</span>';
+            echo '<span class="alert-success">'.$success.'</span>';
          };
       };
 
