@@ -42,13 +42,10 @@ if(!isLoggedIn()){
 <!-- Admin Content -->
 <div class="dash-content">
 
-<div class="content">
-
     <h2 class="page-title">Dashboard</h2>
 
     <?php //include(ROOT_PATH . '/app/includes/messages.php'); ?>
 
-</div>
 
 </div>
 <!-- // Admin Content -->
