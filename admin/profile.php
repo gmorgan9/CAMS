@@ -79,7 +79,7 @@ if(!isLoggedIn()){
          };
       };
       ?>
-      <div class="form-group ml-3">
+      <div class="form-group ml-3" style="width: 95%;">
          <label for="fname">First Name</label>
          <input class="form-control" id="fname" type="text" name="fname" required>
       </div>
