@@ -1,7 +1,7 @@
 <?php
 
 require("app/database/connection.php");
-require("app/database/functions.php");
+// require("app/database/functions.php");
 
 session_start();
 
