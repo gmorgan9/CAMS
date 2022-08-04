@@ -71,7 +71,7 @@ if(!isLoggedIn()){
     <p class="card-text text-end">View Details</p> 
   </div>
   <div class="icon" style="float: left;">
-    <i class="bi bi-file-earmark-text" style="text-align: left; float: left;"></i>
+    <i class="bi bi-file-earmark-text" ></i>
   </div>
 </div>
 
