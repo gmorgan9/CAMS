@@ -95,21 +95,21 @@ if(!isLoggedIn()){
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">User Name</label>
-            <input class="form-control" id="uname" type="text" name="uname" required>
+            <input class="form-control" id="uname" type="text" name="uname" value="<?php echo $_SESSION['uname']; ?>" required>
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Email Address</label>
-            <input class="form-control" id="email" type="email" name="email" required>
+            <input class="form-control" id="email" type="email" name="email" value="<?php echo $_SESSION['email']; ?>" required>
          </div> 
       </div> <!-- end ROW -->
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Password</label>
-            <input class="form-control" id="password" type="password" name="password" required>
+            <input class="form-control" id="password" type="password" name="password" value="<?php echo $_SESSION['pass']; ?>" required>
          </div>   
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Confirm Password</label>
-            <input class="form-control" id="cpassword" type="password" name="cpassword" required>
+            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php echo $_SESSION['cpass']; ?>" required>
          </div>
       </div><!-- end ROW -->
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
