@@ -5,8 +5,8 @@ require_once "app/database/functions.php";
 
 session_start();
 
-if(isLoggedIn()){
-   header('location: profile.php');
+if(isLoggedIn() == true){
+  header('location:' . BASE_URL .' /login.php');
 }
 
 if(isset($_POST['submit'])){

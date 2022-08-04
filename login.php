@@ -6,9 +6,9 @@ require_once "path.php";
 
 session_start();
 
-// if(isLoggedIn()){
-//    header('location: admin_page.php');
-// }
+if(isLoggedIn() == false){
+   header('location:' . BASE_URL .' /login.php');
+}
 
 
 

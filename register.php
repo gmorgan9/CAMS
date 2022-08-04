@@ -3,6 +3,10 @@
 require_once "app/database/connection.php";
 require_once "path.php";
 
+if(isLoggedIn() == false){
+   header('location:' . BASE_URL .' /login.php');
+}
+
 if(isset($_POST['submit'])){
 
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
