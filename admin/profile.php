@@ -104,17 +104,17 @@ if(isset($_POST['update-profile'])){
       <?php
       if(isset($error)){
          foreach($error as $error){
-            echo '<span class="error-msg">'.$error.'</span>';
+            echo '<span class="alert alert-danger">'.$error.'</span>';
          };
       };
 
       if(isset($success)){
          foreach($success as $success){
-            echo '<span class="success-msg">'.$success.'</span>';
+            echo '<span class="alert alert-success">'.$success.'</span>';
          };
       };
 
-      
+
       if (mysqli_num_rows($result) > 0) {
       while($row = mysqli_fetch_assoc($result)) {
 
