@@ -61,9 +61,12 @@ if(!isLoggedIn()){
       <li>Profile</li>
     </ul>
   </div>
-  <div class="page-header mx-auto m-2">
-  <p class="text-center" style="padding-top: 2px;">welcome <span><?php echo $_SESSION['admin_fname'] ?></span></p>
+  <div class="jumbotron jumbotron-fluid m-2">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
   </div>
+</div>
 
  
 <!-- end MAIN -->
