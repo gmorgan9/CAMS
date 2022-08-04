@@ -38,9 +38,9 @@ if(!isLoggedIn()){
 <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
         
 <div class="main">
-  <div class="page-head" style="display:inline;">
-    <h3 class="page_title">Dashboard</h3>
-    <nav aria-label="breadcrumb">
+  <div class="page-header" style="display:inline-block;">
+    <p class="page_title" style="float: left;">Dashboard</p>
+    <nav aria-label="breadcrumb" style="float: right;">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Home</a></li>
     <li class="breadcrumb-item active" aria-current="page">Library</li>
