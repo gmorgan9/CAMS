@@ -110,7 +110,7 @@ if(!isLoggedIn()){
          <input class="form-control" id="cpassword" type="password" name="cpassword" required>
       </div>
       </div>
-      <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="submit" value="Update User" class="btn btn-secondary">
    </form>
 </div>
