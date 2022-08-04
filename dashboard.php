@@ -47,7 +47,7 @@ if(!isLoggedIn()){
 
 
   <!-- stats -->
-<div class="stats mx-auto">
+<div class="stats d-flex justify-content-center">
 
 
 
