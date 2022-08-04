@@ -55,7 +55,7 @@ if(isset($_POST['submit'])){
          $_SESSION['loggedin'] = $row['loggedin'];
          $_SESSION['user_lname'] = $row['lname'];
          $_SESSION['isadmin'] = $row['isadmin'];
-         header('location: /profile.php');
+         header('location: profile.php');
       }
      
    }else{
