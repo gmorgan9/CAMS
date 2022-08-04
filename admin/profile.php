@@ -70,8 +70,8 @@ if(!isLoggedIn()){
 </div>
 
 <div class="page-content mx-auto" style="margin-top: -6.5px;">
-<form action="" method="post">
-      <h3>register now</h3>
+<form class="form-group" action="" method="post">
+      <h3>Edit Profile</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
