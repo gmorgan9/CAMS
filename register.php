@@ -1,14 +1,13 @@
 <?php
 
 require_once "app/database/connection.php";
-// require_once "app/database/path.php";
 require_once "app/database/functions.php";
 
 session_start();
 
-// if(isLoggedIn()){
-//    header('location: dashboard.php');
-// }
+if(isLoggedIn()){
+   header('location: dashboard.php');
+}
 
 if(isset($_POST['register'])){
 
