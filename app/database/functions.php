@@ -105,8 +105,8 @@ function register(){
 	// register user if there are no errors in the form
 	if (count($errors) == 0) {
 		$password = md5($pass);//encrypt the password before saving in the database
-			$query = "INSERT INTO students (fname, lname, uname, email, password) 
-					  VALUES('$fname', '$lname', '$uname', '$email', '$password')";
+			$query = "INSERT INTO students (fname, lname, uname, email, password, isadmin, loggedin) 
+					  VALUES('$fname', '$lname', '$uname', '$email', '$password', 0, 0)";
 			mysqli_query($conn, $query);
 
 			// get id of the created user
