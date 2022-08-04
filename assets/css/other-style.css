@@ -171,6 +171,13 @@ header {
     border-bottom: 4px solid var(--primary-color);
 } */
 
+.dash-wrapper {
+    min-height: 100%;
+  }
+  
+  .dash-wrapper a:hover {
+    color: var(--hover-color);
+  }
 
 .active {
     color: var(--primary-color);
