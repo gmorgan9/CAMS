@@ -82,6 +82,7 @@ if(!isLoggedIn()){
          <label for="fname">Student ID</label>
          <input class="form-control" id="fname" type="text" value="<?php echo $sID; ?>" name="fname" readonly>
       </div>
+      <div class="row">
       <div class="form-group mx-auto w-25">
          <label for="fname">First Name</label>
          <input class="form-control" id="fname" type="text" name="fname" required>
@@ -89,6 +90,7 @@ if(!isLoggedIn()){
       <div class="form-group pt-3 mx-auto w-25">
          <label for="fname">Last Name</label>
          <input class="form-control" id="lname" type="text" name="lname" required>
+      </div>
       </div>
       <div class="form-group pt-3 mx-auto" style="width: 95%;">
          <label for="fname">User Name</label>
