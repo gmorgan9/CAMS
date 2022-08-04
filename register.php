@@ -36,6 +36,7 @@ if(isset($_POST['submit'])){
       }else{
          $insert = "INSERT INTO students(fname, lname, uname, email, password, loggedin) VALUES('$fname', '$lname', '$uname', '$email','$pass','$user_type', '$loggedin')";
          mysqli_query($conn, $insert);
+         echo "success";
          header('location:login.php');
       }
    }
