@@ -5,7 +5,7 @@ require_once "path.php";
 
 session_start();
 
-if(!isLoggedIn()){
+if(isLoggedIn() == false){
    header('location:student-login.php');
 }
 
