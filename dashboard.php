@@ -77,18 +77,18 @@ if(!isLoggedIn()){
     </div>
     <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
-    
 </div>
 
-<!-- <div class="card" style="width: 24.1em; border-radius: 0 !important; border-color: #fff;">
+<div class="card" style="width: 24.1rem; border-radius: 0 !important; border-color: #fff;">
   <div class="card-body">
-    <h5 class="card-title">Total </h5>
-    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-    <p class="card-text text-end">View Details</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <div class="card-content" style="float: right;">
+    <h5 class="card-title text-end">Course Schedule</h5>
+    <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;"></h6>
+    <p class="card-text text-end"><a href="#" class="detail-btn" style="">View Details</a></p>
+    </div>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
-</div> -->
+</div>
 
 
 </div>
