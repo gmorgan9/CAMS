@@ -83,11 +83,11 @@ if(!isLoggedIn()){
          <input class="form-control" id="fname" type="text" value="<?php echo $sID; ?>" name="fname" readonly>
       </div>
       <div class="row">
-      <div class="form-group mx-auto w-25">
+      <div class="form-group w-25">
          <label for="fname">First Name</label>
          <input class="form-control" id="fname" type="text" name="fname" required>
       </div>
-      <div class="form-group pt-3 mx-auto w-25">
+      <div class="form-group pt-3 w-25">
          <label for="fname">Last Name</label>
          <input class="form-control" id="lname" type="text" name="lname" required>
       </div>
