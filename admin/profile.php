@@ -6,7 +6,7 @@ require_once "../path.php";
 
 session_start();
 
-if(isLoggedIn() == true){
+if(!isLoggedIn()){
    header('location:' . BASE_URL .' /login.php');
 }
 
