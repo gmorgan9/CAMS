@@ -1,14 +1,13 @@
 <?php
 
 require_once "app/database/connection.php";
-require_once "path.php";
 require_once "app/database/functions.php";
-
+require_once "path.php";
 
 session_start();
 
 if(!isLoggedIn()){
-   header('location:login.php');
+   header('location:../student-login.php');
 }
 
 ?>
@@ -19,7 +18,7 @@ if(!isLoggedIn()){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>user page</title>
+   <title>admin page</title>
 
    <!-- Custom Styles -->
    <link rel="stylesheet" href="<?php echo BASE_URL . '/assets/css/other-style.css?v='. time(); ?>">
@@ -36,10 +35,10 @@ if(!isLoggedIn()){
 <div class="land-container">
 
    <div class="content">
-      <h3 style="color: white;">hi, <span>user</span></h3>
-      <h1 style="color: white;">welcome <span><?php echo $_SESSION['user_fname'] ?></span></h1>
-      <p style="color: white;">this is an user page</p>
-      <a style="color: white;" href="logout.php" class="btn">logout</a>
+      <h3><span>Standard Profile Page</span></h3>
+      <h1>welcome <span><?php echo $_SESSION['admin_fname'] ?></span></h1>
+      <p>this is an admin page</p>
+      <a href="logout.php" class="btn">logout</a>
    </div>
 
 </div>
