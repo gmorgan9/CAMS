@@ -252,7 +252,7 @@ header {
 }
 
 .dash-wrapper .left-sidebar {
-	flex: 2;
+	flex: 1;
 	height: 100%;
 	background: var(--secondary-color);
 }
@@ -275,7 +275,7 @@ header {
 }
 
 .dash-wrapper .admin-content {
-	flex: 8;
+	flex: 5;
 	height: 100%;
 	padding: 40px 100px 100px;
 	overflow-y: scroll;
