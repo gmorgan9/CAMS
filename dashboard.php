@@ -41,10 +41,7 @@ if(!isLoggedIn()){
   <div class="page-header mx-auto">
     <p class="page_title" style="float: left; padding-top: 2px;">Dashboard</p>
     <ul class="breadcrumb">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Pictures</a></li>
-      <li><a href="#">Summer 15</a></li>
-      <li>Italy</li>
+      <li>Dashboard</li>
     </ul>
   </div>
 </div>

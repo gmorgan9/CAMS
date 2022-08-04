@@ -38,7 +38,13 @@ if(!isLoggedIn()){
 <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
         
 <div class="main">
-    <h3 class="page_title">Assignments</h3>
+  <div class="page-header mx-auto">
+    <p class="page_title" style="float: left; padding-top: 2px;">Assignments</p>
+    <ul class="breadcrumb">
+      <li><a href="<?php echo BASE_URL . '/dashboard.php' ?>">Dashboard</a></li>
+      <li>Assignments</li>
+    </ul>
+  </div>
 </div>
 
 
