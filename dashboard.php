@@ -27,7 +27,7 @@ if(!isLoggedIn()){
 
 
 
-    <title>CAMS | Home Page</title>
+    <title>CAMS | Dashboard</title>
 </head>
 <body>
     
