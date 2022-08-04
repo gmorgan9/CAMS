@@ -148,6 +148,9 @@ footer {
 /* Breadcrumbs */
 
 /* Style the list */
+.breadcrumb.div {
+    float: right;
+}
 ul.breadcrumb {
     padding: 10px 16px;
     list-style: none;
@@ -156,8 +159,6 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: 18px;
-    float: right;
-    
   }
   ul.breadcrumb li+li:before {
     padding: 8px;
