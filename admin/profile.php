@@ -71,7 +71,7 @@ if(!isLoggedIn()){
 
 <div class="page-content mx-auto" style="margin-top: -6.5px;">
 <form action="" method="post">
-      <h3>Edit Profile</h3>
+      <h3 class="mx-auto" style="width: 95%;">Edit Profile</h3>
       <?php
       if(isset($error)){
          foreach($error as $error){
