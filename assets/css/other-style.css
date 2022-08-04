@@ -136,6 +136,7 @@ footer {
 
 /* Sidebar */
 .sidebar {
+    background-color: #eee;
     position:fixed;
     top: 0;
     bottom: 0;
