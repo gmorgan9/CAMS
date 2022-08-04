@@ -41,6 +41,8 @@ if(isLoggedIn()){
 // };
 
 
+if(isset($_POST['register'])){
+
 $servername = "localhost";
 $username = "garrett";
 $password = "BIGmorgan1999!";
@@ -98,7 +100,7 @@ if (!$conn) {
           $_SESSION['success']  = "You are now logged in";
           header('location: login.php');				
     }
-
+   }
 
 ?>
 
@@ -145,7 +147,7 @@ if (!$conn) {
          <option value="user">user</option>
          <option value="admin">admin</option>
       </select> -->
-      <input type="submit" name="register_btn" value="register now" class="form-btn">
+      <input type="submit" name="register" value="register now" class="form-btn">
       <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
