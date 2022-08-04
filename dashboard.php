@@ -69,8 +69,7 @@ if(!isLoggedIn()){
     <h5 class="card-title text-end">Total Assignments Due</h5>
     <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
     <p class="card-text text-end">View Details</p>
-    <a href="#" class="card-link">Card link</a>
-    <a href="#" class="card-link">Another link</a>
+    <i class="bi bi-file-earmark-text" style="float: right;"></i>
   </div>
 </div>
 
