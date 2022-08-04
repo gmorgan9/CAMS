@@ -39,7 +39,7 @@ if(!isLoggedIn()){
         
 <div class="main">
   <div class="page-header">
-    <p class="page_title">Dashboard</p>
+    <p class="page_title" style="float: left;">Dashboard</p>
     <ul class="breadcrumb">
       <li><a href="#">Home</a></li>
       <li><a href="#">Pictures</a></li>
