@@ -47,7 +47,7 @@ if(!isLoggedIn()){
 
 
   <!-- stats -->
-<div class="stats d-flex justify-content-center" style="margin-left: -30px; margin-top: 3px;">
+<div class="stats d-flex justify-content-center" style="margin-left: -30px; margin-top: 5px;">
 
 
 
