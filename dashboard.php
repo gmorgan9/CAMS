@@ -61,7 +61,7 @@ if(!isLoggedIn()){
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
     <p class="card-text text-end">View Details</p>
     </div>
-    <p style="float: left; font-size: 40px;"><i class="bi bi-file-earmark-text"></i></p>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
 </div>
 
@@ -72,7 +72,7 @@ if(!isLoggedIn()){
     <h6 class="card-subtitle mb-2 text-muted text-end" style="font-size: 40px !important;">3</h6>
     <p class="card-text text-end">View Details</p> 
     </div>
-    <p style="float: left; font-size: 40px; margin-top: 15px;"><i class="bi bi-file-earmark-text"></i></p>
+    <p style="float: left; font-size: 40px; margin-top: 20px;"><i class="bi bi-file-earmark-text"></i></p>
   </div>
     
 </div>
