@@ -85,11 +85,11 @@ if(!isLoggedIn()){
       <div class="row" style="margin-left: 20px;">
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">First Name</label>
-            <input class="form-control" id="fname" type="text" name="fname" required>
+            <input class="form-control" id="fname" type="text" name="fname" value="<?php echo $_SESSION['fname']; ?>" required>
          </div>
          <div class="form-group pt-3" style="width: 48.6%;">
             <label for="fname">Last Name</label>
-            <input class="form-control" id="lname" type="text" name="lname" required>
+            <input class="form-control" id="lname" type="text" name="lname" value="<?php echo $_SESSION['lname']; ?>" required>
          </div>
       </div><!-- end ROW -->
       <div class="row" style="margin-left: 20px;">
