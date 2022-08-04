@@ -11,7 +11,7 @@
     --font-color: #FFFFFF;
     --dark-font: #000;
 }
-.detail-btn:hover {
+.detail-btn a:hover {
     color: #48ceff;
   }
 body {
