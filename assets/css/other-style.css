@@ -148,10 +148,12 @@ footer {
 /* Breadcrumbs */
 
 /* Style the list */
-ul.breadcrumb {
-    padding: 10px 16px;
-    list-style: none;
+.page-header {
+    padding: 5px 8px;
     background-color: #eee;
+}
+ul.breadcrumb {
+    list-style: none;
     float: right !important;
   }
   ul.breadcrumb li {
