@@ -80,22 +80,22 @@ if(!isLoggedIn()){
       };
       ?>
       <div class="form-group">
-         <input type="text" name="fname" required placeholder="enter your first name">
+         <input class="form-control" type="text" name="fname" required placeholder="enter your first name">
       </div>
       <div class="form-group">
-         <input type="text" name="lname" required placeholder="enter your last name">
+         <input class="form-control" type="text" name="lname" required placeholder="enter your last name">
       </div>
       <div class="form-group">
-         <input type="text" name="uname" required placeholder="enter your user name">
+         <input class="form-control" type="text" name="uname" required placeholder="enter your user name">
       </div>   
       <div class="form-group">
-         <input type="email" name="email" required placeholder="enter your email">
+         <input class="form-control" type="email" name="email" required placeholder="enter your email">
       </div>   
       <div class="form-group">
-         <input type="password" name="password" required placeholder="enter your password">
+         <input class="form-control" type="password" name="password" required placeholder="enter your password">
       </div>   
       <div class="form-group">
-         <input type="password" name="cpassword" required placeholder="confirm your password">
+         <input class="form-control" type="password" name="cpassword" required placeholder="confirm your password">
       </div>
       <!-- <select name="user_type">
          <option value="user">user</option>
