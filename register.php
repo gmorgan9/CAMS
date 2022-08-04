@@ -3,8 +3,8 @@
 require_once "app/database/connection.php";
 require_once "path.php";
 
-if(isLoggedIn() == true){
-   header('location:' . BASE_URL .' /login.php');
+if(isLoggedIn()){
+   header('location:' . BASE_URL .' /dashboard.php');
 }
 
 if(isset($_POST['submit'])){
