@@ -143,16 +143,22 @@ if (mysqli_num_rows($result) > 0) {
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
             $studentID   =$row['studentID'];
-            $fname =$row['fname'];
-            $lname = $row['lname'];
-            $uname = $row['uname'];
-            $email = $row['email'];
+            $fname  = $row['fname'];
+            $lname  = $row['lname'];
+            $uname  = $row['uname'];
+            $email  = $row['email'];
+            $status = $row['isadmin'];
             ?>
     <tr>
         <?php 
         if($_SESSION['sID'] == $row['studentID']){ 
         ?>
         <th class="bg-warning" scope="row"><?php echo $studentID; ?></th>
+        <?php if($status == 1){ ?>
+          <td class="bg-warning">Admin</td>
+        <?php } else { ?>
+          <td class="bg-warning">Student</td>
+        <?php } ?>
         <td class="bg-warning"><?php echo $fname; ?></td>
         <td class="bg-warning"><?php echo $lname; ?></td>
         <td class="bg-warning"><?php echo $uname; ?></td>
