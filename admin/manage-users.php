@@ -171,8 +171,8 @@ if (mysqli_num_rows($result) > 0) {
         <td><?php echo $uname; ?></td>
         <td><?php echo $email; ?></td>
         <td colspan="2">
-            <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
-            <a href="manage-users.php?studentID=<?php echo $id; ?>">delete</a>
+            <a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
+            <a href="manage-users.php?studentID=<?php echo $id; ?>"><button class="btn btn-danger"></button></a>
         </td>
 
         <?php 
