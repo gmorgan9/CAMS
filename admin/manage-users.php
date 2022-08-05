@@ -134,9 +134,6 @@ if (mysqli_num_rows($result) > 0) {
     <tr>
         <?php 
         if($_SESSION['sID'] == $row['studentID']){ 
-
-        
-
         ?>
         <th scope="row"><?php echo $studentID; ?></th>
         <td style="color: green;"><?php echo $fname; ?></td>
@@ -161,7 +158,9 @@ if (mysqli_num_rows($result) > 0) {
             <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
             <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
         </td>
+
         <?php 
+        }
         }
     } 
 ?>
