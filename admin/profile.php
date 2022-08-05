@@ -122,12 +122,12 @@ if (mysqli_num_rows($result) > 0) {
       // };
       ?> 
    <div class="row mx-auto" style="width: 98%;">
-      <div class="form-group pt-3 mx-auto">
+      <div class="form-group pt-3">
             <label for="studentID">Student ID</label>
             <input class="form-control" style="width: 25%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
          </div>
 
-         <div class="form-group pt-3 mx-auto">
+         <div class="form-group pt-3">
             <label for="status">Account Status</label>
             <?php
             if($_SESSION['isadmin'] == 1){ 
