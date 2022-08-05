@@ -152,13 +152,15 @@ if (mysqli_num_rows($result) > 0) {
 
 
       </td>
-  </tbody>
-</table>
 
-<?php }
+      <?php }
       }
 
 ?>
+  </tbody>
+</table>
+
+
 
 
 
