@@ -132,9 +132,9 @@ if (mysqli_num_rows($result) > 0) {
       <td><?php echo $row['email'] ?></td>
       <td colspan="2">
 
-        <a href="#" class="btn btn-primary"><i class="far fa-eye"></i></a>
-        <a href="#" class="btn btn-success"><i class="fas fa-edit"></i></a>
-        <a href="#" class="btn btn-danger"><i class="far fa-trash-alt"></i></a>
+        <a href="#" class="btn btn-primary"><i class="bi bi-eye"></i></a>
+        <a href="#" class="btn btn-success"><i class="bi bi-edit"></i></a>
+        <a href="#" class="btn btn-danger"><i class="bi bi-trash-alt"></i></a>
 
 
 
