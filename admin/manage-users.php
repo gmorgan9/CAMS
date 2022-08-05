@@ -109,6 +109,17 @@ if (mysqli_num_rows($result) > 0) {
 <div class="page-content mx-auto">
 
 
+    <?php
+      $sql = "SELECT * FROM students";
+      $all = mysqli_query($conn, $sql);
+      if($all) {
+          while ($row = mysqli_fetch_assoc($result)) {
+            $sID   =$row['studentID'];
+            $fname =$row['fname'];
+            $lname = $row['lname'];
+            $uname = $row['uname'];
+            $email = $row['email'];
+            ?>
 
 
 
@@ -125,16 +136,16 @@ if (mysqli_num_rows($result) > 0) {
   </thead>
   <tbody class="table-group-divider">
     <tr>
-      <th scope="row"><?php echo $row['studentID'] ?></th>
-      <td><?php echo $row['fname'] ?></td>
-      <td><?php echo $row['lname'] ?></td>
-      <td><?php echo $row['uname'] ?></td>
-      <td><?php echo $row['email'] ?></td>
+      <th scope="row"><?php echo $sID; ?></th>
+      <td><?php echo $fname; ?></td>
+      <td><?php echo $lname; ?></td>
+      <td><?php echo $uname; ?></td>
+      <td><?php echo $email; ?></td>
       <td colspan="2">
 
         <!-- <a href="#" style="color: blue; font-size: 18px;"><i class="bi bi-eye"></i></a> &nbsp; -->
-        <button class="btn btn-primary"><a href="update-incident.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
-        <button class="btn btn-danger"><a href="update-incident.php?updateid=<?php //echo $id; ?>"></a></button>
+        <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
+        <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
 
 
 
@@ -142,13 +153,10 @@ if (mysqli_num_rows($result) > 0) {
   </tbody>
 </table>
 
+<?php }
+      }
 
-
-
-
-
-
-
+?>
 
 
 
