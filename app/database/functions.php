@@ -12,3 +12,12 @@ function isLoggedIn()
 		return false;
 	}
 }
+
+function isAdmin()
+{
+	if ($_SESSION['isadmin'] == 1) {
+		return true;
+	}else{
+		return false;
+	}
+}
