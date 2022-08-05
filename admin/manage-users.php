@@ -125,14 +125,34 @@ if (mysqli_num_rows($result) > 0) {
       $all = mysqli_query($conn, $sql);
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
-            $sID   =$row['studentID'];
+            $studentID   =$row['studentID'];
             $fname =$row['fname'];
             $lname = $row['lname'];
             $uname = $row['uname'];
             $email = $row['email'];
             ?>
     <tr>
-        <th scope="row"><?php echo $sID; ?></th>
+        <?php 
+        if($_SESSION['sID'] == $row['studentID']){ 
+
+        
+
+        ?>
+        <th scope="row"><?php echo $studentID; ?></th>
+        <td style="color: green;"><?php echo $fname; ?></td>
+        <td><?php echo $lname; ?></td>
+        <td><?php echo $uname; ?></td>
+        <td><?php echo $email; ?></td>
+        <td colspan="2">
+            <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
+            <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
+        </td>
+
+        <?php 
+
+        }else {
+            ?>
+            <th scope="row"><?php echo $studentID; ?></th>
         <td><?php echo $fname; ?></td>
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
