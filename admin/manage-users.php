@@ -118,15 +118,17 @@ if (mysqli_num_rows($result) > 0) {
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Username</th>
+      <th scope="col">Email</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row"><?php echo $row['studentID'] ?></th>
+      <td><?php echo $row['fname'] ?></td>
+      <td><?php echo $row['lname'] ?></td>
+      <td><?php echo $row['uname'] ?></td>
+      <td><?php echo $row['email'] ?></td>
     </tr>
     <tr>
       <th scope="row">2</th>
