@@ -115,17 +115,32 @@ if (mysqli_num_rows($result) > 0) {
       //    };
       // };
 
-      if(isset($success)){
-         foreach($success as $success){
-            echo '<span class="error-msg">'.$success.'</span>';
-         };
-      };
+      // if(isset($success)){
+      //    foreach($success as $success){
+      //       echo '<span class="error-msg">'.$success.'</span>';
+      //    };
+      // };
+      ?> 
+      <div class="row">
+         <div class="form-group" style="margin-left: 30px;">
+            <label for="studentID">Student ID</label>
+            <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
+         </div>
 
-      ?>
-      <p><?php if ($success) echo $success; ?></p>
-      <div class="form-group" style="margin-left: 30px;">
-         <label for="studentID">Student ID</label>
-         <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
+         <div class="form-group" style="margin-left: 30px;">
+            <label for="status">Account Status</label>
+            <?php
+            if($_SESSION['isadmin'] == 1){ 
+            ?>
+            <input class="form-control" style="width: 10%" id="status" type="text" value="Admin" name="studentID" disabled>
+            <?php 
+            } else {
+            ?>
+            <input class="form-control" style="width: 10%" id="status" type="text" value="Student" name="studentID" disabled>
+            <?php 
+            }
+            ?>
+         </div>
       </div>
       <!-- <div class="row" style="margin-left: 20px;"> -->
          <div class="form-group pt-3 mx-auto" style="width: 95%;">
