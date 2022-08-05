@@ -128,6 +128,7 @@ if (mysqli_num_rows($result) > 0) {
   <thead>
     <tr>
       <th scope="col">#</th>
+      <th scope="col">Status</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
       <th scope="col">Username</th>
@@ -169,6 +170,11 @@ if (mysqli_num_rows($result) > 0) {
 
         <?php } else {?>
         <th scope="row"><?php echo $studentID; ?></th>
+        <?php if($status == 1){ ?>
+          <td class="bg-warning">Admin</td>
+        <?php } else { ?>
+          <td class="bg-warning">Student</td>
+        <?php } ?>
         <td><?php echo $fname; ?></td>
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
