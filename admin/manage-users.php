@@ -10,6 +10,9 @@ session_start();
 if(!isLoggedIn()){
    header('location: /login.php');
 }
+if(!isAdmin()){
+  header('location: /dashboard.php');
+}
 
 
 $sID = $_SESSION['sID'];
