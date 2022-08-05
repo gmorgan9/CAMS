@@ -121,7 +121,7 @@ if (mysqli_num_rows($result) > 0) {
       //    };
       // };
       ?> 
-   <div class="row" style="margin-left: 20px;">
+   <div class="row mx-auto" style="margin-left: 20px;">
       <div class="form-group pt-3 mx-auto">
             <label for="studentID">Student ID</label>
             <input class="form-control" style="width: 40%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
