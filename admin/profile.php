@@ -142,6 +142,7 @@ if (mysqli_num_rows($result) > 0) {
             ?>
          </div>
       </div>
+         </div>
       <!-- <div class="row" style="margin-left: 20px;"> -->
          <div class="form-group pt-3 mx-auto" style="width: 95%;">
             <label for="fname">First Name</label>
