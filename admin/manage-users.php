@@ -136,7 +136,7 @@ if (mysqli_num_rows($result) > 0) {
         if($_SESSION['sID'] == $row['studentID']){ 
         ?>
         <th scope="row"><?php echo $studentID; ?></th>
-        <td style="color: green;"><?php echo $fname; ?></td>
+        <td style="backgroud-color: green;"><?php echo $fname; ?></td>
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
         <td><?php echo $email; ?></td>
