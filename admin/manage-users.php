@@ -170,10 +170,7 @@ if (mysqli_num_rows($result) > 0) {
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
         <td><?php echo $email; ?></td>
-        <td colspan="2">
-            <a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
-            <a href="manage-users.php?studentID=<?php echo $studentID; ?>"><button class="btn btn-danger"></button></a>
-        </td>
+        <td><a href="manage-users.php?studentID=<?php echo $studentID; ?>"><button class="btn btn-danger"></button></a></td>
 
         <?php 
         }
