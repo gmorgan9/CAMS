@@ -132,9 +132,9 @@ if (mysqli_num_rows($result) > 0) {
       <td><?php echo $row['email'] ?></td>
       <td colspan="2">
 
-        <a href="#" style="color: blue; font-size: 18px;"><i class="bi bi-eye"></i></a> &nbsp;
-        <a href="#" style="color: green; font-size: 18px;"><i class="bi bi-pencil-square"></i></a>&nbsp;
-        <a href="#" style="color: red; font-size: 18px;"><i class="bi bi-trash"></i></a>
+        <!-- <a href="#" style="color: blue; font-size: 18px;"><i class="bi bi-eye"></i></a> &nbsp; -->
+        <a href="update-incident.php?updateid=<?php //echo $id; ?>"><i class="bi bi-pencil-square" style="color:#005382;"></a></i>&nbsp;
+        <a href="all-incidents.php?id=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a>
 
 
 
