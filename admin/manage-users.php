@@ -113,7 +113,7 @@ if (mysqli_num_rows($result) > 0) {
       $sql = "SELECT * FROM students";
       $all = mysqli_query($conn, $sql);
       if($all) {
-          while ($row = mysqli_fetch_assoc($result)) {
+          while ($row = mysqli_fetch_assoc($all)) {
             $sID   =$row['studentID'];
             $fname =$row['fname'];
             $lname = $row['lname'];
