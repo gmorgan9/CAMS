@@ -121,22 +121,22 @@ if (mysqli_num_rows($result) > 0) {
       //    };
       // };
       ?> 
-   <div class="row" >
-      <div class="form-group pt-3" style="width: 48.6%;">
+   <div class="row" style="margin-left: 20px;">
+      <div class="form-group pt-3 mx-auto">
             <label for="studentID">Student ID</label>
-            <input class="form-control" style="width: 10%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
+            <input class="form-control" style="width: 40%" id="studentID" type="text" value="<?php echo $row['studentID']; ?>" name="studentID" disabled>
          </div>
 
-         <div class="form-group pt-3" style="width: 48.6%;">
+         <div class="form-group pt-3 mx-auto">
             <label for="status">Account Status</label>
             <?php
             if($_SESSION['isadmin'] == 1){ 
             ?>
-            <input class="form-control" style="width: 10%" id="status" type="text" value="Admin" name="studentID" disabled>
+            <input class="form-control" style="width: 40%" id="status" type="text" value="Admin" name="studentID" disabled>
             <?php 
             } else {
             ?>
-            <input class="form-control" style="width: 10%" id="status" type="text" value="Student" name="studentID" disabled>
+            <input class="form-control" style="width: 40%" id="status" type="text" value="Student" name="studentID" disabled>
             <?php 
             }
             ?>
