@@ -142,9 +142,9 @@ if (mysqli_num_rows($result) > 0) {
         <td class="bg-warning"><?php echo $email; ?></td>
         <td class="bg-warning" colspan="2">
             <?php if($_SESSION['isadmin'] == 1){ ?>
-                <a href="<?php echo BASE_URL . '/admin/profile.php' ?>">My Profile</a>
+                <a class="badge text-bg-primary" href="<?php echo BASE_URL . '/admin/profile.php' ?>">My Profile</a>
             <?php } else { ?>
-                <a href="<?php echo BASE_URL . '/profile.php' ?>">My Profile</a>
+                <a class="badge text-bg-primary" href="<?php echo BASE_URL . '/profile.php' ?>">My Profile</a>
             <?php } ?>
         </td>
 
