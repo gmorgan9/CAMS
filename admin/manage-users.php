@@ -134,7 +134,7 @@ if (mysqli_num_rows($result) > 0) {
 
         <a href="#" class="btn-primary"><i class="bi bi-eye"></i></a>
         <a href="#" class="btn-success"><i class="bi bi-pencil-square"></i></a>
-        <a href="#" style="color: red;"><i class="bi bi-trash"></i></a>
+        <a href="#" style="color: red; font-size: 20px;"><i class="bi bi-trash"></i></a>
 
 
 
