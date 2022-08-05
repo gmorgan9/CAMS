@@ -107,13 +107,7 @@ if (mysqli_num_rows($result) > 0) {
 
 <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto">
-
-
-    
-
-
-
-<table class="table">
+    <table class="table">
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -138,33 +132,21 @@ if (mysqli_num_rows($result) > 0) {
             $email = $row['email'];
             ?>
     <tr>
-      <th scope="row"><?php echo $sID; ?></th>
-      <td><?php echo $fname; ?></td>
-      <td><?php echo $lname; ?></td>
-      <td><?php echo $uname; ?></td>
-      <td><?php echo $email; ?></td>
-      <td colspan="2">
-
-        <!-- <a href="#" style="color: blue; font-size: 18px;"><i class="bi bi-eye"></i></a> &nbsp; -->
-        <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
-        <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
-
-
-
-      </td>
-
-      <?php }
-      }
-
+        <th scope="row"><?php echo $sID; ?></th>
+        <td><?php echo $fname; ?></td>
+        <td><?php echo $lname; ?></td>
+        <td><?php echo $uname; ?></td>
+        <td><?php echo $email; ?></td>
+        <td colspan="2">
+            <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
+            <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
+        </td>
+        <?php 
+        }
+    } 
 ?>
   </tbody>
 </table>
-
-
-
-
-
-
       <?php 
       }
    } else {
