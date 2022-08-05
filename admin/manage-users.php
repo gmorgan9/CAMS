@@ -171,9 +171,9 @@ if (mysqli_num_rows($result) > 0) {
         <?php } else {?>
         <th scope="row"><?php echo $studentID; ?></th>
         <?php if($status == 1){ ?>
-          <td class="bg-warning">Admin</td>
+          <td>Admin</td>
         <?php } else { ?>
-          <td class="bg-warning">Student</td>
+          <td>Student</td>
         <?php } ?>
         <td><?php echo $fname; ?></td>
         <td><?php echo $lname; ?></td>
