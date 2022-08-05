@@ -17,6 +17,16 @@
                 <i class="bi bi-bar-chart"></i>
                 <span>  Progress Report</span>
             </a>
+
+            <?php if($_SESSION['isadmin'] == 1){ ?>
+                <span>Admin Links</span>
+                <a href="<?php echo BASE_URL . '/pages/progress-report.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="bi bi-bar-chart"></i>
+                <span>  Manage Users</span>
+                </a>
+            <?php } else { ?>
+
+            <?php }?>
         </div>
     </div>
 </nav>
