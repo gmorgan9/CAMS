@@ -22,7 +22,7 @@
                 <br>
                 <span style="margin-left: 38px; margin-bottom: -10px;">Admin Links</span>
                 <hr>
-                <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/pages/progress-report.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/admin/manage-users.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-bar-chart"></i>
                 <span>  Manage Users</span>
                 </a>
