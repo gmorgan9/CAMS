@@ -95,7 +95,7 @@ if (mysqli_num_rows($result) > 0) {
     <p class="page_title" style="float: left; padding-top: 2px;">Profile</p>
     <ul class="breadcrumb">
       <li><a href="<?php echo BASE_URL . '/dashboard.php' ?>">Dashboard</a></li>
-      <li>Profile</li>
+      <li>Admin Profile</li>
     </ul>
   </div>
 
