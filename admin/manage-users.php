@@ -159,7 +159,6 @@ if (mysqli_num_rows($result) > 0) {
         <td class="bg-warning"><?php echo $email; ?></td>
         <td class="bg-warning" colspan="2">
             <a style="text-decoration: none;" class="badge text-bg-primary" href="<?php echo BASE_URL . '/admin/profile.php' ?>">My Profile</a>
-            <button class="btn btn-danger"><a href="manage-users.php?studentID=<?php echo $id; ?>"></a></button>
         </td>
 
         <?php 
@@ -173,7 +172,7 @@ if (mysqli_num_rows($result) > 0) {
         <td><?php echo $email; ?></td>
         <td colspan="2">
             <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
-            <button class="btn btn-danger"><a href="manage-users.php?studentID=<?php echo $id; ?>"></a></button>
+            <a href="manage-users.php?studentID=<?php echo $id; ?>"></a>
         </td>
 
         <?php 
