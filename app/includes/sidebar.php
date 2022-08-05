@@ -26,9 +26,7 @@
                 <i class="bi bi-bar-chart"></i>
                 <span>  Manage Users</span>
                 </a>
-            <?php } else { ?>
-
-            <?php }?>
+            <?php } else {} ?>
         </div>
     </div>
 </nav>
