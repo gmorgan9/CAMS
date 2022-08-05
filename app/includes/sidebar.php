@@ -20,7 +20,7 @@
 
             <?php if($_SESSION['isadmin'] == 1){ ?>
                 <br>
-                <span style="margin-left: 38px;">Admin Links</span>
+                <span style="margin-left: 38px; margin-bottom: -10px;">Admin Links</span>
                 <hr>
                 <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/pages/progress-report.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-bar-chart"></i>
