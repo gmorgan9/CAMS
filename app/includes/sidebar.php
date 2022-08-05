@@ -19,7 +19,8 @@
             </a>
 
             <?php if($_SESSION['isadmin'] == 1){ ?>
-                <span>Admin Links</span>
+                <br>
+                <span class="text-center">Admin Links</span>
                 <a href="<?php echo BASE_URL . '/pages/progress-report.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-bar-chart"></i>
                 <span>  Manage Users</span>
