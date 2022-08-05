@@ -141,7 +141,7 @@ if (mysqli_num_rows($result) > 0) {
         <td class="bg-warning"><?php echo $uname; ?></td>
         <td class="bg-warning"><?php echo $email; ?></td>
         <td class="bg-warning" colspan="2">
-            <a style="text-decoration: none;" class="badge text-bg-primary" href="<?php echo BASE_URL . '/admin/profile.php' ?>">My Profile</a>
+            <a style="text-decoration: none;" class="badge text-bg-primary" href="<?php echo BASE_URL . '/admin/profile.php' ?>">Profile</a>
         </td>
 
         <?php 
