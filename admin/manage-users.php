@@ -170,7 +170,7 @@ if (mysqli_num_rows($result) > 0) {
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
         <td><?php echo $email; ?></td>
-        <td><a href="manage-users.php?studentID=<?php echo $studentID; ?>"><button class="btn btn-danger"></button></a></td>
+        <td><a style="text-decoration: none;" class="badge text-bg-danger" href="manage-users.php?studentID=<?php echo $studentID; ?>">Delete</a></td>
 
         <?php 
         }
