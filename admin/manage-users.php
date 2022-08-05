@@ -120,6 +120,7 @@ if (mysqli_num_rows($result) > 0) {
       <th scope="col">Last</th>
       <th scope="col">Username</th>
       <th scope="col">Email</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
@@ -129,6 +130,15 @@ if (mysqli_num_rows($result) > 0) {
       <td><?php echo $row['lname'] ?></td>
       <td><?php echo $row['uname'] ?></td>
       <td><?php echo $row['email'] ?></td>
+      <td colspan="2">
+
+        <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+        <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+
+
+
+      </td>
     </tr>
     <tr>
       <th scope="row">2</th>
