@@ -133,7 +133,7 @@ if (mysqli_num_rows($result) > 0) {
       <td colspan="2">
 
         <!-- <a href="#" style="color: blue; font-size: 18px;"><i class="bi bi-eye"></i></a> &nbsp; -->
-        <button class="btn btn-primary"><a  style="color:white; font-size:10px;" href="update-incident.php?updateid=<?php //echo $id; ?>"><i class="bi bi-pencil-square"></a></i></button>&nbsp;
+        <button class="btn btn-primary"><a  style="color:white; font-size:10px;" href="update-incident.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
         <a href="all-incidents.php?id=<?php echo $id; ?>" class="delete"><i class="bi bi-trash" style="color:#941515;"></i></a>
 
 
