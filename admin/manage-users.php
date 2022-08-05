@@ -44,6 +44,23 @@ if(isset($_POST['update-profile'])){
    } 
 };
 
+// Delete User
+if(isset($_GET['studentID'])) {
+    $id = $_GET['studentID'];
+
+    $sql = "DELETE FROM students WHERE studentID = $id";
+    $delete = mysqli_query($conn, $sql);
+    if($delete) {
+        // echo "Deleted Successfully";
+        header('location: manage-users.php'); // returns back to same page
+    } else {
+        die(mysqli_error($conn));
+    }
+}
+
+
+
+
 ?>
 
 <!DOCTYPE html>
