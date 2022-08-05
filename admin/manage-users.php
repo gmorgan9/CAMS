@@ -161,22 +161,14 @@ if (mysqli_num_rows($result) > 0) {
             <a style="text-decoration: none;" class="badge text-bg-primary" href="<?php echo BASE_URL . '/admin/profile.php' ?>">My Profile</a>
         </td>
 
-        <?php 
-
-        }else {
-            ?>
-            <th scope="row"><?php echo $studentID; ?></th>
+        <?php } else {?>
+        <th scope="row"><?php echo $studentID; ?></th>
         <td><?php echo $fname; ?></td>
         <td><?php echo $lname; ?></td>
         <td><?php echo $uname; ?></td>
         <td><?php echo $email; ?></td>
         <td><a style="text-decoration: none;" class="badge text-bg-danger" href="manage-users.php?studentID=<?php echo $studentID; ?>">Delete</a></td>
-
-        <?php 
-        }
-        }
-    } 
-?>
+        <?php }}} ?>
   </tbody>
 </table>
       <?php 
