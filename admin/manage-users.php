@@ -135,12 +135,12 @@ if (mysqli_num_rows($result) > 0) {
         <?php 
         if($_SESSION['sID'] == $row['studentID']){ 
         ?>
-        <th scope="row"><?php echo $studentID; ?></th>
-        <td style="backgroud-color: green;"><?php echo $fname; ?></td>
-        <td><?php echo $lname; ?></td>
-        <td><?php echo $uname; ?></td>
-        <td><?php echo $email; ?></td>
-        <td colspan="2">
+        <th class="bg-warning" scope="row"><?php echo $studentID; ?></th>
+        <td class="bg-warning"><?php echo $fname; ?></td>
+        <td class="bg-warning"><?php echo $lname; ?></td>
+        <td class="bg-warning"><?php echo $uname; ?></td>
+        <td class="bg-warning"><?php echo $email; ?></td>
+        <td class="bg-warning" colspan="2">
             <button class="btn btn-primary"><a href="update-user.php?updateid=<?php //echo $id; ?>"></a></button>&nbsp;
             <button class="btn btn-danger"><a href="delete-user.php?deleteid=<?php //echo $id; ?>"></a></button>
         </td>
