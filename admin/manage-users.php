@@ -109,17 +109,7 @@ if (mysqli_num_rows($result) > 0) {
 <div class="page-content mx-auto">
 
 
-    <?php
-      $sql = "SELECT * FROM students";
-      $all = mysqli_query($conn, $sql);
-      if($all) {
-          while ($row = mysqli_fetch_assoc($all)) {
-            $sID   =$row['studentID'];
-            $fname =$row['fname'];
-            $lname = $row['lname'];
-            $uname = $row['uname'];
-            $email = $row['email'];
-            ?>
+    
 
 
 
@@ -135,6 +125,18 @@ if (mysqli_num_rows($result) > 0) {
     </tr>
   </thead>
   <tbody class="table-group-divider">
+
+  <?php
+      $sql = "SELECT * FROM students";
+      $all = mysqli_query($conn, $sql);
+      if($all) {
+          while ($row = mysqli_fetch_assoc($all)) {
+            $sID   =$row['studentID'];
+            $fname =$row['fname'];
+            $lname = $row['lname'];
+            $uname = $row['uname'];
+            $email = $row['email'];
+            ?>
     <tr>
       <th scope="row"><?php echo $sID; ?></th>
       <td><?php echo $fname; ?></td>
