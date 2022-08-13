@@ -149,15 +149,15 @@ if(!isLoggedIn()){
     <fieldset class="row pt-3 mx-auto">
         <legend class="col-form-label col-sm-6 pt-3">Course Days</legend>
         <div class="form-group " style="width: 95%;">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">M
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M"> M
             &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">Tu
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu"> Tu
             &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">W
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W"> W
             &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">Th
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th"> Th
             &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">F
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F"> F
         </div>
     </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
