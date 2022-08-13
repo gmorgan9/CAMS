@@ -146,29 +146,29 @@ if(!isLoggedIn()){
       <label for="end_time" style="font-size: 14px;">End Time</label>
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
-    <span style="font-size: 14px; margin-top: 15px; padding-bottom: -10px;">Start Time</span>
-
-    <fieldset class="row pt-3 mx-auto" style="width: 95%;">
-        <legend class="col-form-label col-sm-2 pb-0">Radios</legend>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
-            <label class="form-check-label" for="inlineCheckbox1">M</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
-            <label class="form-check-label" for="inlineCheckbox2">Tu</label>
-        </div>
-        <div class="form-check form-check-inline" >
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
-            <label class="form-check-label" for="inlineCheckbox1">W</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
-            <label class="form-check-label" for="inlineCheckbox2">Th</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
-            <label class="form-check-label" for="inlineCheckbox2">F</label>
+    <fieldset class="row pt-3 mx-auto">
+        <legend class="col-form-label col-sm-2 pt-0" style="padding-bottom: -15px;">Course Days</legend>
+        <div class="form-group " style="width: 95%;">
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
+                <label class="form-check-label" for="inlineCheckbox1">M</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
+                <label class="form-check-label" for="inlineCheckbox2">Tu</label>
+            </div>
+            <div class="form-check form-check-inline" >
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
+                <label class="form-check-label" for="inlineCheckbox1">W</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
+                <label class="form-check-label" for="inlineCheckbox2">Th</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
+                <label class="form-check-label" for="inlineCheckbox2">F</label>
+            </div>
         </div>
     </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
