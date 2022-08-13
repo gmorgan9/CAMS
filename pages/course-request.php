@@ -141,6 +141,7 @@ if(!isLoggedIn()){
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
         <select class="form-select" aria-label="Default select example" name="semester">
+        <option selected>Select One...</option>
        
         <?php 
         $query = "SELECT semestername FROM semester";
