@@ -30,6 +30,10 @@ if(!isLoggedIn()){
     $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
     $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
     $student_idno = mysqli_real_escape_string($conn, $_POST['student_idno']);
+    $semestername = mysqli_real_escape_string($conn, $_POST['semestername']);
+    $semester_start = mysqli_real_escape_string($conn, $_POST['semester_start']);
+    $semester_end = mysqli_real_escape_string($conn, $_POST['semester_end']);
+
 
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
@@ -146,7 +150,7 @@ if(!isLoggedIn()){
         $end_date = $row['end_date']?>
     <?php }} ?>
 
-      <input class="form-control" id="semestername" type="hidden" name="semestername" value="<?php echo $semestername; ?>">
+      <!-- <input class="form-control" id="semestername" type="hidden" name="semestername" value="<?php //echo $semestername; ?>"> -->
       <input class="form-control" id="semester_start" type="hidden" name="semester_start" value="<?php echo $start_date; ?>">
       <input class="form-control" id="semester_end" type="hidden" name="semester_end" value="<?php echo $end_date; ?>">
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
