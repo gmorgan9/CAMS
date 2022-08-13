@@ -142,7 +142,7 @@ if(!isLoggedIn()){
       <label for="start_time" style="font-size: 14px;">Start Time</label>
       <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
     </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+    <div class="form-group pt-3 mx-auto">
       <label for="end_time" style="font-size: 14px;">End Time</label>
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
