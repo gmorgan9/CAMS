@@ -117,7 +117,7 @@ if(!isLoggedIn()){
                                     <h6 class="mb-0">Course</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['shortcourse']; ?> (00<?php echo $row['section']; ?>) <span class="text-black text-capitalize">Section <span class="text-muted"><?php echo $row['credits']; ?></span></span>
+                                        <?php echo $row['shortcourse']; ?> (00<?php echo $row['section']; ?>) <span class="text-black text-capitalize">Credits <span class="text-muted"><?php echo $row['credits']; ?>.0</span></span>
                                   </div>
                                 </div>
                       <hr>
