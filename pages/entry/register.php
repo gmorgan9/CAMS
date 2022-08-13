@@ -1,19 +1,20 @@
 <!-- WORKING -->
 <?php
 
-require_once "app/database/connection.php";
-require_once "app/database/functions.php";
-require_once "path.php";
+require_once "../../app/database/connection.php";
+require_once "../../app/database/functions.php";
+require_once "../../path.php";
 
 session_start();
 
 if(isLoggedIn()){
-   header('location: /dashboard.php');
+   header('location:' . BASE_URL . '/pages/dashboard.php');
 }
 
 
 if(isset($_POST['submit'])){
 
+   $idno  = rand(10000, 99999); // figure how to not allow duplicates
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
@@ -22,7 +23,7 @@ if(isset($_POST['submit'])){
    $cpass = md5($_POST['cpassword']);
    $isadmin = $_POST['isadmin'];
 
-   $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' && password = '$pass' ";
+   $select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' ";
 
    $result = mysqli_query($conn, $select);
 
@@ -35,7 +36,7 @@ if(isset($_POST['submit'])){
       if($pass != $cpass){
          $error[] = 'passwords do not match!';
       }else{
-         $insert = "INSERT INTO students (fname, lname, uname, email, password) VALUES('$fname','$lname','$uname','$email','$pass')";
+         $insert = "INSERT INTO students (idno, fname, lname, uname, email, password) VALUES('$idno', '$fname','$lname','$uname','$email','$pass')";
          mysqli_query($conn, $insert);
          header('location:login.php');
       }
@@ -64,7 +65,7 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
-<?php include("app/includes/header.php"); ?>
+<?php include("../../app/includes/header.php"); ?>
    
 <br><br><br>
 <div class="form-container mx-auto">
@@ -85,17 +86,13 @@ if(isset($_POST['submit'])){
       <input type="email" name="email" required placeholder="enter your email">
       <input type="password" name="password" required placeholder="enter your password">
       <input type="password" name="cpassword" required placeholder="confirm your password">
-      <!-- <select name="user_type">
-         <option value="user">user</option>
-         <option value="admin">admin</option>
-      </select> -->
       <input type="submit" name="submit" value="register now" class="form-btn">
-      <p>already have an account? <a href="student-login.php">login now</a></p>
+      <p>already have an account? <a href="login.php">login now</a></p>
    </form>
 
 </div>
 
-<?php include("app/includes/footer.php"); ?>
+<?php include("../../app/includes/footer.php"); ?>
 
 </body>
 </html>

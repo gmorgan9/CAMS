@@ -30,14 +30,14 @@ if(isset($_POST['update-profile'])){
    // $cpass = md5($_POST['cpassword']);
    // $isadmin = $_POST['isadmin'];
 
-   $update_select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' ";
+   $update_select = " SELECT * FROM student WHERE uname = '$uname' && email = '$email' ";
 
    $update_result = mysqli_query($conn, $update_select);
 
    if(mysqli_num_rows($result) > 0){
 
       // $error[] = 'user already exist!';
-      $update = "UPDATE students SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
+      $update = "UPDATE student SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
       mysqli_query($conn, $update);
       $success[] = 'Success';
       header('location:' . BASE_URL . '/admin/profile.php');

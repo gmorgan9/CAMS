@@ -1,14 +1,14 @@
 <!-- WORKING -->
 <?php
 
-require_once "app/database/connection.php";
-require_once "app/database/functions.php";
-require_once "path.php";
+require_once "../../app/database/connection.php";
+require_once "../../app/database/functions.php";
+require_once "../../path.php";
 
 session_start();
 
 if(isLoggedIn()){
-   header('location: '. BASE_URL . '/pages/dashboard.php');
+   header('location:' . BASE_URL . '/pages/dashboard.php');
 }
 
 
@@ -25,50 +25,33 @@ if(isset($_POST['submit'])){
    $isadmin = $_POST['isadmin'];
    $loggedin = $_POST['loggedin'];
 
-   $select = " SELECT * FROM students WHERE uname = '$uname' && password = '$pass' ";
+   $select = " SELECT * FROM student WHERE uname = '$uname' && password = '$pass' ";
 
    $result = mysqli_query($conn, $select);
 
    if(mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_array($result);
-      $sql = "UPDATE students SET loggedin='1' WHERE uname='$uname'";
-      if($row['isadmin'] == 1){
-         if (mysqli_query($conn, $sql)) {
-            echo "Record updated successfully";
-          } else {
-            echo "Error updating record: " . mysqli_error($conn);
-          }
-         $_SESSION['fname'] = $row['fname'];
-         $_SESSION['sID'] = $row['studentID'];
-         $_SESSION['loggedin'] = $row['loggedin'];
-         $_SESSION['lname'] = $row['lname'];
-         $_SESSION['isadmin'] = $row['isadmin'];
-         $_SESSION['uname'] = $row['uname'];
-         $_SESSION['email'] = $row['email'];
-         $_SESSION['pass'] = $row['password'];
-         $_SESSION['cpass'] = $row['cpassword'];
-         header('location: '. BASE_URL . '/pages/dashboard.php');
-      }elseif($row['isadmin'] == 0){
-         if (mysqli_query($conn, $sql)) {
-            echo "Record updated successfully";
-          } else {
-            echo "Error updating record: " . mysqli_error($conn);
-          }
-          $_SESSION['fname'] = $row['fname'];
-          $_SESSION['sID'] = $row['studentID'];
-          $_SESSION['loggedin'] = $row['loggedin'];
-          $_SESSION['lname'] = $row['lname'];
-          $_SESSION['isadmin'] = $row['isadmin'];
-          $_SESSION['uname'] = $row['uname'];
-         $_SESSION['email'] = $row['email'];
-         $_SESSION['pass'] = $row['password'];
-         $_SESSION['cpass'] = $row['cpassword'];
-         header('location: '. BASE_URL . '/pages/dashboard.php');
-      }
+      $sql = "UPDATE student SET loggedin='1' WHERE uname='$uname'";
+      if (mysqli_query($conn, $sql)) {
+         echo "Record updated successfully";
+       } else {
+         echo "Error updating record: " . mysqli_error($conn);
+       }
+       $_SESSION['fname']            = $row['fname'];
+       $_SESSION['sID']              = $row['studentID'];
+       $_SESSION['loggedin']         = $row['loggedin'];
+       $_SESSION['student_idno']     = $row['idno'];
+       $_SESSION['lname']            = $row['lname'];
+       $_SESSION['acc_type']         = $row['acc_type'];
+       $_SESSION['uname']            = $row['uname'];
+       $_SESSION['email']            = $row['email'];
+       $_SESSION['pass']             = $row['password'];
+       $_SESSION['cpass']            = $row['cpassword'];
+      header('location:' . BASE_URL . '/pages/dashboard.php');
      
    }else{
-   $error[] = 'incorrect email or password!';
+      $error[] = 'incorrect email or password!';
    }
 
 };
@@ -93,7 +76,7 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-<?php include("app/includes/header.php"); ?>
+<?php include("../../app/includes/header.php"); ?>
    
 <br><br><br>
 <div class="form-container mx-auto">
@@ -115,7 +98,7 @@ if(isset($_POST['submit'])){
 
 </div>
 
-<?php include("app/includes/footer.php"); ?>
+<?php include("../../app/includes/footer.php"); ?>
 
 </body>
 </html>
