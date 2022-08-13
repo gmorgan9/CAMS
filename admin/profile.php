@@ -16,7 +16,7 @@ if(!isAdmin()){
 
 
 $sID = $_SESSION['sID'];
-$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+$select = " SELECT * FROM student WHERE studentID = '$sID' ";
 $result = mysqli_query($conn, $select);
 
 if(isset($_POST['update-profile'])){
@@ -68,17 +68,6 @@ if(isset($_POST['update-profile'])){
 </head>
 <body>
 
-   
-<!-- <div class="land-container">
-   <div class="content">
-
-      <h3><span>Admin Profile Page</span></h3>
-      <h1>welcome <span><?php //echo $_SESSION['admin_fname'] ?></span></h1>
-      <p>this is an admin profile</p>
-      <a href="logout.php" class="btn">logout</a>
-   </div>
-
-</div> -->
 
 <?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
@@ -133,7 +122,7 @@ if (mysqli_num_rows($result) > 0) {
          <div class="form-group pt-3" style="width: 20%;">
             <label for="status">Account Status</label>
             <?php
-            if($_SESSION['isadmin'] == 1){ 
+            if($_SESSION['acc_type'] == 1){ 
             ?>
             <input class="form-control" style="width: 90%" id="status" type="text" value="Admin" name="studentID" disabled>
             <?php 
@@ -145,7 +134,6 @@ if (mysqli_num_rows($result) > 0) {
             ?>
          </div>
       </div>
-      <!-- <div class="row" style="margin-left: 20px;"> -->
          <div class="form-group pt-3 mx-auto" style="width: 95%;">
             <label for="fname">First Name</label>
             <input class="form-control" id="fname" type="text" name="fname" value="<?php echo $row['fname']; ?>" required>
@@ -154,8 +142,6 @@ if (mysqli_num_rows($result) > 0) {
             <label for="fname">Last Name</label>
             <input class="form-control" id="lname" type="text" name="lname" value="<?php echo $row['lname']; ?>" required>
          </div>
-      <!-- </div>end ROW -->
-      <!-- <div class="row" style="margin-left: 20px;"> -->
          <div class="form-group pt-3 mx-auto" style="width: 95%;">
             <label for="fname">User Name</label>
             <input class="form-control" id="uname" type="text" name="uname" value="<?php echo $row['uname']; ?>" required>
@@ -164,19 +150,6 @@ if (mysqli_num_rows($result) > 0) {
             <label for="fname">Email Address</label>
             <input class="form-control" id="email" type="email" name="email" value="<?php echo $row['email']; ?>" required>
          </div> 
-      <!-- </div> end ROW -->
-      <!-- <div class="row" style="margin-left: 20px;">
-         <div class="form-group pt-3" style="width: 48.6%;">
-            <label for="fname">Password</label>
-            <input class="form-control" id="password" type="password" name="password" value="<?php //echo $row['password']; ?>" required>
-            <i class="bi bi-eye-slash" id="togglePassword" style="cursor: pointer;"></i>  Show/Hide Password
-         </div>   
-         <div class="form-group pt-3" style="width: 48.6%;">
-            <label for="fname">Confirm Password</label>
-            <input class="form-control" id="cpassword" type="password" name="cpassword" value="<?php //echo $row['password']; ?>" required>
-         </div>
-      </div> -->
-      <!-- end ROW -->
 
       <div class="form-group pt-3 mx-auto" style="width: 95%; margin-bottom: 10px;">
       <input type="submit" name="update-profile" value="Update User" class="btn btn-secondary">
@@ -194,27 +167,8 @@ if (mysqli_num_rows($result) > 0) {
 </div> 
 
 
-<?php include(ROOT_PATH . "app/includes/footer.php"); ?>
+<?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
-<!-- <script>
-   const togglePassword = document.querySelector("#togglePassword");
-        const password = document.querySelector("#password");
-
-        togglePassword.addEventListener("click", function () {
-            // toggle the type attribute
-            const type = password.getAttribute("type") === "password" ? "text" : "password";
-            password.setAttribute("type", type);
-            
-            // toggle the icon
-            this.classList.toggle("bi-eye");
-        });
-
-        // prevent form submit
-        const form = document.querySelector("form");
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-        });
-</script> -->
 
 </body>
 </html>
