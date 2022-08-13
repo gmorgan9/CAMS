@@ -147,6 +147,8 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <span style="font-size: 14px; margin-top: 15px; padding-bottom: -10px;">Start Time</span>
+    <fieldset class="row mb-3">
+    <legend class="col-form-label col-sm-2 pt-0">Radios</legend>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     
         <div class="form-check form-check-inline">
@@ -170,6 +172,7 @@ if(!isLoggedIn()){
             <label class="form-check-label" for="inlineCheckbox2">F</label>
         </div>
     </div>
+    </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Job</button>
     </div>
