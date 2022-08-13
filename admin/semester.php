@@ -72,7 +72,7 @@ if (isset($_POST['active'])) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>WMS | Course Request</title>
+   <title>CAMS | Semester Request</title>
 
   <!-- LINKS -->
     <!-- Custom Styles -->
@@ -99,10 +99,10 @@ if (isset($_POST['active'])) {
   <div class="main"> 
 
   <div class="page-header mx-auto">
-    <p class="page_title" style="float: left; padding-top: 2px;">Courses</p>
+    <p class="page_title" style="float: left; padding-top: 2px;">Semesters</p>
     <ul class="breadcrumb">
       <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
-      <li>Courses</li>
+      <li>Semesters</li>
     </ul>
   </div>
 
@@ -111,7 +111,7 @@ if (isset($_POST['active'])) {
     <div class="page-content float-start" style="margin-top: 12px; width: 32%;margin-left: -73px; height: unset !important;">
     <form action="" method="post">
     <div class="section-header pt-2">
-      <span class="text-muted pt-4" style="width: 95%;">Course Requests</span>
+      <span class="text-muted pt-4" style="width: 95%;">Semester Requests</span>
     </div>
     <hr style="margin-bottom: -5px; margin-top: 5px;">
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
@@ -135,7 +135,7 @@ if (isset($_POST['active'])) {
       <input class="form-control" id="end_date" type="date" name="end_date" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
-      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-semester" class="badge text-bg-secondary">Request Course</button>
+      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-semester" class="badge text-bg-secondary">Request Semester</button>
     </div>
     </form>
     </div>
