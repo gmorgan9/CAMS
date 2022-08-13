@@ -1,1 +1,1 @@
-<p>Blocked Page</p>
+<p class="text-black">Blocked Page</p>

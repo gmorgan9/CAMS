@@ -37,6 +37,7 @@ if(isLoggedIn()){
 <?php include("app/includes/bloacked-page.php"); ?>
 </div>
     
+<div class="main-container">
 <?php include("app/includes/header.php"); ?>
 
     <div class="container text-end">
@@ -70,7 +71,7 @@ if(isLoggedIn()){
 
 
       <?php include("app/includes/footer.php"); ?>
-
+      </div>
 
 </body>
 </html>
