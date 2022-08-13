@@ -147,7 +147,7 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <fieldset class="row pt-3 mx-auto">
-        <legend class="col-form-label col-sm-6 pt-3">Course Days</legend>
+        <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
         <div class="form-group " style="width: 95%; margin-top: -15px;">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M"> M
             &nbsp;
