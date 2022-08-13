@@ -34,7 +34,11 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-    $days=implode(", ", $_POST['day']);
+    $var1 = array();
+    $days = array();
+    $var1 = $_POST['days'];
+    $days = implode(',', $var1);
+    //$days=implode(", ", $_POST['day']);
     //$chk = implode(',', $_POST['days[]']);
 
 
@@ -153,15 +157,15 @@ if(!isLoggedIn()){
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label>Days:</label>
                 <br />
-                <input type="checkbox" name="day[]" value="M"/>M
+                <input type="checkbox" name="days[]" value="M"/>M
                 <br />
-                <input type="checkbox" name="day[]" value="Tu"/>Tu
+                <input type="checkbox" name="days[]" value="Tu"/>Tu
                 <br />
-                <input type="checkbox" name="day[]" value="W"/>W
+                <input type="checkbox" name="days[]" value="W"/>W
                 <br />
-                <input type="checkbox" name="day[]" value="Th"/>Th
+                <input type="checkbox" name="days[]" value="Th"/>Th
                 <br />
-                <input type="checkbox" name="day[]" value="F"/>F
+                <input type="checkbox" name="days[]" value="F"/>F
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Job</button>
