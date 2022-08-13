@@ -34,7 +34,7 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-    $checkbox1 = $_POST['days[]'];
+    $checkbox1 = $_POST['days'];
     $chk="";  
     foreach($checkbox1 as $chk1)  
        {  
