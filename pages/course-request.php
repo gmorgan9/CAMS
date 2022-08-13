@@ -149,7 +149,6 @@ if(!isLoggedIn()){
     <fieldset class="row pt-3 mx-auto" style="width: 95%;">
         <legend class="col-form-label col-sm-6 pt-3">Course Days</legend>
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M"> M
-            &nbsp;
             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu"> Tu
             &nbsp;
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W"> W
