@@ -34,8 +34,13 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-        
-    $days = implode(',', $_POST['days']);
+    $day1=$_POST['days'];  
+    $days=""; 
+    foreach($day1 as $days1)  
+   {  
+      $days .= $days1.",";  
+   }  
+
 
 
 
@@ -47,7 +52,7 @@ if(!isLoggedIn()){
       mysqli_query($conn, $insert);
       // mysqli_query($conn, $insert2);
       header('location: course-request.php');
-    } 
+    }
   };
 // END ADD JOB
 
@@ -152,23 +157,23 @@ if(!isLoggedIn()){
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[option1]" value="M">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
             <label class="form-check-label" for="inlineCheckbox1">M</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[option2]" value="Tu">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
             <label class="form-check-label" for="inlineCheckbox2">Tu</label>
         </div>
         <div class="form-check form-check-inline" >
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[option3]" value="W">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
             <label class="form-check-label" for="inlineCheckbox1">W</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[option4]" value="Th">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
             <label class="form-check-label" for="inlineCheckbox2">Th</label>
         </div>
         <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[option5]" value="F">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
             <label class="form-check-label" for="inlineCheckbox2">F</label>
         </div>
     </div>
