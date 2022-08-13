@@ -117,25 +117,16 @@ if(!isLoggedIn()){
                                     <h6 class="mb-0">Course</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['shortcourse']; ?>
+                                        <?php echo $row['shortcourse']; ?> (00<?php $row['section']; ?>)
                                   </div>
                                 </div>
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Wednesday</h6>
+                                    <h6 class="mb-0"></h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                      <?php 
-                                      $wed_date = date("M d, Y", strtotime($row['wed_date']));
-                                      $wed_timein = date("h:i A", strtotime($row['wed_timein']));
-                                      $wed_timeout = date("h:i A", strtotime($row['wed_timeout']));
-                                      ?>
-                                      <?php //if($row['new_date'] != null && $orgDate != $row['new_date']) { ?>
-                                        <!-- <span class="text-warning">Change in Progress</span> -->
-                                      <?php //} else { ?>
-                                        <?php echo $wed_date; ?> &nbsp; <?php echo $wed_timein; ?> - <?php echo $wed_timeout; ?>
-                                      <?php //} ?>
+                                        <?php echo $row['coursename']; ?>
                                   </div>
                                 </div>
                       <hr>
