@@ -111,6 +111,14 @@ if(!isLoggedIn()){
       <input class="form-control" id="semestername" type="text" name="semestername" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
+    <label for="status" style="font-size: 14px;">Status</label>
+        <select class="form-select" aria-label="Default select example" name="status">
+            <option selected>Select One...</option>
+            <option value="active">Active</option>
+            <option value="inactive">Inactive</option>
+        </select>
+    </div>
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_date" style="font-size: 14px;">Start Date</label>
       <input class="form-control" id="start_date" type="date" name="start_date" value="" required>
     </div>
@@ -119,7 +127,7 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_date" type="date" name="end_date" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
-      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-semester" class="badge text-bg-secondary">Request Semester</button>
+      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-semester" class="badge text-bg-secondary">Request Course</button>
     </div>
     </form>
     </div>
