@@ -59,7 +59,7 @@ if(!isLoggedIn()){
 <!-- start MAIN -->
   <div class="main"> 
 
-  <!-- VIEW TIMESHEET -->
+  <!-- VIEW COURSE -->
     
     <?php 
 
@@ -191,7 +191,7 @@ if(!isLoggedIn()){
           ?>
        </form>
     </div>
-  <!-- END VIEW TIMESHEET --> 
+  <!-- END VIEW COURSE --> 
 
   
   </div> 
@@ -202,14 +202,14 @@ if(!isLoggedIn()){
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Schedule Change Request</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Course Change Request</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
             <?php 
-            $id = $_GET['scheduleID'];
-            $select = " SELECT * FROM schedule WHERE scheduleID = '$id' ";
+            $id = $_GET['courseID'];
+            $select = " SELECT * FROM course WHERE courseID = '$id' ";
             $result = mysqli_query($conn, $select);
 
             if (mysqli_num_rows($result) > 0) {
@@ -218,7 +218,7 @@ if(!isLoggedIn()){
 
             <form action="" method="post">
                 <div class="section-header pt-2 text-center fs-5">
-                    <span class="text-muted pt-4" style="width: 95%;">Schedule Requests</span>
+                    <span class="text-muted pt-4" style="width: 95%;">Course Requests</span>
                 </div>
                 <hr style="margin-bottom: -5px; margin-top: 5px;">
                 <div class="form-group pt-3 mx-auto">
@@ -235,7 +235,7 @@ if(!isLoggedIn()){
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-schedule" class="badge text-bg-secondary">Update Schedule</button>
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-course" class="badge text-bg-secondary">Update Schedule</button>
             </div>
         </form>
         </div>
