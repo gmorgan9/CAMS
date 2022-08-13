@@ -159,11 +159,11 @@ if(!isLoggedIn()){
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
-        <select class="form-select" aria-label="Default select example" name="semester">
+        <select class="form-select" aria-label="Default select example" name="semestername">
         <option selected>Select One...</option>
        
         <?php 
-        $query = "SELECT * FROM semester";
+        $query = "SELECT * FROM semester WHERE status = 'active'";
         $result = mysqli_query($conn, $query);
         while ($row = mysqli_fetch_array($result)) { ?>
             <!-- <option selected>Select One...</option> -->
