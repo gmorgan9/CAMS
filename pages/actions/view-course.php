@@ -81,7 +81,7 @@ if(!isLoggedIn()){
       </div>
 
       <div class="page-content mx-auto mt-2">
-          <h3 class="text-center">Course View</h3>
+          <h3 class="text-center">Course View (<?php echo $row['semestername']; ?>)</h3>
           <div class="col-md-8 mx-auto">
                   <div class="card mb-3">
                     <div class="card-body">
