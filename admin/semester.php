@@ -26,8 +26,8 @@ if(!isLoggedIn()){
     $result = mysqli_query($conn, $select);
 
 
-    $days=implode(", ", $_POST['days']);
-    $insert = "INSERT INTO semester (idno, semestername, start_date, end_date, status) VALUES('$idno', '$semestername', '$start_date', '$end_date', '$status')";
+    //$days=implode(", ", $_POST['days']);
+    $insert = "INSERT INTO semester (idno, semestername, start_date, end_date) VALUES('$idno', '$semestername', '$start_date', '$end_date')";
     mysqli_query($conn, $insert);
     header('location: semester.php');
   };
@@ -110,14 +110,14 @@ if(!isLoggedIn()){
       <label for="semestername" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">e.g. "Fall 2022"</span></label>
       <input class="form-control" id="semestername" type="text" name="semestername" value="" required>
     </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+    <!-- <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="status" style="font-size: 14px;">Status</label>
         <select class="form-select" aria-label="Default select example" name="status">
             <option selected>Select One...</option>
             <option value="active">Active</option>
             <option value="inactive">Inactive</option>
         </select>
-    </div>
+    </div> -->
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_date" style="font-size: 14px;">Start Date</label>
       <input class="form-control" id="start_date" type="date" name="start_date" value="" required>
