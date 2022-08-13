@@ -1,6 +1,13 @@
 <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
     <div class="position-sticky">
         <div class="list-group list-group-flush mx-3 mt-4">
+
+            <?php if($_SESSION['acc_type'] == 1){ ?>
+            <a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
+                <i class="bi bi-speedometer"></i>
+                <span>  Dashboard</span>
+            </a>
+            <?php } else { ?>
             <a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>" class="list-group-item list-group-item-action py-2 ripple" aria-current="true">
                 <i class="bi bi-speedometer"></i>
                 <span>  Dashboard</span>
@@ -17,6 +24,7 @@
                 <i class="bi bi-bar-chart"></i>
                 <span>  Progress Report</span>
             </a>
+            <?php } ?>
 
             <?php if($_SESSION['acc_type'] == 1){ ?>
                 <br>
@@ -32,12 +40,12 @@
                     $rowcount = mysqli_num_rows( $result );
              
                 ?>
-                <a href="<?php echo BASE_URL . '/admin/jobs.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                <a href="<?php echo BASE_URL . '/admin/course.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-briefcase"></i>
                     <?php if($rowcount == 0){ ?>
-                        <span>  Jobs</span>
+                        <span>  Courses</span>
                     <?php } else { ?>
-                        <span>  Jobs</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
+                        <span>  Courses</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
                     <?php }} ?>
                 </a>
             <?php } else {} ?>
