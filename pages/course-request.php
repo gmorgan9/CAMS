@@ -140,7 +140,7 @@ if(!isLoggedIn()){
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
-        <select class="form-select" aria-label="Default select example">
+        <select class="form-select" aria-label="Default select example" name="semester">
             <option selected>Select One...</option>
             <option value="fall22">Fall 2022</option>
             <option value="win23">Winter 2023</option>
