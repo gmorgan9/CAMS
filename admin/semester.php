@@ -106,29 +106,10 @@ if(!isLoggedIn()){
       <span class="text-muted pt-4" style="width: 95%;">Course Requests</span>
     </div>
     <hr style="margin-bottom: -5px; margin-top: 5px;">
-    <?php 
-
-    $sql = "SELECT * FROM student";
-    $all = mysqli_query($conn, $sql);
-      if($all) {
-        while ($row = mysqli_fetch_assoc($all)) {
-    
-    $fname = $row['fname'];
-    $lname = $row['lname']; 
-    $studentID = $row['idno']?>
-    <?php }} ?>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="semestername" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">e.g. "Fall 2022"</span></label>
       <input class="form-control" id="semestername" type="text" name="semestername" value="" required>
     </div>
-    <!-- <div class="form-group pt-3 mx-auto" style="width: 95%;">
-    <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
-        <select class="form-select" aria-label="Default select example" name="semester">
-            <option selected>Select One...</option>
-            <option value="fall22">Fall 2022</option>
-            <option value="win23">Winter 2023</option>
-        </select>
-    </div> -->
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_date" style="font-size: 14px;">Start Date</label>
       <input class="form-control" id="start_date" type="date" name="start_date" value="" required>
