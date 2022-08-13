@@ -18,7 +18,8 @@ if(!isLoggedIn()){
     $courseID = mysqli_real_escape_string($conn, $_POST['courseID']);
     $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
     $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
-    $time = mysqli_real_escape_string($conn, $_POST['time']);
+    $start_time = mysqli_real_escape_string($conn, $_POST['start_time']);
+    $end_time = mysqli_real_escape_string($conn, $_POST['end_time']);
     $days = mysqli_real_escape_string($conn, $_POST['days']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
     $days = mysqli_real_escape_string($conn, $_POST['days']);
