@@ -139,6 +139,15 @@ if(!isLoggedIn()){
       <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <label for="semester" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
+      <input class="form-control" id="semester" type="text" name="semester" value="" required>
+    </div>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Select One...</option>
+        <option value="fall22">Fall 2022</option>
+        <option value="win23">Winter 2023</option>
+    </select>
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_time" style="font-size: 14px;">Start Time</label>
       <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
     </div>
