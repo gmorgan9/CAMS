@@ -151,26 +151,17 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
-            <label class="form-check-label" for="inlineCheckbox1">M</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
-            <label class="form-check-label" for="inlineCheckbox2">Tu</label>
-        </div>
-        <div class="form-check form-check-inline" >
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
-            <label class="form-check-label" for="inlineCheckbox1">W</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
-            <label class="form-check-label" for="inlineCheckbox2">Th</label>
-        </div>
-        <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
-            <label class="form-check-label" for="inlineCheckbox2">F</label>
-        </div>
+    <label>Days:</label>
+                <br />
+                <input type="checkbox" name="days[]" value="M"/>M
+                <br />
+                <input type="checkbox" name="days[]" value="Tu"/>Tu
+                <br />
+                <input type="checkbox" name="days[]" value="W"/>W
+                <br />
+                <input type="checkbox" name="days[]" value="Th"/>Th
+                <br />
+                <input type="checkbox" name="days[]" value="F"/>F
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Job</button>
