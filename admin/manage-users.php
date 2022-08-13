@@ -16,7 +16,7 @@ if(!isAdmin()){
 
 
 $sID = $_SESSION['sID'];
-$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+$select = " SELECT * FROM student WHERE studentID = '$sID' ";
 $result = mysqli_query($conn, $select);
 
 if(isset($_POST['update-profile'])){
@@ -51,7 +51,7 @@ if(isset($_POST['update-profile'])){
 if(isset($_GET['studentID'])) {
     $id = $_GET['studentID'];
 
-    $sql = "DELETE FROM students WHERE studentID = $id";
+    $sql = "DELETE FROM student WHERE studentID = $id";
     $delete = mysqli_query($conn, $sql);
     if($delete) {
         // echo "Deleted Successfully";
@@ -114,7 +114,7 @@ if (mysqli_num_rows($result) > 0) {
   <div class="page-header mx-auto">
     <p class="page_title" style="float: left; padding-top: 2px;">Manage Users</p>
     <ul class="breadcrumb">
-      <li><a href="<?php echo BASE_URL . '/dashboard.php' ?>">Dashboard</a></li>
+      <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
       <li>Manage Users</li>
     </ul>
   </div>
@@ -142,7 +142,7 @@ if (mysqli_num_rows($result) > 0) {
   <tbody class="table-group-divider">
 
   <?php
-      $sql = "SELECT * FROM students";
+      $sql = "SELECT * FROM student";
       $all = mysqli_query($conn, $sql);
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
@@ -201,7 +201,7 @@ if (mysqli_num_rows($result) > 0) {
 </div> 
 
 
-<?php include(ROOT_PATH . "app/includes/footer.php"); ?>
+<?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
 </body>
 </html>
