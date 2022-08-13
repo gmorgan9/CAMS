@@ -64,7 +64,7 @@ if(isset($_POST['submit'])){
          $_SESSION['email'] = $row['email'];
          $_SESSION['pass'] = $row['password'];
          $_SESSION['cpass'] = $row['cpassword'];
-         header('location: pages/dashboard.php');
+         header('location: '. ROOT_PATH . '/pages/dashboard.php');
       }
      
    }else{
