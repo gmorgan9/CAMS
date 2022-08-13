@@ -173,6 +173,7 @@ if (isset($_POST['active'])) {
             <td><span class="text-capitalize text-danger"><?php echo $status; ?><span></td>
           <?php } ?>
           <td>
+          <div class="forms d-flex" style="">
             <form method="post" action="">
               <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
               <button style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="active"><span class="badge text-bg-success">Active</span></button>
@@ -181,6 +182,7 @@ if (isset($_POST['active'])) {
               <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
               <button onclick="return confirm('Be Careful, Can\'t be undone! \r\nOK to delete?')" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="inactive"><span class="badge text-bg-danger">Inactive</span></button>
             </form>
+          </div>
           </td>
           <?php } ?>
           
