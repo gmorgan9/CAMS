@@ -175,15 +175,15 @@ if(!isLoggedIn()){
       <input class="form-control" id="professorname" type="text" name="professorname" value="" required>
     </div>
     <div class="row mx-auto">
-        <div class="form-group pt-3" style="width: 33.5%;">
+        <div class="form-group pt-3" style="width: 33.3%;">
             <label for="section" style="font-size: 14px;">Section</label>
             <input class="form-control" id="section" type="number" name="section" value="" required>
         </div>
-        <div class="form-group pt-3" style="width: 33.5%;">
+        <div class="form-group pt-3" style="width: 33.3%;">
             <label for="credits" style="font-size: 14px;">Credits</label>
             <input class="form-control" id="credits" type="number" name="credits" value="" required>
         </div>
-        <div class="form-group pt-3" style="width: 33.5%;">
+        <div class="form-group pt-3" style="width: 33.3%;">
             <label for="location" style="font-size: 14px;">Location</label>
             <input class="form-control" id="location" type="text" name="location" value="" required>
         </div>
