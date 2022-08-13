@@ -147,8 +147,7 @@ if(!isLoggedIn()){
         $result = mysql_query($conn, $query);
         while ($row = mysql_fetch_array($result)) { ?>
             <option selected>Select One...</option>
-            <option value="fall22">Fall 2022</option>
-            <option value="win23">Winter 2023</option>
+            <?php echo "<option value='".$row['semestername']."'>'".$row['semestername']."'</option>"; ?>
             <?php }?>
         </select>
     </div>
