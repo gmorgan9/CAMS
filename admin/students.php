@@ -8,20 +8,20 @@ require_once "../path.php";
 session_start();
 
 if(!isLoggedIn()){
-   header('location: /login.php');
+  header('location:' . BASE_URL . '/pages/entry/login.php');
 }
 if(!isAdmin()){
-  header('location: /dashboard.php');
+  header('location:' . BASE_URL . '/pages/dashboard.php');
 }
 
 
-$empID = $_SESSION['empID'];
-$select = " SELECT * FROM employee WHERE employeeID = '$empID' ";
+$sID = $_SESSION['sID'];
+$select = " SELECT * FROM student WHERE studentID = '$sID' ";
 $result = mysqli_query($conn, $select);
 
 if(isset($_POST['update-profile'])){
 
-   $employeeID   = mysqli_real_escape_string($conn, $_POST['employeeID']);
+   $studentID   = mysqli_real_escape_string($conn, $_POST['studentID']);
    $fname = mysqli_real_escape_string($conn, $_POST['fname']);
    $lname = mysqli_real_escape_string($conn, $_POST['lname']);
    $uname = mysqli_real_escape_string($conn, $_POST['uname']);
@@ -37,10 +37,10 @@ if(isset($_POST['update-profile'])){
    if(mysqli_num_rows($result) > 0){
 
       // $error[] = 'user already exist!';
-      $update = "UPDATE employee SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where employeeID = '$empID' ";
+      $update = "UPDATE student SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
       mysqli_query($conn, $update);
       $success[] = 'Success';
-      header('location:' . BASE_URL . '/admin/profile.php');
+      header('location:' . BASE_URL . '/admin/students.php');
       
    }else{
       
@@ -48,14 +48,14 @@ if(isset($_POST['update-profile'])){
 };
 
 // Delete User
-if(isset($_GET['employeeID'])) {
-    $id = $_GET['employeeID'];
+if(isset($_GET['studentID'])) {
+    $id = $_GET['studentID'];
 
-    $sql = "DELETE FROM employee WHERE employeeID = $id";
+    $sql = "DELETE FROM student WHERE studentID = $id";
     $delete = mysqli_query($conn, $sql);
     if($delete) {
         // echo "Deleted Successfully";
-        header('location: employees.php'); // returns back to same page
+        header('location: students.php'); // returns back to same page
     } else {
         die(mysqli_error($conn));
     }
@@ -72,7 +72,7 @@ if(isset($_GET['employeeID'])) {
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>WMS | Employees</title>
+   <title>CAMS | Students</title>
 
    <!-- Custom Styles -->
    <link rel="stylesheet" href="<?php echo BASE_URL . '/assets/css/other-style.css?v='. time(); ?>">
