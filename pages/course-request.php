@@ -141,9 +141,15 @@ if(!isLoggedIn()){
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
         <select class="form-select" aria-label="Default select example" name="semester">
+       
+        <?php 
+        $query = "SELECT semestername FROM semester";
+        $result = mysql_query($conn, $query);
+        while ($row = mysql_fetch_array($result)) { ?>
             <option selected>Select One...</option>
             <option value="fall22">Fall 2022</option>
             <option value="win23">Winter 2023</option>
+            <?php }?>
         </select>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
