@@ -40,7 +40,7 @@ if(!isLoggedIn()){
     //    {  
     //       $chk.= $chk1.",";  
     //    }  
-    $chk = implode(',', $_POST['days']);
+    $chk = implode(',', $_POST['days[]']);
 
 
 
