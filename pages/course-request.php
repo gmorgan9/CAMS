@@ -51,7 +51,7 @@ if(!isLoggedIn()){
       $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
       mysqli_query($conn, $insert);
       // mysqli_query($conn, $insert2);
-      header('location: course_request.php');
+      header('location: course-request.php');
     }
   };
 // END ADD JOB
