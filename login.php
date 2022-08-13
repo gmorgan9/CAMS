@@ -48,7 +48,7 @@ if(isset($_POST['submit'])){
          $_SESSION['email'] = $row['email'];
          $_SESSION['pass'] = $row['password'];
          $_SESSION['cpass'] = $row['cpassword'];
-         header('location: /pages/dashboard.php');
+         header('location: '. ROOT_PATH . '/pages/dashboard.php');
       }elseif($row['isadmin'] == 0){
          if (mysqli_query($conn, $sql)) {
             echo "Record updated successfully";
