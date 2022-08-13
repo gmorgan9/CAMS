@@ -37,7 +37,7 @@ if(!isLoggedIn()){
     $var1 = array();
     $days = array();
     $var1 = $_POST['days'];
-    $days = implode(',', $var1);
+    $days = implode(", ", $var1);
     //$days=implode(", ", $_POST['day']);
     //$chk = implode(',', $_POST['days[]']);
 
