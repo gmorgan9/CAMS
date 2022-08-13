@@ -142,12 +142,12 @@ if(!isLoggedIn()){
       <label for="start_time" style="font-size: 14px;">Start Time</label>
       <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
     </div>
-    <div class="form-group pt-3 mx-auto">
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="end_time" style="font-size: 14px;">End Time</label>
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <fieldset class="row pt-3 mx-auto">
-        <legend class="col-form-label col-sm-2 pt-0" style="padding-bottom: -150px;">Course Days</legend>
+        <legend class="col-form-label col-sm-3 pt-0" style="padding-bottom: -150px;">Course Days</legend>
         <div class="form-group " style="width: 95%;">
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
