@@ -2,7 +2,7 @@
 <!--Main Navigation-->
 <header>
 <!-- Navbar -->
-    <?php if(isset($_SESSION['user_fname']) || isset($_SESSION['admin_fname'])){ ?>
+    <?php if(isset($_SESSION['fname'])){ ?>
         <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
     <?php } else { ?>
         <nav id="main-navbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
@@ -16,7 +16,7 @@
         </a>
 
         <ul class="navbar-nav ms-auto d-flex flex-row">
-            <?php if(isset($_SESSION['user_fname']) || isset($_SESSION['admin_fname'])){ ?>
+            <?php if(isset($_SESSION['fname'])){ ?>
             <?php if($_SESSION['isadmin'] == 1){ ?>
                 <li class="nav-item"><a class="nav-link me-3 me-lg-0" href="<?php echo BASE_URL . '/pages/dashboard.php' ?>"><i class="bi bi-globe2"></i>  Dashboard</a></li>
                 <li class="nav-item"><a class="nav-link me-3 me-lg-0" href="<?php echo BASE_URL . '/admin/profile.php' ?>"><i class="bi bi-person"></i>  Profile</a></li>
