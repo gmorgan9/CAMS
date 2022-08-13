@@ -134,6 +134,21 @@ if(!isLoggedIn()){
       <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $fname; ?>">
       <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $lname; ?>">
       <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $studentID; ?>">
+
+      <?php
+      $sql = "SELECT * FROM semester WHERE status = 'active'";
+      $all = mysqli_query($conn, $sql);
+      if($all) {
+        while ($row = mysqli_fetch_assoc($all)) {
+    
+        $semestername = $row['semestername'];
+        $start_date = $row['start_date']; 
+        $end_date = $row['end_date']?>
+    <?php }} ?>
+
+      <input class="form-control" id="semestername" type="hidden" name="semestername" value="<?php echo $semestername; ?>">
+      <input class="form-control" id="semester_start" type="hidden" name="semester_start" value="<?php echo $start_date; ?>">
+      <input class="form-control" id="semester_end" type="hidden" name="semester_end" value="<?php echo $end_date; ?>">
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="coursename" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
       <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
