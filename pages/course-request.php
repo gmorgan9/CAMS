@@ -144,7 +144,7 @@ if(!isLoggedIn()){
         <option selected>Select One...</option>
        
         <?php 
-        $query = "SELECT semestername FROM semester";
+        $query = "SELECT * FROM semester";
         $result = mysql_query($conn, $query);
         while ($row = mysql_fetch_array($result)) { ?>
             <!-- <option selected>Select One...</option> -->
