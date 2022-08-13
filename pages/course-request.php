@@ -173,11 +173,11 @@ if(!isLoggedIn()){
       <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
     </div>
     <div class="row mx-auto">
-    <div class="form-group pt-3 mx-auto" style="width: 50%;">
+    <div class="form-group pt-3 mx-auto" style="width: 30%;">
           <label for="shortcourse" style="font-size: 14px;">Short Name <span class="text-muted" style="font-size: 10px;">e.g. "IT&C 101"</span></label>
           <input class="form-control" id="shortcourse" type="text" name="shortcourse" value="" required>
         </div>
-        <div class="form-group pt-3 mx-auto" style="width: 50%;">
+        <div class="form-group pt-3 mx-auto" style="width: 70%;">
           <label for="professorname" style="font-size: 14px;">Professor</label>
           <input class="form-control" id="professorname" type="text" name="professorname" value="" required>
         </div>
