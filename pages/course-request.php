@@ -147,6 +147,7 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
+    <label for="inlineCheckbox1" style="font-size: 14px;">Start Time</label>
         <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
             <label class="form-check-label" for="inlineCheckbox1">M</label>
