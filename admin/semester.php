@@ -117,43 +117,26 @@ if(!isLoggedIn()){
     $lname = $row['lname']; 
     $studentID = $row['idno']?>
     <?php }} ?>
-      <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $fname; ?>">
-      <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $lname; ?>">
-      <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $studentID; ?>">
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="coursename" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
-      <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
+      <label for="semestername" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">e.g. "Fall 2022"</span></label>
+      <input class="form-control" id="semestername" type="text" name="semestername" value="" required>
     </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+    <!-- <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
         <select class="form-select" aria-label="Default select example" name="semester">
             <option selected>Select One...</option>
             <option value="fall22">Fall 2022</option>
             <option value="win23">Winter 2023</option>
         </select>
+    </div> -->
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <label for="start_date" style="font-size: 14px;">Start Date</label>
+      <input class="form-control" id="start_date" type="date" name="start_date" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="start_time" style="font-size: 14px;">Start Time</label>
-      <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
+      <label for="end_date" style="font-size: 14px;">End Date</label>
+      <input class="form-control" id="end_date" type="date" name="end_date" value="" required>
     </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="end_time" style="font-size: 14px;">End Time</label>
-      <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
-    </div>
-    <fieldset class="row pt-3 mx-auto">
-        <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
-        <div class="form-group " style="width: 95%; margin-top: -20px;">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M"> M
-            &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu"> Tu
-            &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W"> W
-            &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th"> Th
-            &nbsp;
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F"> F
-        </div>
-    </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Course</button>
     </div>
