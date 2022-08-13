@@ -145,23 +145,23 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <br>
-    <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline" style="width: 95%;">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
         <label class="form-check-label" for="inlineCheckbox1">1</label>
     </div>
-    <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline" style="width: 95%;">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
         <label class="form-check-label" for="inlineCheckbox2">2</label>
     </div>
-    <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline" style="width: 95%;">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
         <label class="form-check-label" for="inlineCheckbox1">1</label>
     </div>
-    <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline" style="width: 95%;">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
         <label class="form-check-label" for="inlineCheckbox2">2</label>
     </div>
-    <div class="form-check form-check-inline">
+    <div class="form-check form-check-inline" style="width: 95%;">
         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
         <label class="form-check-label" for="inlineCheckbox2">2</label>
     </div>
