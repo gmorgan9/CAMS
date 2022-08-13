@@ -32,6 +32,10 @@ if(isLoggedIn()){
     <title>CAMS | Home Page</title>
 </head>
 <body>
+
+<div class="blocked-page">
+<?php include("app/includes/bloacked-page.php"); ?>
+</div>
     
 <?php include("app/includes/header.php"); ?>
 

@@ -1,5 +1,6 @@
 /* WORKING */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+@media only screen and (min-width: 1024px) {
 * {
     margin: 0;
     box-sizing: border-box;
@@ -214,3 +215,21 @@ footer {
    font-size: 20px;
    padding:10px;
 }
+
+.blocked-page {
+   display: none;
+}
+
+
+
+   
+ }
+
+ @media only screen and (max-width: 1024px) {
+   .container {
+      display: none;
+   }
+   .blocked-page {
+      display: block;
+   }
+ }
