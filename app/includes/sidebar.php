@@ -52,6 +52,10 @@
                         <span>  Assignments</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
                     <?php }} ?>
                 </a>
+                <a href="<?php echo BASE_URL . '/admin/semesters.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="bi bi-calendar3"></i>
+                    <span>  Semester</span>
+                </a>
                 <a href="<?php echo BASE_URL . '/admin/reports.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-bar-chart"></i>
                     <span>  Reports</span>
