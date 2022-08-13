@@ -149,25 +149,12 @@ if(!isLoggedIn()){
     <fieldset class="row pt-3 mx-auto">
         <legend class="col-form-label col-sm-6 pt-3">Course Days</legend>
         <div class="form-group " style="width: 95%;">
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
-                <label class="form-check-label" for="inlineCheckbox1">M</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
-                <label class="form-check-label" for="inlineCheckbox2">Tu</label>
-            </div>
-            <div class="form-check form-check-inline" >
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">W
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
-                <label class="form-check-label" for="inlineCheckbox2">Th</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
-                <label class="form-check-label" for="inlineCheckbox2">F</label>
-            </div>
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">M
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">Tu
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">W
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">Th
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">F
+            <label class="form-check-label" for="inlineCheckbox2">F</label>
         </div>
     </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
