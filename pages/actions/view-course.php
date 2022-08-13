@@ -132,19 +132,10 @@ if(!isLoggedIn()){
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Thursday</h6>
+                                    <h6 class="mb-0">Course Time</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                      <?php 
-                                      $thurs_date = date("M d, Y", strtotime($row['thurs_date']));
-                                      $thurs_timein = date("h:i A", strtotime($row['thurs_timein']));
-                                      $thurs_timeout = date("h:i A", strtotime($row['thurs_timeout']));
-                                      ?>
-                                      <?php //if($row['new_date'] != null && $orgDate != $row['new_date']) { ?>
-                                        <!-- <span class="text-warning">Change in Progress</span> -->
-                                      <?php //} else { ?>
-                                        <?php echo $thurs_date; ?> &nbsp; <?php echo $thurs_timein; ?> - <?php echo $thurs_timeout; ?>
-                                      <?php //} ?>
+                                        <?php echo $row['start_time']; ?> - <?php echo $row['end_time']; ?>
                                   </div>
                                 </div>
                       <hr>
