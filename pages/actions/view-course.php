@@ -105,19 +105,10 @@ if(!isLoggedIn()){
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Monday</h6>
+                                    <h6 class="mb-0">Title</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                      <?php 
-                                      $mon_date = date("M d, Y", strtotime($row['mon_date']));
-                                      $mon_timein = date("h:i A", strtotime($row['mon_timein']));
-                                      $mon_timeout = date("h:i A", strtotime($row['mon_timeout']));
-                                      ?>
-                                      <?php //if($row['new_date'] != null && $orgDate != $row['new_date']) { ?>
-                                        <!-- <span class="text-warning">Change in Progress</span> -->
-                                      <?php //} else { ?>
-                                        <?php echo $mon_date; ?> &nbsp; <?php echo $mon_timein; ?> - <?php echo $mon_timeout; ?>
-                                      <?php //} ?>
+                                        <?php echo $row['coursename']; ?>
                                   </div>
                                 </div>
                       <hr>
