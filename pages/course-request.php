@@ -20,9 +20,9 @@ if(!isLoggedIn()){
     $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
     $start_time = mysqli_real_escape_string($conn, $_POST['start_time']);
     $end_time = mysqli_real_escape_string($conn, $_POST['end_time']);
-    $days = mysqli_real_escape_string($conn, $_POST['days']);
+    //$days = mysqli_real_escape_string($conn, $_POST['days']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
-    $days = mysqli_real_escape_string($conn, $_POST['days']);
+    //$days = mysqli_real_escape_string($conn, $_POST['days']);
     $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
     $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
     $note = mysqli_real_escape_string($conn, $_POST['note']);
@@ -34,19 +34,16 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-//     $day1=$_POST['days'];  
-//     $days=""; 
-//     foreach($day1 as $days1)  
-//    {  
-//       $days .= $days1.",";  
-   $var1 = $_POST['days'];
-   $days=implode(", ", $var1);
-      // $insert2 = "INSERT INTO employee_company_data (employee_code, company_code, dept_code, job_code) SELECT employee_code, company_code, dept_code, jobID FROM job";
-      $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
-   // }  
-      mysqli_query($conn, $insert);
-      // mysqli_query($conn, $insert2);
-      header('location: course-request.php');
+    //     $day1=$_POST['days'];  
+    //     $days=""; 
+    //     foreach($day1 as $days1)  
+    //    {  
+    //       $days .= $days1.",";  
+
+    $subjects=implode(", ", $_POST['subject']);
+    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
+    mysqli_query($conn, $insert);
+    header('location: course-request.php');
   };
 // END ADD JOB
 
