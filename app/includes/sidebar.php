@@ -30,7 +30,7 @@
                 $sql = " SELECT * FROM course WHERE approval_status = 'pending' OR approval_status = 'terminated' ";
                 if ($result = mysqli_query($conn, $sql)) {
                     $rowcount = mysqli_num_rows( $result );
-                }
+             
                 ?>
                 <a href="<?php echo BASE_URL . '/admin/jobs.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-briefcase"></i>
@@ -38,7 +38,7 @@
                         <span>  Jobs</span>
                     <?php } else { ?>
                         <span>  Jobs</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
-                    <?php } ?>
+                    <?php }} ?>
                 </a>
             <?php } else {} ?>
         </div>
