@@ -158,8 +158,7 @@ if(!isLoggedIn()){
                 <label class="form-check-label" for="inlineCheckbox2">Tu</label>
             </div>
             <div class="form-check form-check-inline" >
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
-                <label class="form-check-label" for="inlineCheckbox1">W</label>
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">W
             </div>
             <div class="form-check form-check-inline">
                 <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
