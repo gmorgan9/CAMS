@@ -39,20 +39,6 @@
                     <?php } ?>
                 </a>
                 <?php 
-                // WHERE approval_status = 'pending' 
-                $sql = " SELECT * FROM professor";
-                if ($result = mysqli_query($conn, $sql)) {
-                    $rowcount = mysqli_num_rows( $result );
-                ?>
-                <a href="<?php echo BASE_URL . '/pages/professors.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
-                    <i class="bi bi-clock-history"></i>
-                    <?php if($rowcount == 0){ ?>
-                        <span>  Professors</span>
-                    <?php } else { ?>
-                        <span>  Professors</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
-                    <?php }} ?>
-                </a>
-                <?php 
                 // WHERE approval_status = 'pending' OR approval_status = 'terminated' 
                 $sql = " SELECT * FROM assignment";
                 if ($result = mysqli_query($conn, $sql)) {
