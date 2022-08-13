@@ -151,7 +151,7 @@ if (mysqli_num_rows($result) > 0) {
             $lname  = $row['lname'];
             $uname  = $row['uname'];
             $email  = $row['email'];
-            $status = $row['isadmin'];
+            $status = $row['acc_type'];
             ?>
     <tr>
         <?php 
