@@ -24,7 +24,21 @@
                 <hr>
                 <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/admin/manage-users.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-bar-chart"></i>
-                <span>  Manage Users</span>
+                <span>  Students</span>
+                </a>
+                <?php 
+                $sql = " SELECT * FROM job WHERE approval_status = 'pending' OR approval_status = 'terminated' ";
+                if ($result = mysqli_query($conn, $sql)) {
+                    $rowcount = mysqli_num_rows( $result );
+                }
+                ?>
+                <a href="<?php echo BASE_URL . '/admin/jobs.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                    <i class="bi bi-briefcase"></i>
+                    <?php if($rowcount == 0){ ?>
+                        <span>  Jobs</span>
+                    <?php } else { ?>
+                        <span>  Jobs</span> &nbsp;  <span class="badge rounded-pill text-bg-danger" style="margin-top: -10px !important;"><?php echo $rowcount; ?></span>
+                    <?php } ?>
                 </a>
             <?php } else {} ?>
         </div>
