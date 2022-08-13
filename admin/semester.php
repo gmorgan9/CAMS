@@ -119,7 +119,7 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_date" type="date" name="end_date" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
-      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Course</button>
+      <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-semester" class="badge text-bg-secondary">Request Semester</button>
     </div>
     </form>
     </div>
