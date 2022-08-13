@@ -138,7 +138,6 @@ if(!isLoggedIn()){
       <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $fname; ?>">
       <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $lname; ?>">
       <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $studentID; ?>">
-
       <?php
       $sql = "SELECT * FROM semester WHERE status = 'active'";
       $all = mysqli_query($conn, $sql);
@@ -149,14 +148,8 @@ if(!isLoggedIn()){
         $start_date = $row['start_date']; 
         $end_date = $row['end_date']?>
     <?php }} ?>
-
-      <!-- <input class="form-control" id="semestername" type="hidden" name="semestername" value="<?php //echo $semestername; ?>"> -->
       <input class="form-control" id="semester_start" type="hidden" name="semester_start" value="<?php echo $start_date; ?>">
       <input class="form-control" id="semester_end" type="hidden" name="semester_end" value="<?php echo $end_date; ?>">
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="coursename" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
-      <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
-    </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     <label for="semester" style="font-size: 14px;">Semester <span class="text-muted" style="font-size: 10px;">Pick semester for requested course.</span></label>
         <select class="form-select" aria-label="Default select example" name="semestername">
@@ -170,6 +163,14 @@ if(!isLoggedIn()){
             <?php echo "<option value='".$row['semestername']."'>".$row['semestername']."</option>"; ?>
             <?php }?>
         </select>
+    </div>
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <label for="coursename" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
+      <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
+    </div>
+    <div class="form-group pt-3 mx-auto" style="width: 95%;">
+      <label for="professorname" style="font-size: 14px;">Professor</label>
+      <input class="form-control" id="professorname" type="text" name="professorname" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_time" style="font-size: 14px;">Start Time</label>
