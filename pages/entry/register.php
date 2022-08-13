@@ -67,7 +67,7 @@ if(isset($_POST['submit'])){
 <body>
 
 <div class="blocked-page">
-   <?php include("app/includes/blocked-page.php"); ?>
+   <?php include(ROOT_PATH . '/app/includes/blocked-page.php'); ?>
 </div>
 
 <div class="main-container">
