@@ -169,12 +169,12 @@ if(!isLoggedIn()){
         </select>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="coursename" style="font-size: 14px;">Course <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
+      <label for="coursename" style="font-size: 14px;">Title <span class="text-muted" style="font-size: 10px;">e.g. "Intro to Computers"</span></label>
       <input class="form-control" id="coursename" type="text" name="coursename" value="" required>
     </div>
     <div class="row mx-auto">
     <div class="form-group pt-3 mx-auto" style="width: 40%;">
-          <label for="shortcourse" style="font-size: 14px;">Short Name <span class="text-muted" style="font-size: 10px;">e.g. "IT&C 101"</span></label>
+          <label for="shortcourse" style="font-size: 14px;">Course</label>
           <input class="form-control" id="shortcourse" type="text" name="shortcourse" value="" required>
         </div>
         <div class="form-group pt-3 mx-auto" style="width: 60%;">
