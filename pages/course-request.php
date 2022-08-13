@@ -34,15 +34,16 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-//     $day1=$_POST['days'];  
-//     $days=""; 
-//     foreach($day1 as $days1)  
-//    {  
-//       $days .= $days1.",";  
-//    }  
+    $day1=$_POST['days'];  
+    $days=""; 
+    foreach($day1 as $days1)  
+   {  
+      $days .= $days1.",";  
+   
    $days=implode(", ", $_POST['days']);
       // $insert2 = "INSERT INTO employee_company_data (employee_code, company_code, dept_code, job_code) SELECT employee_code, company_code, dept_code, jobID FROM job";
       $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
+    }  
       mysqli_query($conn, $insert);
       // mysqli_query($conn, $insert2);
       header('location: course-request.php');
