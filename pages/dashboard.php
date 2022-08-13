@@ -6,7 +6,7 @@ require_once "../path.php";
 session_start();
 
 if(!isLoggedIn()){
-  header('location:/login.php');
+  header('location: '. BASE_URL . '/pages/entry/login.php');
 }
 
 ?>
@@ -34,9 +34,14 @@ if(!isLoggedIn()){
     <title>CAMS | Dashboard</title>
 </head>
 <body>
-    
-<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
+<div class="blocked-page">
+<?php include("app/includes/blocked-page.php"); ?>
+</div>
+
+    
+<div class="main-container">
+<?php include(ROOT_PATH . "/app/includes/header.php"); ?>
 
 <?php include(ROOT_PATH . "/app/includes/sidebar.php") ?>
         
@@ -106,6 +111,7 @@ if(!isLoggedIn()){
 
 
 <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
+</div>
 
 
 </body>

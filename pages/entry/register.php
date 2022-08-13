@@ -65,6 +65,12 @@ if(isset($_POST['submit'])){
 
 </head>
 <body>
+
+<div class="blocked-page">
+   <?php include("app/includes/blocked-page.php"); ?>
+</div>
+
+<div class="main-container">
 <?php include("../../app/includes/header.php"); ?>
    
 <br><br><br>
@@ -93,6 +99,7 @@ if(isset($_POST['submit'])){
 </div>
 
 <?php include("../../app/includes/footer.php"); ?>
+</div>
 
 </body>
 </html>
