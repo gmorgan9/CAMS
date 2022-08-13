@@ -178,6 +178,7 @@ if (isset($_POST['active'])) {
               <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
               <button style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="active"><span class="badge text-bg-success">Active</span></button>
             </form>
+            &nbsp;
             <form method="post" action="">
               <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
               <button onclick="return confirm('Be Careful, Can\'t be undone! \r\nOK to delete?')" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="inactive"><span class="badge text-bg-danger">Inactive</span></button>
