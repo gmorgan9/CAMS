@@ -28,6 +28,7 @@ if(!isLoggedIn()){
     $note = mysqli_real_escape_string($conn, $_POST['note']);
     $reason = mysqli_real_escape_string($conn, $_POST['reason']);
     $credits = mysqli_real_escape_string($conn, $_POST['credits']);
+    $section = mysqli_real_escape_string($conn, $_POST['section']);
     $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
     $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
     $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
@@ -47,7 +48,7 @@ if(!isLoggedIn()){
     //       $days .= $days1.",";  
 
     $days=implode(", ", $_POST['days']);
-    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, location, credits, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$location', '$credits', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
+    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, location, credits, section, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$location', '$credits', '$section', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
     mysqli_query($conn, $insert);
     header('location: course-request.php');
   };
