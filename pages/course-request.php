@@ -146,7 +146,7 @@ if(!isLoggedIn()){
       <label for="end_time" style="font-size: 14px;">End Time</label>
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
-    <span style="font-size: 14px; margin-top: 15px; margin-bottom: -10px;">Start Time</span>
+    <span style="font-size: 14px; margin-top: 15px; padding-bottom: -10px;">Start Time</span>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
     
         <div class="form-check form-check-inline">
