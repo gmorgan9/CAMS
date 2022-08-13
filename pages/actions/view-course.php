@@ -135,7 +135,7 @@ if(!isLoggedIn()){
                                     <h6 class="mb-0">Course Time</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['start_time']; ?> - <?php echo $row['end_time']; ?>
+                                        <?php echo $row['start_time']; ?> - <?php echo $row['end_time']; ?> (<?php echo $row['days']; ?>)
                                   </div>
                                 </div>
                       <hr>
