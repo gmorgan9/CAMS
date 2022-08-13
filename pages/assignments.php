@@ -48,7 +48,7 @@ if(!isLoggedIn()){
 </div>
 
 
-<?php include(ROOT_PATH . "app/includes/footer.php"); ?>
+<?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
 
 </body>
