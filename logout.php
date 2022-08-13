@@ -2,6 +2,7 @@
 <?php
 session_start();
 require_once "app/database/connection.php";
+require_once "path.php";
 
 $sID = $_SESSION['sID'];
 $sql = "UPDATE student SET loggedin='0' WHERE studentID='$sID'";
