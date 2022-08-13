@@ -34,11 +34,12 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-    $var1 = array();
-    $days = array();
-    $var1 = $_POST['day'];
-    $days = implode(", ", $var1);
-    //$days=implode(", ", $_POST['day']);
+    $checkbox1 = $_POST['days[]'];
+    $chk="";  
+    foreach($checkbox1 as $chk1)  
+       {  
+          $chk.= $chk1.",";  
+        
     //$chk = implode(',', $_POST['days[]']);
 
 
@@ -47,10 +48,11 @@ if(!isLoggedIn()){
       $error[] = 'Course already exist!';
     }else{
       // $insert2 = "INSERT INTO employee_company_data (employee_code, company_code, dept_code, job_code) SELECT employee_code, company_code, dept_code, jobID FROM job";
-      $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
+      $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$chk', '$student_fname', '$student_lname', '$student_idno')";
       mysqli_query($conn, $insert);
       // mysqli_query($conn, $insert2);
       header('location: course-request.php');
+    } 
     }
   };
 // END ADD JOB
@@ -155,17 +157,26 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
-    <label>Days:</label>
-                <br />
-                <input type="checkbox" name="day[]" value="M"/>M
-                <br />
-                <input type="checkbox" name="day[]" value="Tu"/>Tu
-                <br />
-                <input type="checkbox" name="day[]" value="W"/>W
-                <br />
-                <input type="checkbox" name="day[]" value="Th"/>Th
-                <br />
-                <input type="checkbox" name="day[]" value="F"/>F
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M">
+            <label class="form-check-label" for="inlineCheckbox1">M</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu">
+            <label class="form-check-label" for="inlineCheckbox2">Tu</label>
+        </div>
+        <div class="form-check form-check-inline" >
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="W">
+            <label class="form-check-label" for="inlineCheckbox1">W</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th">
+            <label class="form-check-label" for="inlineCheckbox2">Th</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F">
+            <label class="form-check-label" for="inlineCheckbox2">F</label>
+        </div>
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Job</button>
