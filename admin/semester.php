@@ -48,13 +48,21 @@ if(!isLoggedIn()){
   }
 // END DELETE JOB (NOT IN USE)
 
-// SET TERMINATED
+// SET INACTIVE
   if (isset($_POST['inactive'])) {
     $terUpdateQuery = "UPDATE semester SET status = 'inactive' WHERE semesterID = '".$_POST['semesterID']."'";
     $terUpdateResult = mysqli_query($conn, $terUpdateQuery);
     header('location: semester.php');
   }
-// END SET TERMINATED
+// END SET INACTIVE
+
+// SET ACTIVE
+if (isset($_POST['active'])) {
+    $terUpdateQuery = "UPDATE semester SET status = 'active' WHERE semesterID = '".$_POST['semesterID']."'";
+    $terUpdateResult = mysqli_query($conn, $terUpdateQuery);
+    header('location: semester.php');
+  }
+// END SET ACTIVE
 
 ?>
 
@@ -165,6 +173,10 @@ if(!isLoggedIn()){
             <td><span class="text-capitalize text-danger"><?php echo $status; ?><span></td>
           <?php } ?>
           <td>
+            <form method="post" action="">
+              <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
+              <button style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="active"><span class="badge text-bg-success">Active</span></button>
+            </form>
             <form method="post" action="">
               <input type="hidden" name="semesterID" value="<?php echo $semesterID; ?>" />
               <button onclick="return confirm('Be Careful, Can\'t be undone! \r\nOK to delete?')" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="inactive"><span class="badge text-bg-danger">Inactive</span></button>
