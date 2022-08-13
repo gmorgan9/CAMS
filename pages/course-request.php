@@ -146,11 +146,11 @@ if(!isLoggedIn()){
     </div>
     <br>
     <div class="checks" style="width: 95%;">
-        <div class="form-check form-check-inline" style="width: 95%;">
+        <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
             <label class="form-check-label" for="inlineCheckbox1">1</label>
         </div>
-        <div class="form-check form-check-inline" style="width: 95%;">
+        <div class="form-check form-check-inline">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
             <label class="form-check-label" for="inlineCheckbox2">2</label>
         </div>
