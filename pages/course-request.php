@@ -33,6 +33,16 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
+    $day1=$_POST['days'];  
+    $days=""; 
+    foreach($day1 as $days1)  
+   {  
+      $days .= $days1.",";  
+   }  
+
+
+
+
     if(mysqli_num_rows($result) > 0){
       $error[] = 'Course already exist!';
     }else{
