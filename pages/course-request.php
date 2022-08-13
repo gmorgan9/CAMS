@@ -40,7 +40,7 @@ if(!isLoggedIn()){
 //    {  
 //       $days .= $days1.",";  
 //    }  
-   $days=implode(", ", $_POST['days']);
+   $days=implode(", ", $_POST['days[]']);
 
 
 
