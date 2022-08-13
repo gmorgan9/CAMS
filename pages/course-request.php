@@ -27,6 +27,7 @@ if(!isLoggedIn()){
     $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
     $note = mysqli_real_escape_string($conn, $_POST['note']);
     $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+    $credits = mysqli_real_escape_string($conn, $_POST['credits']);
     $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
     $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
     $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
@@ -46,7 +47,7 @@ if(!isLoggedIn()){
     //       $days .= $days1.",";  
 
     $days=implode(", ", $_POST['days']);
-    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
+    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, location, credits, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$location', '$credits', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
     mysqli_query($conn, $insert);
     header('location: course-request.php');
   };
@@ -172,6 +173,16 @@ if(!isLoggedIn()){
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="professorname" style="font-size: 14px;">Professor</label>
       <input class="form-control" id="professorname" type="text" name="professorname" value="" required>
+    </div>
+    <div class="row mx-auto" style="width: 95%;">
+        <div class="form-group pt-3" style="width: 48%;">
+            <label for="credits" style="font-size: 14px;">Credits</label>
+            <input class="form-control" id="credits" type="number" name="credits" value="" required>
+        </div>
+        <div class="form-group pt-3" style="width: 48%;">
+            <label for="location" style="font-size: 14px;">Location</label>
+            <input class="form-control" id="location" type="text" name="location" value="" required>
+        </div>
     </div>
     <div class="form-group pt-3 mx-auto" style="width: 95%;">
       <label for="start_time" style="font-size: 14px;">Start Time</label>
