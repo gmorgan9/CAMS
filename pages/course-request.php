@@ -22,7 +22,7 @@ if(!isLoggedIn()){
     $end_time = mysqli_real_escape_string($conn, $_POST['end_time']);
     $days = mysqli_real_escape_string($conn, $_POST['days']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
-    $new_days = mysqli_real_escape_string($conn, $_POST['days']);
+    $days = mysqli_real_escape_string($conn, $_POST['days']);
     $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
     $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
     $note = mysqli_real_escape_string($conn, $_POST['note']);
@@ -51,7 +51,7 @@ if(!isLoggedIn()){
       $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
       mysqli_query($conn, $insert);
       // mysqli_query($conn, $insert2);
-      header('location: course-request.php');
+      header('location: course_request.php');
     }
   };
 // END ADD JOB
