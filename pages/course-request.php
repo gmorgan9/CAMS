@@ -245,7 +245,7 @@ if(!isLoggedIn()){
         $all = mysqli_query($conn, $sql);
         if($all) {
             while ($row = mysqli_fetch_assoc($all)) {
-              $courseID       = $row['jobID'];
+              $courseID       = $row['courseID'];
               $idno        = $row['idno'];
               $coursename    = $row['coursename'];
               $companyname = $row['companyname'];
