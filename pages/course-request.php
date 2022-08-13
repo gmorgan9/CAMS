@@ -34,13 +34,8 @@ if(!isLoggedIn()){
     $select = " SELECT * FROM course WHERE coursename = '$coursename' ";
     $result = mysqli_query($conn, $select);
 
-    $checkbox1 = $_POST['days'];
-    $chk="";  
-    foreach($checkbox1 as $chk1)  
-       {  
-          $chk.= $chk1.",";  
         
-    //$chk = implode(',', $_POST['days[]']);
+    $chk = implode(',', $_POST['days']);
 
 
 
@@ -53,7 +48,6 @@ if(!isLoggedIn()){
       // mysqli_query($conn, $insert2);
       header('location: course-request.php');
     } 
-    }
   };
 // END ADD JOB
 
