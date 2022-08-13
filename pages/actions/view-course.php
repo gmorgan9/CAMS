@@ -152,21 +152,12 @@ if(!isLoggedIn()){
                                   </div>
                                 </div>
                       <hr>
-                                <div class="row">
+                      <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Friday</h6>
+                                    <h6 class="mb-0">Location</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                      <?php 
-                                      $fri_date = date("M d, Y", strtotime($row['fri_date']));
-                                      $fri_timein = date("h:i A", strtotime($row['fri_timein']));
-                                      $fri_timeout = date("h:i A", strtotime($row['fri_timeout']));
-                                      ?>
-                                      <?php //if($row['new_date'] != null && $orgDate != $row['new_date']) { ?>
-                                        <!-- <span class="text-warning">Change in Progress</span> -->
-                                      <?php //} else { ?>
-                                        <?php echo $fri_date; ?> &nbsp; <?php echo $fri_timein; ?> - <?php echo $fri_timeout; ?>
-                                      <?php //} ?>
+                                        <?php echo $row['location']; ?>
                                   </div>
                                 </div>
                       <hr>
