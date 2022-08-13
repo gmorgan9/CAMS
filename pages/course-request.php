@@ -146,9 +146,8 @@ if(!isLoggedIn()){
       <label for="end_time" style="font-size: 14px;">End Time</label>
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
-    <fieldset class="row pt-3 mx-auto">
+    <fieldset class="row pt-3 mx-auto" style="width: 95%;">
         <legend class="col-form-label col-sm-6 pt-3">Course Days</legend>
-        <div class="form-group " style="width: 95%;">
             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="days[]" value="M"> M
             &nbsp;
             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Tu"> Tu
@@ -158,7 +157,6 @@ if(!isLoggedIn()){
             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="Th"> Th
             &nbsp;
             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="days[]" value="F"> F
-        </div>
     </fieldset>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-course" class="badge text-bg-secondary">Request Job</button>
