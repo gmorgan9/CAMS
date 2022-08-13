@@ -18,6 +18,7 @@ if(!isLoggedIn()){
     $courseID = mysqli_real_escape_string($conn, $_POST['courseID']);
     $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
     $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
+    $shortcourse = mysqli_real_escape_string($conn, $_POST['shortcourse']);
     $start_time = mysqli_real_escape_string($conn, $_POST['start_time']);
     $end_time = mysqli_real_escape_string($conn, $_POST['end_time']);
     //$days = mysqli_real_escape_string($conn, $_POST['days']);
@@ -48,7 +49,7 @@ if(!isLoggedIn()){
     //       $days .= $days1.",";  
 
     $days=implode(", ", $_POST['days']);
-    $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, location, credits, section, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$location', '$credits', '$section', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
+    $insert = "INSERT INTO course (idno, coursename, shortcourse, start_time, end_time, days, location, credits, section, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$shortcourse', '$start_time', '$end_time', '$days', '$location', '$credits', '$section', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
     mysqli_query($conn, $insert);
     header('location: course-request.php');
   };
@@ -173,8 +174,8 @@ if(!isLoggedIn()){
     </div>
     <div class="row mx-auto">
     <div class="form-group pt-3 mx-auto" style="width: 50%;">
-          <label for="professorname" style="font-size: 14px;">Short Name <span class="text-muted" style="font-size: 10px;">e.g. "IT&C 101"</span></label>
-          <input class="form-control" id="professorname" type="text" name="professorname" value="" required>
+          <label for="shortcourse" style="font-size: 14px;">Short Name <span class="text-muted" style="font-size: 10px;">e.g. "IT&C 101"</span></label>
+          <input class="form-control" id="shortcourse" type="text" name="shortcourse" value="" required>
         </div>
         <div class="form-group pt-3 mx-auto" style="width: 50%;">
           <label for="professorname" style="font-size: 14px;">Professor</label>
