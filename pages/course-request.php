@@ -184,13 +184,15 @@ if(!isLoggedIn()){
             <input class="form-control" id="location" type="text" name="location" value="" required>
         </div>
     </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="start_time" style="font-size: 14px;">Start Time</label>
-      <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
-    </div>
-    <div class="form-group pt-3 mx-auto" style="width: 95%;">
-      <label for="end_time" style="font-size: 14px;">End Time</label>
-      <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
+    <div class="row mx-auto">
+        <div class="form-group pt-3" style="width: 50%;">
+          <label for="start_time" style="font-size: 14px;">Start Time</label>
+          <input class="form-control" id="start_time" type="time" name="start_time" value="" required>
+        </div>
+        <div class="form-group pt-3 " style="width: 50%;">
+          <label for="end_time" style="font-size: 14px;">End Time</label>
+          <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
+        </div>
     </div>
     <fieldset class="row pt-3 mx-auto">
         <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
