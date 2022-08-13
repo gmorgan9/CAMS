@@ -1,19 +1,19 @@
 <!-- WORKING -->
 <?php
 
-require_once "app/database/connection.php";
-require_once "app/database/functions.php";
-require_once "path.php";
+require_once "../../app/database/connection.php";
+require_once "../../app/database/functions.php";
+require_once "../../path.php";
 
 session_start();
 
 if(!isLoggedIn()){
-   header('location: /login.php');
+   header('location:' . BASE_URL . '/pages/entry/login.php');
 }
 
 
 $sID = $_SESSION['sID'];
-$select = " SELECT * FROM students WHERE studentID = '$sID' ";
+$select = " SELECT * FROM student WHERE studentID = '$sID' ";
 $result = mysqli_query($conn, $select);
 
 if(isset($_POST['update-profile'])){
@@ -27,14 +27,14 @@ if(isset($_POST['update-profile'])){
    // $cpass = md5($_POST['cpassword']);
    // $isadmin = $_POST['isadmin'];
 
-   $update_select = " SELECT * FROM students WHERE uname = '$uname' && email = '$email' ";
+   $update_select = " SELECT * FROM student WHERE uname = '$uname' && email = '$email' ";
 
    $update_result = mysqli_query($conn, $update_select);
 
    if(mysqli_num_rows($result) > 0){
 
       // $error[] = 'user already exist!';
-      $update = "UPDATE students SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
+      $update = "UPDATE student SET fname = '$fname', lname = '$lname', uname = '$uname', email = '$email' where studentID = '$sID' ";
       mysqli_query($conn, $update);
       $success[] = 'Success';
       header('location:' . BASE_URL . '/admin/profile.php');
@@ -108,19 +108,6 @@ if (mysqli_num_rows($result) > 0) {
 <div class="page-content mx-auto">
 <form action="" method="post">
       <h3 class="mx-auto" style="width: 95%;">Student Profile</h3>
-      <?php
-      // if(isset($error)){
-      //    foreach($error as $error){
-      //       echo '<span class="error-msg">'.$error.'</span>';
-      //    };
-      // };
-
-      // if(isset($success)){
-      //    foreach($success as $success){
-      //       echo '<span class="error-msg">'.$success.'</span>';
-      //    };
-      // };
-      ?> 
       <div class="row" style="margin-left: 20px;">
       <div class="form-group pt-3" style="width: 20%;">
             <label for="studentID">Student ID</label>
