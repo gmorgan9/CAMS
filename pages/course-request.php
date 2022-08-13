@@ -40,7 +40,7 @@ if(!isLoggedIn()){
     //    {  
     //       $days .= $days1.",";  
 
-    $subjects=implode(", ", $_POST['subject']);
+    $days=implode(", ", $_POST['days']);
     $insert = "INSERT INTO course (idno, coursename, start_time, end_time, days, student_fname, student_lname, student_idno) VALUES('$idno', '$coursename', '$start_time', '$end_time', '$days', '$student_fname', '$student_lname', '$student_idno')";
     mysqli_query($conn, $insert);
     header('location: course-request.php');
