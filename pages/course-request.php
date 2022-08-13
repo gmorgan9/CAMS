@@ -145,25 +145,27 @@ if(!isLoggedIn()){
       <input class="form-control" id="end_time" type="time" name="end_time" value="" required>
     </div>
     <br>
-    <div class="form-check form-check-inline" style="width: 95%;">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">1</label>
-    </div>
-    <div class="form-check form-check-inline" style="width: 95%;">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
-    </div>
-    <div class="form-check form-check-inline" style="width: 95%;">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-        <label class="form-check-label" for="inlineCheckbox1">1</label>
-    </div>
-    <div class="form-check form-check-inline" style="width: 95%;">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
-    </div>
-    <div class="form-check form-check-inline" style="width: 95%;">
-        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-        <label class="form-check-label" for="inlineCheckbox2">2</label>
+    <div class="checks" style="width: 95%;">
+        <div class="form-check form-check-inline" style="width: 95%;">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+        </div>
+        <div class="form-check form-check-inline" style="width: 95%;">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+        </div>
+        <div class="form-check form-check-inline" >
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+            <label class="form-check-label" for="inlineCheckbox1">1</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+        </div>
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+            <label class="form-check-label" for="inlineCheckbox2">2</label>
+        </div>
     </div>
     <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
       <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-job" class="badge text-bg-secondary">Request Job</button>
