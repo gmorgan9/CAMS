@@ -22,7 +22,7 @@ if(!isLoggedIn()){
     $end_time = mysqli_real_escape_string($conn, $_POST['end_time']);
     $days = mysqli_real_escape_string($conn, $_POST['days']);
     $location = mysqli_real_escape_string($conn, $_POST['location']);
-    $days = mysqli_real_escape_string($conn, $_POST['days']);
+    $new_days = mysqli_real_escape_string($conn, $_POST['days']);
     $start_date = mysqli_real_escape_string($conn, $_POST['start_date']);
     $end_date = mysqli_real_escape_string($conn, $_POST['end_date']);
     $note = mysqli_real_escape_string($conn, $_POST['note']);
