@@ -71,7 +71,7 @@
                 </a>
                 <a href="<?php echo BASE_URL . '/pages/class-schedule.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-calendar-range"></i>
-                    <span>  Class Schedule</span>
+                    <span>  Course Schedule</span>
                 </a>
 
            <?php } ?>
