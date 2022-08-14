@@ -128,7 +128,7 @@ if(isset($_GET['employeeID'])) {
 <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
 <div class="section-header text-center pt-2">
-      <span class="text-black fs-3 pt-4" style="width: 95%;">Schedule for <?php echo $_SESSION['fname']; ?> <?php echo $_SESSION['lname']; ?></span>
+      <span class="text-muted fs-3 pt-4" style="width: 95%;">Schedule for <?php echo $_SESSION['fname']; ?> <?php echo $_SESSION['lname']; ?></span>
     </div>
     <table class="table">
   <thead>
