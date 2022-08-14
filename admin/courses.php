@@ -133,7 +133,7 @@ if(isset($_GET['courseID'])) {
   <tbody class="table-group-divider">
 
   <?php
-      $sql = "SELECT * FROM course where approval_status = 'pending'";
+      $sql = "SELECT * FROM course where approval_status = 'pending' AND status = 'inactive'";
       $result = mysqli_query($conn, $sql);
       if($result) {
           while ($row = mysqli_fetch_assoc($result)) {
