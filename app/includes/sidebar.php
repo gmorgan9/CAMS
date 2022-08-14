@@ -26,7 +26,7 @@
                 </a>
                 <?php 
                 //WHERE approval_status = 'pending' OR approval_status = 'terminated' 
-                $sql = " SELECT * FROM course";
+                $sql = " SELECT * FROM course WHERE approval_status = 'pending' OR approval_status = 'terminated'";
                 if ($result = mysqli_query($conn, $sql)) {
                     $rowcount = mysqli_num_rows( $result );
                 ?>
