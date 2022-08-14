@@ -308,9 +308,10 @@ if(isset($_POST['add-lab'])){
                                 </div>
                     </div>
                   </div>
+                                    </div>
 
 
-                  <div class="col-md-8 float-end">
+                <div class="col-md-8 float-end">
                   <div class="card mb-3">
                     <div class="card-body">
                                 <div class="row">
@@ -412,6 +413,7 @@ if(isset($_POST['add-lab'])){
                                 </div>
                     </div>
                   </div>
+                                    </div>
 
 
 
