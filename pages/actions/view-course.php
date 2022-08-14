@@ -97,6 +97,7 @@ if(isset($_POST['add-lab'])){
         </ul>
       </div>
 
+      <?php if($row['lab_idno'] == null) { ?>
       <div class="page-content mx-auto mt-2">
           <h3 class="text-center">Course View</h3>
           <div class="col-md-8 mx-auto">
@@ -201,8 +202,226 @@ if(isset($_POST['add-lab'])){
                                 </div>
                     </div>
                   </div>
-                                      </div>                   
-                            
+                </div>       
+                <?php } else { ?>            
+            <div class="page-content mx-auto mt-2">
+            <h3 class="text-center">Course View</h3>
+            <div class="col-md-8 float-start">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Student</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                  <span class="text-capitalize"><?php echo $row['student_lname']; ?>, <?php echo $row['student_fname']; ?></span>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Title</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['coursename']; ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Course</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['shortcourse']; ?> (00<?php echo $row['section']; ?>)
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Professor</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['professorname']; ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Credits</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['credits']; ?>.0
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Course Time</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php
+                                        $start_time = date("h:i A", strtotime($row['start_time']));
+                                        $end_time = date("h:i A", strtotime($row['end_time']));
+                                        ?>
+                                        <?php echo $start_time; ?> - <?php echo $end_time; ?> (<?php echo $row['days']; ?>)
+                                  </div>
+                                </div>
+                      <hr>
+                      <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Location</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    <?php if($row['lab_location'] == null) { ?>
+                                        <?php echo $row['location']; ?>
+                                    <?php } else { ?>
+                                        <?php echo $row['location']; ?> (LAB Location <?php echo $row['lab_location']; ?>)
+                                        <?php } ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Status</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    <?php if($row['approval_status'] == 'approved'){ ?>
+                                    <span class="text-capitalize text-success"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'rejected') { ?>
+                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'pending') { ?>
+                                      <span class="text-capitalize text-primary"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'terminated') { ?>
+                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
+                                    <?php }?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Actions</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                  <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#addLab" href="#">Add Lab</a>
+                                  <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a>
+                                  </div>
+                                </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-md-8 float-end">
+                  <div class="card mb-3">
+                    <div class="card-body">
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Student</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                  <span class="text-capitalize"><?php echo $row['student_lname']; ?>, <?php echo $row['student_fname']; ?></span>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Title</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['coursename']; ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Course</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['shortcourse']; ?> (00<?php echo $row['section']; ?>)
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Professor</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['professorname']; ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Credits</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['credits']; ?>.0
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Course Time</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php
+                                        $start_time = date("h:i A", strtotime($row['start_time']));
+                                        $end_time = date("h:i A", strtotime($row['end_time']));
+                                        ?>
+                                        <?php echo $start_time; ?> - <?php echo $end_time; ?> (<?php echo $row['days']; ?>)
+                                  </div>
+                                </div>
+                      <hr>
+                      <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Location</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    <?php if($row['lab_location'] == null) { ?>
+                                        <?php echo $row['location']; ?>
+                                    <?php } else { ?>
+                                        <?php echo $row['location']; ?> (LAB Location <?php echo $row['lab_location']; ?>)
+                                        <?php } ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Status</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                    <?php if($row['approval_status'] == 'approved'){ ?>
+                                    <span class="text-capitalize text-success"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'rejected') { ?>
+                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'pending') { ?>
+                                      <span class="text-capitalize text-primary"><?php echo $row['approval_status']; ?><span>
+                                    <?php } if($row['approval_status'] == 'terminated') { ?>
+                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
+                                    <?php }?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Actions</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                  <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#addLab" href="#">Add Lab</a>
+                                  <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a>
+                                  </div>
+                                </div>
+                    </div>
+                  </div>
+
+
+
+
+
+                </div> 
+
+
+                
+            <?php } ?>           
                             
                             
           <?php 
