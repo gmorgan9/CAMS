@@ -546,7 +546,7 @@ if(isset($_POST['add-lab'])){
                         &nbsp;
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="Th"> Th
                         &nbsp;
-                        <?php if(in_array("M", $lab_days)) { ?>
+                        <?php if(in_array("F", $lab_days)) { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F" checked> F
                         <?php } else { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F"> F
