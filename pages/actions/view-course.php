@@ -165,7 +165,11 @@ if(isset($_POST['add-lab'])){
                                     <h6 class="mb-0">Location</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
+                                    <?php if($row['lab_location'] == null) { ?>
                                         <?php echo $row['location']; ?>
+                                    <?php } else { ?>
+                                        <?php echo $row['location']; ?> (LAB Location <?php echo $row['lab_location']; ?>)
+                                        <?php } ?>
                                   </div>
                                 </div>
                       <hr>
