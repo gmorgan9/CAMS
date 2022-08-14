@@ -142,7 +142,7 @@ if(isset($_GET['employeeID'])) {
 
   <?php
       $student_idno = $_SESSION['student_idno'];
-      $sql = "SELECT * FROM course WHERE student_idno = '$student_idno'";
+      $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' ORDER BY start_time ASC";
       $all = mysqli_query($conn, $sql);
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
