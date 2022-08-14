@@ -163,6 +163,10 @@ if(isset($_GET['employeeID'])) {
         <th scope="row"><?php echo $idno; ?></th>
         <td><?php echo $shortcourse; ?></td>
         <td><?php echo $coursename; ?></td>
+        <?php 
+        $start_time = date("h:i A", strtotime($row['start_time']));
+        $end_time = date("h:i A", strtotime($row['end_time']));
+        ?>
         <td><?php echo $start_time; ?> - <?php echo $end_time; ?></td>
         <td>
           <!-- <a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#editEmployee" class="badge text-bg-primary" href="actions/edit-employee.php?employeeID=<?php echo $empID; ?>">Edit</a> -->
