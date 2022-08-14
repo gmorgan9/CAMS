@@ -192,7 +192,7 @@ if(isset($_POST['add-lab'])){
                                   </div>
                                   <div class="col-sm-9 text-secondary">
                                   <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#addLab" href="#">Add Lab</a>
-                                  <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a>
+                                  <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a>
                                   </div>
                                 </div>
                     </div>
