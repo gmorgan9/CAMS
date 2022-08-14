@@ -534,7 +534,8 @@ if(isset($_POST['add-lab'])){
                 <fieldset class="row pt-3 mx-auto">
                     <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
                     <div class="form-group " style="width: 95%; margin-top: -20px;">
-                        <?php if(in_array('M', $lab_days, TRUE)) { ?>
+                    <?php $lab_days = array("M", "Tu", "W", "Th", "F"); ?>
+                        <?php if(in_array('M', $lab_days)) { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="lab_days[]" value="M" checked> M
                         <?php } else { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="lab_days[]" value="M"> M
@@ -546,7 +547,7 @@ if(isset($_POST['add-lab'])){
                         &nbsp;
                         <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="Th"> Th
                         &nbsp;
-                        <?php if(in_array('F', $lab_days, TRUE)) { ?>
+                        <?php if(in_array('F', $lab_days)) { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F" checked> F
                         <?php } else { ?>
                             <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F"> F
