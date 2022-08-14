@@ -115,7 +115,11 @@ if (isset($_POST['terminated'])) {
         <p class="page_title" style="float: left; padding-top: 2px;">View Course</p>
         <ul class="breadcrumb">
           <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
-          <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Courses</a></li>
+          <?php if($_SESSION['acc_type'] == 1) { ?>
+            <li><a href="<?php echo BASE_URL . '/admin/actions/courses.php' ?>">Courses</a></li>
+          <?php } else { ?> 
+            <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Courses</a></li>
+          <?php } ?> 
           <li>Viewing Course: <span class="text-muted" style="text-transform: capitalize"><?php echo $row['shortcourse']; ?>  </span></li>
         </ul>
       </div>
