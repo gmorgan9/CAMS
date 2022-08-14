@@ -313,10 +313,11 @@ if(isset($_POST['add-lab'])){
                     <label for="lab_location" style="font-size: 14px;">Lab Location</label>
                     <input class="form-control" id="lab_location" type="text" name="lab_location" required>
                 </div>
-                <div class="form-group pt-3 mx-auto">
+                <!-- <div class="form-group pt-3 mx-auto">
                     <label for="notes" style="font-size: 14px;">Notes <span class="text-muted" style="font-size: 10px;">List dates and times wanted to be changed. Give reason behind change.</span></label>
                     <textarea class="form-control" id="reason" type="text" name="reason" value=""></textarea>
-                </div> <?php }} ?>
+                </div>  -->
+                <?php }} ?>
 
         </div>
     
