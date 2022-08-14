@@ -300,7 +300,7 @@ if (isset($_POST['terminated'])) {
                                     <?php if($row['lab_location'] == null) { ?>
                                         <?php echo $row['location']; ?>
                                     <?php } else { ?>
-                                        <?php echo $row['location']; ?> (LAB Location <?php echo $row['lab_location']; ?>)
+                                        <?php echo $row['location']; ?>
                                         <?php } ?>
                                   </div>
                                 </div>
