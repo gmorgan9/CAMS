@@ -219,6 +219,9 @@ footer {
 .blocked-page {
    display: none;
 }
+.blocked-footer {
+ display: none;
+}
 
 
 
@@ -233,4 +236,7 @@ footer {
       color: black;
       display: block;
    }
+   .blocked-footer {
+      display: block;
+     }
  }

@@ -72,7 +72,9 @@ if(isLoggedIn()){
       
       <?php include("app/includes/footer.php"); ?>
       </div>
-      <?php include(ROOT_PATH . "/app/includes/blocked-footer.php"); ?>
+      <div class="blocked-footer">
+        <?php include(ROOT_PATH . "/app/includes/blocked-footer.php"); ?>
+      </div>
 
 </body>
 </html>
