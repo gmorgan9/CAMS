@@ -532,7 +532,7 @@ if(isset($_POST['add-lab'])){
                     <input class="form-control" id="lab_end_time" type="time" name="lab_end_time" value="<?php echo $row['lab_end_time']; ?>" required>
                 </div>
                 <div class="form-group pt-3 mx-auto">
-                    <label for="lab_end_time" style="font-size: 14px;">Lab Days <span class="text-muted" style="font-size: 10px;">For changing lab days, please list in reason field.</span></label>
+                    <label for="lab_end_time" style="font-size: 14px;">Lab Days <br><span class="text-muted" style="font-size: 10px;">For changing lab days, please list in reason field.</span></label>
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="lab_location" style="font-size: 14px;">Lab Location</label>
