@@ -538,6 +538,11 @@ if(isset($_POST['add-lab'])){
                     <?php 
                     $lab_days_fromDB = $row['lab_days'];
                     $lab_days = explode(',',$lab_days_fromDB); 
+                    foreach($lab_days_fromDB as $item){
+                        $checked = in_array($item,$lab_days) ? ' checked' : '';
+                        echo '<input type="checkbox" name="purs[]"'.$checked.'>'.$item;
+                        echo '<br/>';
+                    }
                     
                     ?>
                         <?php if(in_array('M', $lab_days)) { ?>
