@@ -128,7 +128,22 @@ if(isset($_GET['employeeID'])) {
 <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
 <div class="section-header text-center pt-2">
-      <span class="text-muted fs-3 pt-4" style="width: 95%;">Schedule for <?php echo $_SESSION['fname']; ?> <?php echo $_SESSION['lname']; ?></span>
+    <?php 
+
+    $student_idno = $_SESSION['student_idno'];
+    $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' ORDER BY start_time ASC";
+    $all = mysqli_query($conn, $sql);
+        if($all) {
+            while ($row = mysqli_fetch_assoc($all)) {
+                $student_fname = $row['student_fname'];
+                $student_lname = $row['student_lname'];
+                $semester = $row['semester'];
+
+            }}
+    
+    ?>
+      <span class="text-muted fs-3 pt-4" style="width: 95%;">Course Schedule for <?php echo $student_fname; ?> <?php echo $student_lname; ?></span>
+      <span class="text-muted fs-5 pt-2" style="width: 95%;"><?php echo $semester; ?></span>
     </div>
     <table class="table">
   <thead>
