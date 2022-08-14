@@ -146,7 +146,7 @@ if(isset($_GET['employeeID'])) {
       <span class="text-muted fs-3 pt-4" style="width: 95%;">Course Schedule for <?php echo $student_fname; ?> <?php echo $student_lname; ?></span>
     </div>
     <div class="section-header text-center pt-2">
-        <span class="text-muted fs-5 pt-1" style="width: 95%;"><?php echo $semester; ?></span>
+        <span class="text-muted fs-5" style="width: 95%;"><?php echo $semester; ?></span>
     </div>
     <table class="table">
   <thead>
