@@ -116,7 +116,7 @@ if (isset($_POST['terminated'])) {
         <ul class="breadcrumb">
           <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
           <?php if($_SESSION['acc_type'] == 1) { ?>
-            <li><a href="<?php echo BASE_URL . '/admin/actions/courses.php' ?>">Courses</a></li>
+            <li><a href="<?php echo BASE_URL . '/admin/courses.php' ?>">Courses</a></li>
           <?php } else { ?> 
             <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Courses</a></li>
           <?php } ?> 
