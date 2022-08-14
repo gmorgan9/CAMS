@@ -410,7 +410,8 @@ if(isset($_POST['add-lab'])){
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="notes" style="font-size: 14px;">Reason <span class="text-muted" style="font-size: 10px;">List dates and times wanted to be changed. Give reason behind change.</span></label>
-                    <textarea class="form-control" id="reason" type="text" name="reason" value=""></textarea>
+                    <textarea class="form-control" id="reason" type="text" name="reason" value=""><?php foreach($_POST['lab_days'] as $value){
+                        echo "value : ".$value.'<br/>';} ?></textarea>
                 </div> <?php }} ?>
 
         </div>
