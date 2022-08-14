@@ -318,28 +318,28 @@ if(isset($_POST['add-lab'])){
                     <div class="card-body">
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Student</h6>
+                                    <h6 class="mb-0">Lab ID</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                  <span class="text-capitalize"><?php echo $row['student_lname']; ?>, <?php echo $row['student_fname']; ?></span>
+                                  <?php echo $row['lab_idno']; ?>
                                   </div>
                                 </div>
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Title</h6>
+                                    <h6 class="mb-0">Lab Time</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['coursename']; ?>
+                                        <?php echo $row['lab_start_time']; ?> - <?php echo $row['lab_end_time']; ?> (<?php echo $row['lab_days']; ?>)
                                   </div>
                                 </div>
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Course</h6>
+                                    <h6 class="mb-0">Lab Location</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['shortcourse']; ?> (00<?php echo $row['section']; ?>)
+                                        <?php echo $row['lab_location']; ?>
                                   </div>
                                 </div>
                       <hr>
