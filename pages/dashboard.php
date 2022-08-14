@@ -112,6 +112,7 @@ if(!isLoggedIn()){
 
 <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 </div>
+<?php include(ROOT_PATH . "app/includes/blocked-footer.php"); ?>
 
 
 </body>
