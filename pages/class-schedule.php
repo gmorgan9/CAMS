@@ -48,7 +48,7 @@ if(!isLoggedIn()){
 
 
     <!-- start PAGE-CONTENT -->
-<div class="page-content mx-auto mt-2" style="width: 100%;">
+<div class="page-content mx-auto mt-2" style="width: 105%;">
     <table class="table">
   <thead>
     <tr>
