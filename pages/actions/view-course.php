@@ -410,8 +410,7 @@ if(isset($_POST['add-lab'])){
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="notes" style="font-size: 14px;">Reason <span class="text-muted" style="font-size: 10px;">List dates and times wanted to be changed. Give reason behind change.</span></label>
-                    <textarea class="form-control" id="reason" type="text" name="reason" value=""><?php foreach($_POST['lab_days'] as $value){
-                        echo "value : ".$value.'<br/>';} ?></textarea>
+                    <textarea class="form-control" id="reason" type="text" name="reason" value=""></textarea>
                 </div> <?php }} ?>
 
         </div>
@@ -532,36 +531,9 @@ if(isset($_POST['add-lab'])){
                     <label for="lab_end_time" style="font-size: 14px;">Lab End Time</label>
                     <input class="form-control" id="lab_end_time" type="time" name="lab_end_time" value="<?php echo $row['lab_end_time']; ?>" required>
                 </div>
-                <fieldset class="row pt-3 mx-auto">
-                    <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
-                    <div class="form-group " style="width: 95%; margin-top: -20px;">
-
-                    <?php 
-                    $lab_days_fromDB = $row['lab_days'];
-                    $lab_days = explode(',',$lab_days_fromDB); 
-                    foreach($_POST['lab_days'] as $value){
-                        echo "value : ".$value.'<br/>';}
-                    
-                    ?>
-                        <?php if(in_array('M', $lab_days)) { ?>
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="lab_days[]" value="M" checked> M
-                        <?php } else { ?>
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="lab_days[]" value="M"> M
-                        <?php } ?>
-                        &nbsp;
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="Tu"> Tu
-                        &nbsp;
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="lab_days[]" value="W"> W
-                        &nbsp;
-                        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="Th"> Th
-                        &nbsp;
-                        <?php if(in_array('F', $lab_days)) { ?>
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F" checked> F
-                        <?php } else { ?>
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="lab_days[]" value="F"> F
-                        <?php } ?>
-                    </div>
-                </fieldset>
+                <div class="form-group pt-3 mx-auto">
+                    <label for="lab_end_time" style="font-size: 14px;">Reason <span class="text-muted" style="font-size: 10px;">For changing lab days, please list in reason field.</span></label>
+                </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="lab_location" style="font-size: 14px;">Lab Location</label>
                     <input class="form-control" id="lab_location" type="text" name="lab_location" value="<?php echo $row['lab_location'] ?>" required>
