@@ -25,22 +25,22 @@ if(!isLoggedIn()){
   };
 // END UPDATE TIME FUNCTION
 
-// UPDATE TIME FUNCTION
+// UPDATE LAB FUNCTION
 if(isset($_POST['add-lab'])){
     $id = $_GET['courseID'];
     $reason = mysqli_real_escape_string($conn, $_POST['reason']);
     $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
     $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
     $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
-    $lab_days = implode(", ", $_POST['lab_days']);
+    //$lab_days = implode(", ", $_POST['lab_days']);
     $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
   
-    $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location', lab_days = '$lab_days' WHERE courseID = '$id'";
+    $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location' WHERE courseID = '$id'";
     mysqli_query($conn, $update);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   
   };
-// END UPDATE TIME FUNCTION
+// END UPDATE LAB FUNCTION
 
 ?>
 
