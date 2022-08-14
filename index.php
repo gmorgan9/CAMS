@@ -69,9 +69,9 @@ if(isLoggedIn()){
           </div>
       </div>
 
-
-      <?php include("app/includes/footer.php"); ?>
       </div>
+      <?php include("app/includes/footer.php"); ?>
+      
 
 </body>
 </html>
