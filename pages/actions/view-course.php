@@ -59,7 +59,7 @@ if(!isLoggedIn()){
 
 // SET TERMINATED
 if (isset($_POST['terminated'])) {
-    $terUpdateQuery = "UPDATE course SET lab_start_time = null,lab_end_time = null, lab_location = null, reason = null WHERE courseID = '".$_POST['courseID']."'";
+    $terUpdateQuery = "UPDATE course SET lab_idno = null, lab_start_time = null, lab_end_time = null, lab_location = null, reason = null WHERE courseID = '".$_POST['courseID']."'";
     $terUpdateResult = mysqli_query($conn, $terUpdateQuery);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   }
