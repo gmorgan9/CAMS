@@ -205,8 +205,10 @@ if(isset($_POST['add-lab'])){
                 </div>       
                 <?php } else { ?>            
             <div class="page-content mx-auto mt-2">
+
+
             <h3 class="text-center">Course View</h3>
-            <div class="col-md-8 float-start">
+            <div class="col-md-8 float-start" style="width:50%;">
                   <div class="card mb-3">
                     <div class="card-body">
                                 <div class="row">
@@ -310,8 +312,8 @@ if(isset($_POST['add-lab'])){
                   </div>
                                     </div>
 
-
-                <div class="col-md-8 float-end">
+<!-- float end -->
+                <div class="col-md-8 float-end" style="width:50%;">
                   <div class="card mb-3">
                     <div class="card-body">
                                 <div class="row">
