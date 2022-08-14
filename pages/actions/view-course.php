@@ -353,7 +353,11 @@ if (isset($_POST['terminated'])) {
                                     <h6 class="mb-0">Lab Time</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['lab_start_time']; ?> - <?php echo $row['lab_end_time']; ?> (<?php echo $row['lab_days']; ?>)
+                                  <?php
+                                        $lab_start_time = date("h:i A", strtotime($row['lab_start_time']));
+                                        $lab_end_time = date("h:i A", strtotime($row['lab_end_time']));
+                                        ?>
+                                        <?php echo $lab_start_time; ?> - <?php echo $lab_end_time; ?> (<?php echo $row['lab_days']; ?>)
                                   </div>
                                 </div>
                       <hr>
