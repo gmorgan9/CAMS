@@ -525,11 +525,11 @@ if(isset($_POST['add-lab'])){
                 <hr style="margin-bottom: -5px; margin-top: 5px;">
                 <div class="form-group pt-3 mx-auto">
                     <label for="lab_start_time" style="font-size: 14px;">Lab Start Time</label>
-                    <input class="form-control" id="lab_start_time" type="time" name="lab_start_time" required>
+                    <input class="form-control" id="lab_start_time" type="time" name="lab_start_time" value="<?php echo $row['lab_start_time']; ?>" required>
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="lab_end_time" style="font-size: 14px;">Lab End Time</label>
-                    <input class="form-control" id="lab_end_time" type="time" name="lab_end_time" required>
+                    <input class="form-control" id="lab_end_time" type="time" name="lab_end_time" value="<?php echo $row['lab_end_time']; ?>" required>
                 </div>
                 <fieldset class="row pt-3 mx-auto">
                     <legend class="col-form-label col-sm-6 pt-3" style="font-size: 14px;">Course Days</legend>
