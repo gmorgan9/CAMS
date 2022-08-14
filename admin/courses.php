@@ -181,29 +181,28 @@ if(isset($_GET['courseID'])) {
   <thead>
     <tr>
       <th scope="col" style="font-size: 14px;">ID #</th>
-      <th scope="col" style="font-size: 14px;">Job Title / Position</th>
+      <th scope="col" style="font-size: 14px;">Course Name</th>
+      <th scope="col" style="font-size: 14px;">Course Title</th>
       <th scope="col" style="font-size: 14px;">Actions</th>
     </tr>
   </thead>
   <tbody class="table-group-divider">
 
   <?php
-      $sql = "SELECT * FROM job WHERE approval_status != 'pending'";
+      $sql = "SELECT * FROM course WHERE approval_status != 'pending'";
       $all = mysqli_query($conn, $sql);
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
-            $jobid       = $row['jobID'];
-            $idno        = $row['idno'];
-            $jobtitle    = $row['jobtitle'];
-            $companyname = $row['companyname'];
-            $deptname    = $row['deptname'];
-            $employee_fname = $row['employee_fname'];
-            $app_status = $row['approval_status'];
-            // $companyname    = $row['companyname'];
+            $courseid       = $row['courseID'];
+            $idno           = $row['idno'];
+            $coursename     = $row['coursename'];
+            $shortcourse    = $row['shortcourse'];
+            $app_status     = $row['approval_status'];
   ?>
     <tr>
         <th scope="row"><?php echo $idno; ?></th>
-        <td><?php echo $jobtitle; ?></td>
+        <td><?php echo $shortcourse; ?></td>
+        <td><?php echo $coursename; ?></td>
         <?php if($app_status == 'approved'){ ?>
         <td><span class="text-capitalize text-success"><?php echo $app_status; ?><span></td>
         <?php } if($app_status == 'rejected') { ?>
@@ -215,9 +214,9 @@ if(isset($_GET['courseID'])) {
         <?php }?>
         <td>
           <?php if($app_status != 'terminated') { ?>
-            <a style="text-decoration: none;" class="badge text-bg-success" href="actions/view-job.php?jobID=<?php echo $jobid; ?>">View</a>
+            <a style="text-decoration: none;" class="badge text-bg-success" href="actions/view-course.php?courseID=<?php echo $courseid; ?>">View</a>
           <?php } else {} ?>
-          <a onclick="return confirm('Be Careful! \r\nOK to delete?')" style="text-decoration: none;" class="badge text-bg-danger" href="jobs.php?jobID=<?php echo $jobid; ?>">Delete</a>
+          <a onclick="return confirm('Be Careful! \r\nOK to delete?')" style="text-decoration: none;" class="badge text-bg-danger" href="courses.php?courseID=<?php echo $courseid; ?>">Delete</a>
         </td>
         <?php } ?>
         
