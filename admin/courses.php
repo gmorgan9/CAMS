@@ -60,7 +60,7 @@ if(isset($_GET['courseID'])) {
   
   if (isset($_POST['approved']))
     {
-        $appUpdateQuery = "UPDATE course SET approval_status = 'approved' WHERE courseID = '".$_POST['courseID']."'";
+        $appUpdateQuery = "UPDATE course SET approval_status = 'approved', status = 'active' WHERE courseID = '".$_POST['courseID']."'";
         $appUpdateResult = mysqli_query($conn, $appUpdateQuery);
         header('location: courses.php');
         // $appInsertQuery = "INSERT INTO approved(id,status) VALUES ('".$_POST['row_id']."','Approved')";
