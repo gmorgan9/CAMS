@@ -150,6 +150,7 @@ if(isset($_GET['employeeID'])) {
             $semester       = $row['semestername'];
             $idno           = $row['idno'];
             $shortcourse    = $row['shortcourse'];
+            $coursename     = $row['coursename'];
             $start_time     = $row['start_time'];
             $end_time       = $row['end_time'];
             $location       = $row['location'];
