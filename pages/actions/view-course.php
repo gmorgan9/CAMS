@@ -25,21 +25,36 @@ if(!isLoggedIn()){
   };
 // END UPDATE TIME FUNCTION
 
+// ADD LAB FUNCTION
+    if(isset($_POST['add-lab'])){
+        $id = $_GET['courseID'];
+        $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+        $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+        $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
+        $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
+        $lab_days = implode(", ", $_POST['lab_days']);
+        $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
+  
+        $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location', lab_days = '$lab_days' WHERE courseID = '$id'";
+        mysqli_query($conn, $update);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    };
+// END ADD LAB FUNCTION
+
 // UPDATE LAB FUNCTION
-if(isset($_POST['add-lab'])){
-    $id = $_GET['courseID'];
-    $reason = mysqli_real_escape_string($conn, $_POST['reason']);
-    $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
-    $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
-    $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
-    //$lab_days = implode(", ", $_POST['lab_days']);
-    $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
+    if(isset($_POST['update-lab'])){
+        $id = $_GET['courseID'];
+        $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+        $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+        $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
+        $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
+        // $lab_days = implode(", ", $_POST['lab_days']);
+        $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
   
-    $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location' WHERE courseID = '$id'";
-    mysqli_query($conn, $update);
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-  
-  };
+        $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location', reason = '$reason' WHERE courseID = '$id'";
+        mysqli_query($conn, $update);
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    };
 // END UPDATE LAB FUNCTION
 
 ?>
@@ -429,7 +444,7 @@ if(isset($_POST['add-lab'])){
 <!-- END EDIT MODAL -->
 
 <!-- ADD LAB MODAL -->
-<div class="modal fade" id="addLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="addLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -499,7 +514,7 @@ if(isset($_POST['add-lab'])){
   </div>
 <!-- END EDIT MODAL -->
 
-<!-- ADD LAB MODAL -->
+<!-- EDIT LAB MODAL -->
 <div class="modal fade" id="editLab" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
