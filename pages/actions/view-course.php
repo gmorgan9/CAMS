@@ -25,6 +25,23 @@ if(!isLoggedIn()){
   };
 // END UPDATE TIME FUNCTION
 
+// UPDATE TIME FUNCTION
+if(isset($_POST['add-lab'])){
+    $id = $_GET['courseID'];
+    $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+    $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+    $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
+    $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
+    $lab_days = implode(", ", $_POST['lab_days']);
+    $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
+  
+    $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location', lab_days = '$lab_days' WHERE courseID = '$id'";
+    mysqli_query($conn, $update);
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
+  
+  };
+// END UPDATE TIME FUNCTION
+
 ?>
 
 <!DOCTYPE html>
@@ -306,7 +323,7 @@ if(!isLoggedIn()){
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-course" class="badge text-bg-secondary">Update Schedule</button>
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-lab" class="badge text-bg-secondary">Update Course</button>
             </div>
         </form>
         </div>
