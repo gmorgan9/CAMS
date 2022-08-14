@@ -155,7 +155,7 @@ if(isset($_GET['employeeID'])) {
       <th scope="col">Course Name</th>
       <th scope="col">Course Title</th>
       <th scope="col">Start Time / End Time</th>
-      <th scope="col">Status</th>
+      <!-- <th scope="col">Status</th> -->
       <th scope="col">Actions</th>
     </tr>
   </thead>
