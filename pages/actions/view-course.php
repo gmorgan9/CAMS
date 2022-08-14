@@ -57,6 +57,14 @@ if(!isLoggedIn()){
     };
 // END UPDATE LAB FUNCTION
 
+// SET TERMINATED
+if (isset($_POST['terminated'])) {
+    $terUpdateQuery = "UPDATE course SET lab_start_time = null,lab_end_time = null, lab_location = null, reason = null WHERE courseID = '".$_POST['courseID']."'";
+    $terUpdateResult = mysqli_query($conn, $terUpdateQuery);
+    header('location: course_request.php');
+  }
+// END SET TERMINATED
+
 ?>
 
 <!DOCTYPE html>
@@ -363,6 +371,11 @@ if(!isLoggedIn()){
                                     <h6 class="mb-0">Actions</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
+                                  <form method="post" action="">
+                                    <input type="hidden" name="courseID" value="<?php echo $courseID; ?>" />
+                                    <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#editLab" href="#">Edit</a>
+                                    <button onclick="return confirm('Be Careful, Can\'t be undone! \r\nOK to delete?')" style="background: none; color: inherit; border: none; padding: 0; font: inherit; cursor: pointer; outline: inherit;" type="submit" name="terminated"><span class="badge text-bg-danger">Delete</span></button>
+                                  </form>
                                   <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#editLab" href="#">Edit</a>
                                   </div>
                                 </div>
