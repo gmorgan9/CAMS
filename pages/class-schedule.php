@@ -127,6 +127,9 @@ if(isset($_GET['employeeID'])) {
 
 <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
+<div class="section-header pt-2">
+      <span class="text-muted pt-4" style="width: 95%;">Pending Course Requests</span>
+    </div>
     <table class="table">
   <thead>
     <tr>
