@@ -105,7 +105,7 @@ if (isset($_POST['terminated'])) {
 
     $id = $_GET['course_idno'];
     //$student_idno = $_SESSION['student_idno'];
-    $select = " SELECT * FROM assignment WHERE course_idno = '$id'";
+    $select = " SELECT * FROM course WHERE course_idno = '$id'";
     $result = mysqli_query($conn, $select);
     
     if (mysqli_num_rows($result) > 0) {
