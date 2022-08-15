@@ -59,9 +59,10 @@ if(!isLoggedIn()){
           while ($row = mysqli_fetch_assoc($all)) {
             $courseID = $row['courseID'];
             $coursename = $row['shortcourse'];
+            $idno = $row['idno'];
 
             ?>
-    <a class="text-decoration-none badge text-bg-secondary" href="actions/view-course-assignments.php?courseID=<?php echo $courseID; ?>"><?php echo $coursename ?></a>
+    <a class="text-decoration-none badge text-bg-secondary" href="actions/view-course-assignments.php?course_idno=<?php echo $idno; ?>"><?php echo $coursename ?></a>
   <?php }} ?> 
 
  
