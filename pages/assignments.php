@@ -138,12 +138,12 @@ if(isset($_POST['add-assignment'])){
                 </div>
                 <hr style="margin-bottom: -5px; margin-top: 5px;">
                 <!-- hidden -->
-                <input class="form-control" id="coursename" type="hidden" name="coursename" value="<?php echo $coursename; ?>">
-                <input class="form-control" id="course_idno" type="hidden" name="course_idno" value="<?php echo $course_idno; ?>">
-                <input class="form-control" id="professorname" type="hidden" name="professorname" value="<?php echo $professorname; ?>">
-                <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $student_fname; ?>">
-                <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $student_lname; ?>">
-                <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $student_idno; ?>">
+                <input class="form-control" id="coursename" type="text" name="coursename" value="<?php echo $coursename; ?>">
+                <input class="form-control" id="course_idno" type="text" name="course_idno" value="<?php echo $course_idno; ?>">
+                <input class="form-control" id="professorname" type="text" name="professorname" value="<?php echo $professorname; ?>">
+                <input class="form-control" id="student_fname" type="text" name="student_fname" value="<?php echo $student_fname; ?>">
+                <input class="form-control" id="student_lname" type="text" name="student_lname" value="<?php echo $student_lname; ?>">
+                <input class="form-control" id="student_idno" type="text" name="student_idno" value="<?php echo $student_idno; ?>">
                 <!-- end hidden -->
                 <div class="form-group pt-3 mx-auto">
                     <label for="title" style="font-size: 14px;">Title</label>
@@ -171,7 +171,7 @@ if(isset($_POST['add-assignment'])){
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-course" class="badge text-bg-secondary">Update Schedule</button>
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-assignment" class="badge text-bg-secondary">Update Schedule</button>
             </div>
         </form>
         </div>
