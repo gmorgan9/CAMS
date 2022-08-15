@@ -58,28 +58,12 @@ if(!isLoggedIn()){
       $all = mysqli_query($conn, $sql);
       if($all) {
           while ($row = mysqli_fetch_assoc($all)) {
+            $courseID = $row['courseID'];
             $coursename = $row['shortcourse'];
 
             ?>
-  <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="tab" data-bs-toggle="tab" data-bs-target="#<?php echo $coursename; ?>" type="button" role="tab" aria-controls="<?php echo $coursename; ?>" aria-selected="true"><?php echo $coursename; ?></button>
-  </li>
+    <a class="text-decoration-none badge text-bg-secondary" href="actions/view-course-assignments.php?courseID=<?php echo $courseID; ?>"><?php echo $coursename ?></a>
   <?php }} ?> 
-</ul>
-<?php 
-      $sql = "SELECT * FROM course WHERE shortcourse = '$coursename'";
-      $all = mysqli_query($conn, $sql);
-      if($all) {
-          while ($row = mysqli_fetch_assoc($all)) {
-            $coursename = $row['shortcourse'];
-
-            ?>
-<div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="tab" tabindex="0">
-    ...
-  </div>
-</div>
-<?php }} ?>
 
  
  <!-- end PAGE-CONTENT -->
