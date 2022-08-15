@@ -112,11 +112,11 @@ if (isset($_POST['terminated'])) {
           //$acc_type = $row['acc_type'];
     ?>
       <div class="page-header mx-auto">
-        <p class="page_title" style="float: left; padding-top: 2px;">View Course</p>
+        <p class="page_title" style="float: left; padding-top: 2px;">Course Assignments</p>
         <ul class="breadcrumb">
           <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
-          <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Courses</a></li>
-          <li>Viewing: <span class="text-muted" style="text-transform: capitalize"><?php echo $row['idno']; ?>  </span></li>
+          <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Assignments</a></li>
+          <li>Viewing: <span class="text-muted" style="text-transform: capitalize"><?php echo $row['shortcourse']; ?>  </span></li>
         </ul>
       </div>
 
