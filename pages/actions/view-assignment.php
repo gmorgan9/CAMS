@@ -137,10 +137,19 @@ if (isset($_POST['terminated'])) {
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Title</h6>
+                                    <h6 class="mb-0">Course</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
                                         <?php echo $row['coursename']; ?>
+                                  </div>
+                                </div>
+                      <hr>
+                                <div class="row">
+                                  <div class="col-sm-3">
+                                    <h6 class="mb-0">Title</h6>
+                                  </div>
+                                  <div class="col-sm-9 text-secondary">
+                                        <?php echo $row['title']; ?>
                                   </div>
                                 </div>
                       <hr>
