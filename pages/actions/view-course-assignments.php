@@ -115,7 +115,7 @@ if (isset($_POST['terminated'])) {
         <p class="page_title" style="float: left; padding-top: 2px;">Course Assignments</p>
         <ul class="breadcrumb">
           <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
-          <li><a href="<?php echo BASE_URL . '/pages/course-request.php' ?>">Assignments</a></li>
+          <li><a href="<?php echo BASE_URL . '/pages/assignments.php' ?>">Assignments</a></li>
           <li>Viewing: <span class="text-muted" style="text-transform: capitalize"><?php echo $row['shortcourse']; ?>  </span></li>
         </ul>
       </div>
