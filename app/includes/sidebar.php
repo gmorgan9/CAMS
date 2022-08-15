@@ -6,10 +6,6 @@
                 <span>  Dashboard</span>
             </a>
             <?php if($_SESSION['acc_type'] == 0) { ?>
-            <a href="<?php echo BASE_URL . '/pages/information.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
-                <i class="bi bi-info-circle"></i>
-                <span>  Information</span>
-            </a>
             <a href="<?php echo BASE_URL . '/pages/class-schedule.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-calendar-range"></i>
                 <span>  Schedule</span>
