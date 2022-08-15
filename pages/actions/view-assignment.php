@@ -173,10 +173,14 @@ if (isset($_POST['terminated'])) {
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Credits</h6>
+                                    <h6 class="mb-0">Due</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['credits']; ?>.0
+                                    <?php 
+                                    $duedate = date("M d, Y", strtotime($row['duedate']));
+                                    $duetime = date("h:i A", strtotime($row['duetime']));
+                                    ?>
+                                        <?php echo $duedate; ?> / <?php echo $duetime; ?> 
                                   </div>
                                 </div>
                       <hr>
