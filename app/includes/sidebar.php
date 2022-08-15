@@ -14,7 +14,7 @@
                 <i class="bi bi-calendar-range"></i>
                 <span>  Schedule</span>
             </a>
-            <a href="<?php echo BASE_URL . '/pages/timesheet.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+            <a href="<?php echo BASE_URL . '/pages/assignments.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-journal-bookmark"></i>
                 <span>  Assignments</span>
             </a>
