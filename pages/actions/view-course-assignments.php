@@ -229,7 +229,7 @@ $all = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
                   $coursename     = $row['coursename'];
-                  $course_idno    = $row['course_idno'];
+                  $course_idno    = $row['idno'];
                   $professorname  = $row['professorname'];
                   $student_fname  = $row['student_fname'];
                   $student_lname  = $row['student_lname'];
