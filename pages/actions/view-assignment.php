@@ -32,7 +32,7 @@ if(!isLoggedIn()){
     $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
     $completed = mysqli_real_escape_string($conn, $_POST['completed']);
   
-    $update = "UPDATE assignment SET title = '$title', description = '$description', duedate = '$duedate', duetime = '$duetime', category = '$category' completed = '$completed'  WHERE assignmentID = '$id'";
+    $update = "UPDATE assignment SET completed = '$completed', title = '$title', description = '$description', duedate = '$duedate', duetime = '$duetime', category = '$category' completed = '$completed'  WHERE assignmentID = '$id'";
     mysqli_query($conn, $update);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   
