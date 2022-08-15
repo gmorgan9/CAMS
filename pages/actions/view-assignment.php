@@ -131,7 +131,7 @@ if (isset($_POST['terminated'])) {
                                     <h6 class="mb-0">Student</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                  <span class="text-capitalize"><?php echo $row['student_lname']; ?>, <?php echo $row['student_fname']; ?></span>
+                                  <span class="text-capitalize"><?php echo $row['student_lname']; ?>, <?php echo $row['student_fname']; ?> (<?php echo $row['student_idno']; ?>)</span>
                                   </div>
                                 </div>
                       <hr>
