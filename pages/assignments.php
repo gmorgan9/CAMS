@@ -78,7 +78,7 @@ if(isset($_POST['add-assignment'])){
 
   <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
-<a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i class="bi bi-plus"></i> Assignment</a>
+
 
   <?php 
       $student_idno = $_SESSION['student_idno'];
@@ -105,81 +105,7 @@ if(isset($_POST['add-assignment'])){
 
 </div>
 
-<!-- EDIT MODAL -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Assignment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
 
-        <?php 
-            $id = $_GET['courseID'];
-            $select = " SELECT * FROM course WHERE courseID = '$id' ";
-            $result = mysqli_query($conn, $select);
-
-            if (mysqli_num_rows($result) > 0) {
-                while($row = mysqli_fetch_assoc($result)) {
-                  $coursename     = $row['coursename'];
-                  $course_idno    = $row['course_idno'];
-                  $professorname  = $row['professorname'];
-                  $student_fname  = $row['student_fname'];
-                  $student_lname  = $row['student_lname'];
-                  $student_idno   = $row['student_idno'];
-                }
-              }
-            ?>
-
-            <form action="" method="post">
-                <div class="section-header pt-2 text-center fs-5">
-                    <span class="text-muted pt-4" style="width: 95%;">Add Assignment</span>
-                </div>
-                <hr style="margin-bottom: -5px; margin-top: 5px;">
-                <!-- hidden -->
-                <input class="form-control" id="coursename" type="text" name="coursename" value="<?php echo $coursename; ?>">
-                <input class="form-control" id="course_idno" type="text" name="course_idno" value="<?php echo $course_idno; ?>">
-                <input class="form-control" id="professorname" type="text" name="professorname" value="<?php echo $professorname; ?>">
-                <input class="form-control" id="student_fname" type="text" name="student_fname" value="<?php echo $student_fname; ?>">
-                <input class="form-control" id="student_lname" type="text" name="student_lname" value="<?php echo $student_lname; ?>">
-                <input class="form-control" id="student_idno" type="text" name="student_idno" value="<?php echo $student_idno; ?>">
-                <!-- end hidden -->
-                <div class="form-group pt-3 mx-auto">
-                    <label for="title" style="font-size: 14px;">Title</label>
-                    <input class="form-control" id="title" type="text" name="title" required>
-                </div>
-                <div class="form-group pt-3 mx-auto">
-                    <label for="description" style="font-size: 14px;">Description <span class="text-muted" style="font-size: 10px;">Explain assignment.</span></label>
-                    <textarea class="form-control" id="description" type="text" name="description" value=""></textarea>
-                </div>
-                <div class="form-group pt-3 mx-auto">
-                    <label for="category" style="font-size: 14px;">Category <span class="text-muted" style="font-size: 10px;">e.g. "Quizzes"</span></label>
-                    <input class="form-control" id="category" type="text" name="category" required>
-                </div>
-                <div class="row">
-                  <div class="form-group pt-3 mx-auto" style="width: 50%;">
-                    <label for="duedate" style="font-size: 14px;">Due Date</label>
-                    <input class="form-control" id="duedate" type="date" name="duedate" required>
-                  </div>
-                  <div class="form-group pt-3 mx-auto" style="width: 50%;">
-                    <label for="duetime" style="font-size: 14px;">Due Time</label>
-                    <input class="form-control" id="duetime" type="time" name="duetime" required>
-                  </div>
-                </div>
-    <br>
-        <div class="modal-footer">
-            <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
-                <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-assignment" class="badge text-bg-secondary">Update Schedule</button>
-            </div>
-        </form>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-<!-- END EDIT MODAL -->
 
 
 <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
