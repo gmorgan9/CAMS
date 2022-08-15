@@ -13,33 +13,33 @@ if(!isLoggedIn()){
    header('location:' . BASE_URL . '/pages/entry/login.php');
 }
 
-// UPDATE TIME FUNCTION
-  if(isset($_POST['update-course'])){
-    $id = $_GET['courseID'];
-    $reason = mysqli_real_escape_string($conn, $_POST['reason']);
-  
-    $update = "UPDATE course SET approval_status = 'pending', reason = '$reason' WHERE courseID = '$id'";
-    mysqli_query($conn, $update);
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
-  
-  };
-// END UPDATE TIME FUNCTION
 
-// ADD LAB FUNCTION
-    if(isset($_POST['add-lab'])){
-        $id = $_GET['courseID'];
-        $reason = mysqli_real_escape_string($conn, $_POST['reason']);
-        $lab_idno  = rand(1000000, 9999999); // figure how to not allow duplicates
-        $lab_start_time = mysqli_real_escape_string($conn, $_POST['lab_start_time']);
-        $lab_end_time = mysqli_real_escape_string($conn, $_POST['lab_end_time']);
-        $lab_days = implode(", ", $_POST['lab_days']);
-        $lab_location = mysqli_real_escape_string($conn, $_POST['lab_location']);
-  
-        $update = "UPDATE course SET lab_idno = '$lab_idno', lab_start_time = '$lab_start_time',lab_end_time = '$lab_end_time', lab_location = '$lab_location', lab_days = '$lab_days' WHERE courseID = '$id'";
-        mysqli_query($conn, $update);
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
-    };
-// END ADD LAB FUNCTION
+/// ADD JOB
+if(isset($_POST['add-assignment'])){
+    $assignmentID = mysqli_real_escape_string($conn, $_POST['assignmentID']);
+    $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $duedate = mysqli_real_escape_string($conn, $_POST['duedate']);
+    $duetime = mysqli_real_escape_string($conn, $_POST['duetime']);
+    $category = mysqli_real_escape_string($conn, $_POST['category']);
+    //$days = mysqli_real_escape_string($conn, $_POST['days']);
+    $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
+    $course_idno = mysqli_real_escape_string($conn, $_POST['course_idno']);
+    $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
+    $student_idno = mysqli_real_escape_string($conn, $_POST['student_idno']);
+    $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
+    $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
+
+
+    $select = " SELECT * FROM assignment";
+    $result = mysqli_query($conn, $select);
+
+    $insert = "INSERT INTO assignment (idno, title, description, duedate, duetime, category, coursename, course_idno, professorname, student_fname, student_lname, student_idno) VALUES('$idno', '$title', '$description', '$duedate', '$duetime', '$category', '$coursename', '$course_idno', '$professorname', '$student_fname', '$student_lname', '$student_idno')";
+    mysqli_query($conn, $insert);
+    header('location: view-course-assignments.php');
+  };
+// END ADD JOB
 
 // UPDATE LAB FUNCTION
     if(isset($_POST['update-lab'])){
@@ -104,7 +104,8 @@ if (isset($_POST['terminated'])) {
     <?php 
 
     $id = $_GET['courseID'];
-    $select = " SELECT * FROM course WHERE courseID = '$id' ";
+    $student_idno = $_SESSION['student_idno'];
+    $select = " SELECT * FROM assignment WHERE courseID = '$id' AND student_idno = '$student_idno'";
     $result = mysqli_query($conn, $select);
     
     if (mysqli_num_rows($result) > 0) {
@@ -126,30 +127,30 @@ if (isset($_POST['terminated'])) {
 <?php 
 
 $student_idno = $_SESSION['student_idno'];
-$sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
+$sql = "SELECT * FROM assignment WHERE student_idno = '$student_idno' ORDER BY duedate ASC";
 $all = mysqli_query($conn, $sql);
     if($all) {
         while ($row = mysqli_fetch_assoc($all)) {
             $student_fname = $row['student_fname'];
             $student_lname = $row['student_lname'];
-            $semester = $row['semestername'];
+            //$semester = $row['semestername'];
 
         }}
 
 ?>
 <div class="section-header text-center pt-2">
-  <span class="text-muted fs-3 pt-4" style="width: 95%;">Course Schedule for <?php echo $student_fname; ?> <?php echo $student_lname; ?></span>
+  <span class="text-muted fs-3 pt-4" style="width: 95%;">Assignments for <?php echo $student_fname; ?> <?php echo $student_lname; ?></span>
 </div>
 <div class="section-header text-center pt-2">
-    <span class="text-muted fs-5" style="width: 95%;"><?php echo $semester; ?></span>
+    <!-- <span class="text-muted fs-5" style="width: 95%;"><?php //echo $semester; ?></span> -->
 </div>
 <table class="table">
 <thead>
 <tr>
   <th scope="col">ID #</th>
-  <th scope="col">Course Name</th>
-  <th scope="col">Course Title</th>
-  <th scope="col">Start Time / End Time</th>
+  <th scope="col">Title</th>
+  <th scope="col">Due Date / Due Time</th>
+  <!-- <th scope="col">Start Time / End Time</th> -->
   <!-- <th scope="col">Status</th> -->
   <th scope="col">Actions</th>
 </tr>
@@ -158,18 +159,19 @@ $all = mysqli_query($conn, $sql);
 
 <?php
   $student_idno = $_SESSION['student_idno'];
-  $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
+  $sql = "SELECT * FROM assignment WHERE student_idno = '$student_idno' ORDER BY duedate ASC";
   $all = mysqli_query($conn, $sql);
   if($all) {
       while ($row = mysqli_fetch_assoc($all)) {
         $sID            = $row['studentID'];
-        $semester       = $row['semestername'];
+        //$semester       = $row['semestername'];
         $idno           = $row['idno'];
-        $shortcourse    = $row['shortcourse'];
+        //$shortcourse    = $row['shortcourse'];
+        $title          = $row['title'];
         $coursename     = $row['coursename'];
-        $start_time     = $row['start_time'];
-        $end_time       = $row['end_time'];
-        $location       = $row['location'];
+        //$duedate        = $row['duedate'];
+        //$duetime        = $row['duetime'];
+        //$location       = $row['location'];
         $student_fname  = $row['student_fname'];
         $student_lname  = $row['student_lname'];
         $student_idno   = $row['student_idno'];
@@ -177,13 +179,13 @@ $all = mysqli_query($conn, $sql);
         ?>
 <tr>
     <th scope="row"><?php echo $idno; ?></th>
-    <td><?php echo $shortcourse; ?></td>
-    <td><?php echo $coursename; ?></td>
+    <td><?php echo $title; ?></td>
+    <!-- <td><?php //echo $coursename; ?></td> -->
     <?php 
-    $start_time = date("h:i A", strtotime($row['start_time']));
-    $end_time = date("h:i A", strtotime($row['end_time']));
+    $duedate = date("M d, Y", strtotime($row['duedate']));
+    $duetime = date("h:i A", strtotime($row['duetime']));
     ?>
-    <td><?php echo $start_time; ?> - <?php echo $end_time; ?></td>
+    <td><?php echo $duedate; ?> / <?php echo $duetime; ?></td>
     <td>
       <!-- <a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#editEmployee" class="badge text-bg-primary" href="actions/edit-employee.php?employeeID=<?php echo $empID; ?>">Edit</a> -->
       <a style="text-decoration: none;" class="badge text-bg-success" href="actions/view-employee.php?employeeID=<?php echo $empID; ?>">View</a>
