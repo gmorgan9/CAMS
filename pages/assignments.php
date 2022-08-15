@@ -167,7 +167,7 @@ if(isset($_POST['add-assignment'])){
                     <input class="form-control" id="duetime" type="time" name="duetime" required>
                   </div>
                 </div>
-    
+    <br>
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
