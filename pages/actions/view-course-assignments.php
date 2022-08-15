@@ -105,7 +105,7 @@ if (isset($_POST['terminated'])) {
 
     $id = $_GET['assignmentID'];
     $student_idno = $_SESSION['student_idno'];
-    $select = " SELECT * FROM assignment WHERE assignment = '$id' AND student_idno = '$student_idno'";
+    $select = " SELECT * FROM assignment WHERE assignmentID = '$id' AND student_idno = '$student_idno'";
     $result = mysqli_query($conn, $select);
     
     if (mysqli_num_rows($result) > 0) {
