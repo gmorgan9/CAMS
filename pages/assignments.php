@@ -50,6 +50,7 @@ if(!isLoggedIn()){
 
   <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
+<a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#"><i class="bi bi-plus"></i> Assignment</a>
 
   <?php 
       $student_idno = $_SESSION['student_idno'];
@@ -75,6 +76,54 @@ if(!isLoggedIn()){
 
 
 </div>
+
+<!-- EDIT MODAL -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Course Change Request</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+            <?php 
+            $id = $_GET['courseID'];
+            $select = " SELECT * FROM course WHERE courseID = '$id' ";
+            $result = mysqli_query($conn, $select);
+
+            if (mysqli_num_rows($result) > 0) {
+                while($row = mysqli_fetch_assoc($result)) {
+            ?>
+
+            <form action="" method="post">
+                <div class="section-header pt-2 text-center fs-5">
+                    <span class="text-muted pt-4" style="width: 95%;">Course Requests</span>
+                </div>
+                <hr style="margin-bottom: -5px; margin-top: 5px;">
+                <div class="form-group pt-3 mx-auto">
+                    <label for="notes" style="font-size: 14px;">Notes</label>
+                    <input class="form-control" id="reason" type="text" name="reason" value="<?php echo $row['idno'] ?>" readonly>
+                </div>
+                <div class="form-group pt-3 mx-auto">
+                    <label for="notes" style="font-size: 14px;">Reason <span class="text-muted" style="font-size: 10px;">List dates and times wanted to be changed. Give reason behind change.</span></label>
+                    <textarea class="form-control" id="reason" type="text" name="reason" value=""></textarea>
+                </div> <?php }} ?>
+
+        </div>
+    
+        <div class="modal-footer">
+            <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
+                <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-course" class="badge text-bg-secondary">Update Schedule</button>
+            </div>
+        </form>
+        </div>
+                </div>
+    </div>
+    
+  </div>
+<!-- END EDIT MODAL -->
 
 
 <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
