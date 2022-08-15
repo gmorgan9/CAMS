@@ -62,7 +62,7 @@ if(!isLoggedIn()){
 
             ?>
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="<?php echo $coursename; ?>" data-bs-toggle="tab" data-bs-target="#<?php echo $coursename; ?>" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><?php echo $coursename; ?></button>
+    <button class="nav-link active" id="<?php echo $coursename; ?>" data-bs-toggle="tab" data-bs-target="#<?php echo $coursename; ?>" type="button" role="tab" aria-controls="<?php echo $coursename; ?>" aria-selected="true"><?php echo $coursename; ?></button>
   </li>
   <?php }} ?> 
 </ul>
@@ -76,7 +76,7 @@ if(!isLoggedIn()){
 
             ?>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+  <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="<?php echo $coursename; ?>" tabindex="0">
     ...
   </div>
 </div>
