@@ -64,17 +64,7 @@ if(!isLoggedIn()){
   <li class="nav-item" role="presentation">
     <button class="nav-link active" id="<?php echo $coursename; ?>" data-bs-toggle="tab" data-bs-target="#<?php echo $coursename; ?>" type="button" role="tab" aria-controls="<?php echo $coursename; ?>" aria-selected="true"><?php echo $coursename; ?></button>
   </li>
-  <?php }} ?> 
 </ul>
-<?php 
-      $student_idno = $_SESSION['student_idno'];
-      $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
-      $all = mysqli_query($conn, $sql);
-      if($all) {
-          while ($row = mysqli_fetch_assoc($all)) {
-            $coursename = $row['shortcourse'];
-
-            ?>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="<?php echo $coursename; ?>" tabindex="0">
     ...
