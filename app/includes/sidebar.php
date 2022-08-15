@@ -10,9 +10,13 @@
                 <i class="bi bi-info-circle"></i>
                 <span>  Information</span>
             </a>
+            <a href="<?php echo BASE_URL . '/pages/class-schedule.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
+                <i class="bi bi-calendar-range"></i>
+                <span>  Schedule</span>
+            </a>
             <a href="<?php echo BASE_URL . '/pages/timesheet.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                 <i class="bi bi-clock"></i>
-                <span>  Timesheet</span>
+                <span>  Assignments</span>
             </a>
             <?php } ?>
 
@@ -67,11 +71,7 @@
                 <hr>
                 <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/pages/course-request.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-briefcase"></i>
-                    <span>  Request Course</span>
-                </a>
-                <a href="<?php echo BASE_URL . '/pages/class-schedule.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
-                    <i class="bi bi-calendar-range"></i>
-                    <span>  Course Schedule</span>
+                    <span>  Request a Course</span>
                 </a>
 
            <?php } ?>
