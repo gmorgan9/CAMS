@@ -112,10 +112,10 @@ if(isset($_GET['employeeID'])) {
 ?>
 
   <div class="page-header mx-auto">
-    <p class="page_title" style="float: left; padding-top: 2px;">Employees</p>
+    <p class="page_title" style="float: left; padding-top: 2px;">Schedule</p>
     <ul class="breadcrumb">
       <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
-      <li>Employees</li>
+      <li>Schedule</li>
     </ul>
   </div>
 
