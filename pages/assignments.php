@@ -50,81 +50,26 @@ if(!isLoggedIn()){
   <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
 
-    <?php 
-
-    $student_idno = $_SESSION['student_idno'];
-    $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
-    $all = mysqli_query($conn, $sql);
-        if($all) {
-            while ($row = mysqli_fetch_assoc($all)) {
-                $student_fname = $row['student_fname'];
-                $student_lname = $row['student_lname'];
-                $semester = $row['semestername'];
-
-            }}
-    
-    ?>
-    <div class="section-header text-center pt-2">
-      <span class="text-muted fs-3 pt-4" style="width: 95%;">Course Schedule for <?php echo $student_fname; ?> <?php echo $student_lname; ?></span>
-    </div>
-    <div class="section-header text-center pt-2">
-        <span class="text-muted fs-5" style="width: 95%;"><?php echo $semester; ?></span>
-    </div>
-    <table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID #</th>
-      <th scope="col">Course Name</th>
-      <th scope="col">Course Title</th>
-      <th scope="col">Start Time / End Time</th>
-      <!-- <th scope="col">Status</th> -->
-      <th scope="col">Actions</th>
-    </tr>
-  </thead>
-  <tbody class="table-group-divider">
-
-  <?php
-      $student_idno = $_SESSION['student_idno'];
-      $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
-      $all = mysqli_query($conn, $sql);
-      if($all) {
-          while ($row = mysqli_fetch_assoc($all)) {
-            $sID            = $row['studentID'];
-            $semester       = $row['semestername'];
-            $idno           = $row['idno'];
-            $shortcourse    = $row['shortcourse'];
-            $coursename     = $row['coursename'];
-            $start_time     = $row['start_time'];
-            $end_time       = $row['end_time'];
-            $location       = $row['location'];
-            $student_fname  = $row['student_fname'];
-            $student_lname  = $row['student_lname'];
-            $student_idno   = $row['student_idno'];
-            $status         = $row['approval_status'];
-            ?>
-    <tr>
-        <th scope="row"><?php echo $idno; ?></th>
-        <td><?php echo $shortcourse; ?></td>
-        <td><?php echo $coursename; ?></td>
-        <?php 
-        $start_time = date("h:i A", strtotime($row['start_time']));
-        $end_time = date("h:i A", strtotime($row['end_time']));
-        ?>
-        <td><?php echo $start_time; ?> - <?php echo $end_time; ?></td>
-        <td>
-          <!-- <a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#editEmployee" class="badge text-bg-primary" href="actions/edit-employee.php?employeeID=<?php echo $empID; ?>">Edit</a> -->
-          <a style="text-decoration: none;" class="badge text-bg-success" href="actions/view-employee.php?employeeID=<?php echo $empID; ?>">View</a>
-          <a style="text-decoration: none;" data-bs-toggle="modal" data-bs-target="#confirmDelete" class="badge text-bg-danger" href="employees.php?employeeID=<?php echo $empID; ?>">Delete</a>
-        </td>
-        <?php }}?>
-  </tbody>
-</table>
-      <?php 
-  //     }
-  //  } else {
-  //    echo "0 results";
-  //  }
-      ?>
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+</div>
  
  <!-- end PAGE-CONTENT -->
 </div>
