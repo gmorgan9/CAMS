@@ -47,7 +47,7 @@ if(!isLoggedIn()){
   </div>
 
 
-  !-- start PAGE-CONTENT -->
+  <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
 
     <?php 
