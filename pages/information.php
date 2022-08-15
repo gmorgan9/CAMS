@@ -56,7 +56,7 @@ if(!isLoggedIn()){
 <!-- START MAIN -->
   <div class="main">
   <div class="page-header mx-auto">
-    <p class="page_title" style="float: left; padding-top: 2px;">Employee Information</p>
+    <p class="page_title" style="float: left; padding-top: 2px;">Student Information</p>
     <ul class="breadcrumb">
       <li><a href="<?php echo BASE_URL . '/pages/dashboard.php' ?>">Dashboard</a></li>
       <li>Information</li>
@@ -67,13 +67,14 @@ if(!isLoggedIn()){
     <?php 
     if($_SESSION['acc_type'] == 0) {
     
-    $empID = $_SESSION['employee_idno'];
+    //$empID = $_SESSION['employee_idno'];
     $select = " SELECT * FROM student WHERE idno = '{$_SESSION['student_idno']}' AND status = 'active'";
     $result = mysqli_query($conn, $select);
     if (mysqli_num_rows($result) > 0) {
      while($row = mysqli_fetch_assoc($result)) {
-        $jobID = $row['jobID'];
-        $jobtitle = $row['jobtitle'];
+        $studentID = $row['studentID'];
+        $fname = $row['fname'];
+        $lname = $row['lname'];
         $companyname = $row['companyname'];
         $deptname = $row['deptname'];
         $pay = $row['pay'];
@@ -95,14 +96,10 @@ if(!isLoggedIn()){
                   <div class="card-body">
                   <div class="row">
                       <div class="col-sm-3">
-                        <h6 class="mb-0">Current Job</h6>
+                        <h6 class="mb-0">Student</h6>
                       </div>
                       <div class="col-sm-9 text-secondary">
-                        <?php if(!isset($jobtitle)) { ?>
-                          <span class="text-capitalize">No Current Job</span>
-                        <?php } else { ?>
-                          <span class="text-capitalize"><?php echo $jobtitle; ?></span>
-                        <?php } ?>
+                      <span class="text-capitalize"><?php echo $lname; ?>, <?php echo $fname; ?></span>
                       </div>
                     </div>
                     <hr>
