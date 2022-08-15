@@ -161,7 +161,7 @@ $all = mysqli_query($conn, $sql);
 <?php
   $id = $_GET['course_idno'];
   $student_idno = $_SESSION['student_idno'];
-  $sql = "SELECT * FROM assignment WHERE course_idno = '$id' AND student_idno = '$student_idno' ORDER BY duedate ASC";
+  $sql = "SELECT * FROM assignment WHERE course_idno = '$id' AND student_idno = '$student_idno' ORDER BY duedate ASC, duetime";
   $all = mysqli_query($conn, $sql);
   if($all) {
       while ($row = mysqli_fetch_assoc($all)) {
