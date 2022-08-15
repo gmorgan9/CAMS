@@ -140,7 +140,7 @@ if (isset($_POST['terminated'])) {
                                     <h6 class="mb-0">Course</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php echo $row['coursename']; ?>
+                                        <?php echo $row['coursename']; ?> (<?php echo $row['course_idno']; ?>)
                                   </div>
                                 </div>
                       <hr>
