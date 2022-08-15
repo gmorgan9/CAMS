@@ -127,7 +127,7 @@ if (isset($_POST['terminated'])) {
 <?php 
 
 $id = $_GET['course_idno'];
-$sql = "SELECT * FROM course WHERE idno = '$id' ORDER BY duedate ASC";
+$sql = "SELECT * FROM course WHERE idno = '$id'";
 $all = mysqli_query($conn, $sql);
     if($all) {
         while ($row = mysqli_fetch_assoc($all)) {
