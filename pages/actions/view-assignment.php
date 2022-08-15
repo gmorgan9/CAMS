@@ -310,12 +310,12 @@ if (isset($_POST['terminated'])) {
                 <?php if($row['completed'] == 1) { ?>
                     <div class="form-group pt-3 mx-auto">
                         <label for="completed" style="font-size: 14px;">Completed</label>
-                        <input class="form-control" id="completed" type="checkbox" name="completed" checked required>
+                        <input class="form-check-input" id="completed" type="checkbox" name="completed" checked required>
                     </div>
                 <?php } else { ?>
                     <div class="form-group pt-3 mx-auto">
                         <label for="completed" style="font-size: 14px;">Completed</label>
-                        <input class="form-control" id="completed" type="checkbox" name="completed" checked required>
+                        <input class="form-check-input" id="completed" type="checkbox" name="completed" checked required>
                     </div>
                 <?php } ?>
     <br>
