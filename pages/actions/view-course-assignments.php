@@ -283,7 +283,7 @@ $all = mysqli_query($conn, $sql);
         </div>
       </div>
     </div>
-    
+            </div>
   </div>
 <!-- END EDIT MODAL -->
 
