@@ -124,6 +124,7 @@ if(isset($_POST['add-assignment'])){
                 while($row = mysqli_fetch_assoc($result)) {
                   $coursename     = $row['coursename'];
                   $course_idno    = $row['course_idno'];
+                  $professorname  = $row['professorname'];
                   $student_fname  = $row['student_fname'];
                   $student_lname  = $row['student_lname'];
                   $student_idno   = $row['student_idno'];
@@ -139,6 +140,7 @@ if(isset($_POST['add-assignment'])){
                 <!-- hidden -->
                 <input class="form-control" id="coursename" type="hidden" name="coursename" value="<?php echo $coursename; ?>">
                 <input class="form-control" id="course_idno" type="hidden" name="course_idno" value="<?php echo $course_idno; ?>">
+                <input class="form-control" id="professorname" type="hidden" name="professorname" value="<?php echo $professorname; ?>">
                 <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $student_fname; ?>">
                 <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $student_lname; ?>">
                 <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $student_idno; ?>">
