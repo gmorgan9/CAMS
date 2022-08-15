@@ -186,14 +186,14 @@ if (isset($_POST['terminated'])) {
                       <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
-                                    <h6 class="mb-0">Course Time</h6>
+                                    <h6 class="mb-0">Completed</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                        <?php
-                                        $start_time = date("h:i A", strtotime($row['start_time']));
-                                        $end_time = date("h:i A", strtotime($row['end_time']));
-                                        ?>
-                                        <?php echo $start_time; ?> - <?php echo $end_time; ?> (<?php echo $row['days']; ?>)
+                                    <?php if($row['completed'] == 1) { ?>
+                                        <span class="text-success">Completed</span>
+                                    <?php } else { ?>
+                                        <span class="text-danger">Not Completed</span>
+                                    <?php } ?>
                                   </div>
                                 </div>
                       <hr>
