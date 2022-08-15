@@ -51,7 +51,6 @@ if(!isLoggedIn()){
   <!-- start PAGE-CONTENT -->
 <div class="page-content mx-auto mt-2">
 
-<ul class="nav nav-tabs" id="myTab" role="tablist">
   <?php 
       $student_idno = $_SESSION['student_idno'];
       $sql = "SELECT * FROM course WHERE student_idno = '$student_idno' AND status = 'active' ORDER BY start_time ASC";
