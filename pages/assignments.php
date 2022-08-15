@@ -62,15 +62,16 @@ if(!isLoggedIn()){
 
             ?>
   <li class="nav-item" role="presentation">
-    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><?php echo $coursename; ?></button>
+    <button class="nav-link active" id="<?php echo $coursename; ?>" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true"><?php echo $coursename; ?></button>
   </li>
-  <?php }} ?> 
+  
 </ul>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+  <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
     ...
   </div>
 </div>
+<?php }} ?> 
  
  <!-- end PAGE-CONTENT -->
 </div>
