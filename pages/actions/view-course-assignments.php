@@ -126,8 +126,8 @@ if (isset($_POST['terminated'])) {
 
 <?php 
 
-$student_idno = $_SESSION['student_idno'];
-$sql = "SELECT * FROM assignment WHERE student_idno = '$student_idno' ORDER BY duedate ASC";
+$id = $_GET['course_idno'];
+$sql = "SELECT * FROM assignment WHERE course_idno = '$id' ORDER BY duedate ASC";
 $all = mysqli_query($conn, $sql);
     if($all) {
         while ($row = mysqli_fetch_assoc($all)) {
@@ -158,8 +158,8 @@ $all = mysqli_query($conn, $sql);
 <tbody class="table-group-divider">
 
 <?php
-  $student_idno = $_SESSION['student_idno'];
-  $sql = "SELECT * FROM assignment WHERE student_idno = '$student_idno' ORDER BY duedate ASC";
+  $id = $_GET['course_idno'];
+  $sql = "SELECT * FROM assignment WHERE course_idno = '$id' ORDER BY duedate ASC";
   $all = mysqli_query($conn, $sql);
   if($all) {
       while ($row = mysqli_fetch_assoc($all)) {
