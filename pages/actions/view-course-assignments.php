@@ -159,13 +159,13 @@ $all = mysqli_query($conn, $sql);
 <tbody class="table-group-divider">
 
 <?php
-  //$id = $_GET['course_idno'];
+  $id = $_GET['course_idno'];
   $student_idno = $_SESSION['student_idno'];
-  $sql = "SELECT * FROM assignment WHERE courseID = '$courseID' AND student_idno = '$student_idno' ORDER BY duedate ASC";
+  $sql = "SELECT * FROM assignment WHERE course_idno = '$id' AND student_idno = '$student_idno' ORDER BY duedate ASC";
   $all = mysqli_query($conn, $sql);
   if($all) {
       while ($row = mysqli_fetch_assoc($all)) {
-        $courseID            = $row['courseID'];
+        $sID            = $row['studentID'];
         //$semester       = $row['semestername'];
         $idno           = $row['idno'];
         //$shortcourse    = $row['shortcourse'];
