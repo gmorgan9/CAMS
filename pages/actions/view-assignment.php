@@ -249,6 +249,11 @@ if (isset($_POST['terminated'])) {
                   $student_fname  = $row['student_fname'];
                   $student_lname  = $row['student_lname'];
                   $student_idno   = $row['student_idno'];
+                  $title          = $row['title'];
+                  $description    = $row['description'];
+                  $category       = $row['category'];
+                  $duedate        = $row['duedate'];
+                  $duetime        = $row['duetime'];
                 }
               }
             ?>
@@ -268,24 +273,24 @@ if (isset($_POST['terminated'])) {
                 <!-- end hidden -->
                 <div class="form-group pt-3 mx-auto">
                     <label for="title" style="font-size: 14px;">Title</label>
-                    <input class="form-control" id="title" type="text" name="title" required>
+                    <input class="form-control" id="title" type="text" name="title" value="<?php echo $title; ?>" required>
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="description" style="font-size: 14px;">Description <span class="text-muted" style="font-size: 10px;">Explain assignment.</span></label>
-                    <textarea class="form-control" id="description" type="text" name="description" value=""></textarea>
+                    <textarea class="form-control" id="description" type="text" name="description"><?php echo $description; ?></textarea>
                 </div>
                 <div class="form-group pt-3 mx-auto">
                     <label for="category" style="font-size: 14px;">Category <span class="text-muted" style="font-size: 10px;">e.g. "Quizzes"</span></label>
-                    <input class="form-control" id="category" type="text" name="category" required>
+                    <input class="form-control" id="category" type="text" name="category" value="<?php echo $category; ?>" required>
                 </div>
                 <div class="row">
                   <div class="form-group pt-3 mx-auto" style="width: 50%;">
                     <label for="duedate" style="font-size: 14px;">Due Date</label>
-                    <input class="form-control" id="duedate" type="date" name="duedate" required>
+                    <input class="form-control" id="duedate" type="date" name="duedate" value="<?php echo $duedate; ?>" required>
                   </div>
                   <div class="form-group pt-3 mx-auto" style="width: 50%;">
                     <label for="duetime" style="font-size: 14px;">Due Time</label>
-                    <input class="form-control" id="duetime" type="time" name="duetime" required>
+                    <input class="form-control" id="duetime" type="time" name="duetime" value="<?php echo $duetime; ?>" required>
                   </div>
                 </div>
     <br>
