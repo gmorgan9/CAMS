@@ -14,11 +14,25 @@ if(!isLoggedIn()){
 }
 
 // UPDATE TIME FUNCTION
-  if(isset($_POST['update-course'])){
-    $id = $_GET['courseID'];
-    $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+  if(isset($_POST['update-assignment'])){
+    $id = $_GET['assignmentID'];
+    $assignmentID = mysqli_real_escape_string($conn, $_POST['assignmentID']);
+    $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $duedate = mysqli_real_escape_string($conn, $_POST['duedate']);
+    $duetime = mysqli_real_escape_string($conn, $_POST['duetime']);
+    $category = mysqli_real_escape_string($conn, $_POST['category']);
+    //$days = mysqli_real_escape_string($conn, $_POST['days']);
+    $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
+    $course_idno = mysqli_real_escape_string($conn, $_POST['course_idno']);
+    $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
+    $student_idno = mysqli_real_escape_string($conn, $_POST['student_idno']);
+    $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
+    $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
+    $completed = mysqli_real_escape_string($conn, $_POST['completed']);
   
-    $update = "UPDATE course SET approval_status = 'pending', reason = '$reason' WHERE courseID = '$id'";
+    $update = "UPDATE assignment SET title = '$title', description = '$description', duedate = '$duedate', duetime = '$duetime', category = '$category' completed = '$completed'  WHERE assignmentID = '$id'";
     mysqli_query($conn, $update);
     header('Location: ' . $_SERVER['HTTP_REFERER']);
   
@@ -293,11 +307,22 @@ if (isset($_POST['terminated'])) {
                     <input class="form-control" id="duetime" type="time" name="duetime" value="<?php echo $duetime; ?>" required>
                   </div>
                 </div>
+                <?php if($row['completed'] == 1) { ?>
+                    <div class="form-group pt-3 mx-auto">
+                        <label for="completed" style="font-size: 14px;">Completed</label>
+                        <input class="form-control" id="completed" type="checkbox" name="completed" checked required>
+                    </div>
+                <?php } else { ?>
+                    <div class="form-group pt-3 mx-auto">
+                        <label for="completed" style="font-size: 14px;">Completed</label>
+                        <input class="form-control" id="completed" type="checkbox" name="completed" checked required>
+                    </div>
+                <?php } ?>
     <br>
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-assignment" class="badge text-bg-secondary">Update Schedule</button>
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-assignment" class="badge text-bg-secondary">Update Schedule</button>
             </div>
         </form>
         </div>
