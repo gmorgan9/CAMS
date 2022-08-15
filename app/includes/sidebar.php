@@ -67,7 +67,7 @@
                 <?php } ?>
             <?php } else {?>
                 <br>
-                <span style="margin-left: 38px; margin-bottom: -10px;">Employee Links</span>
+                <span style="margin-left: 38px; margin-bottom: -10px;">Student Links</span>
                 <hr>
                 <a style="margin-top: -15px;" href="<?php echo BASE_URL . '/pages/course-request.php' ?>" class="list-group-item list-group-item-action py-2 ripple">
                     <i class="bi bi-briefcase"></i>
