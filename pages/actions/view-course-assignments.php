@@ -37,7 +37,7 @@ if(isset($_POST['add-assignment'])){
 
     $insert = "INSERT INTO assignment (idno, title, description, duedate, duetime, category, coursename, course_idno, professorname, student_fname, student_lname, student_idno) VALUES('$idno', '$title', '$description', '$duedate', '$duetime', '$category', '$coursename', '$course_idno', '$professorname', '$student_fname', '$student_lname', '$student_idno')";
     mysqli_query($conn, $insert);
-    header('location: view-course-assignments.php');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
   };
 // END ADD ASSIGNMENT
 
