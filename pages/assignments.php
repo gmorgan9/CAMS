@@ -75,7 +75,7 @@ if(!isLoggedIn()){
 
             ?>
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane fade show active" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="<?php echo $coursename; ?>" tabindex="0">
+  <div class="tab-pane fade" id="<?php echo $coursename; ?>" role="tabpanel" aria-labelledby="<?php echo $coursename; ?>" tabindex="0">
     ...
   </div>
 </div>
