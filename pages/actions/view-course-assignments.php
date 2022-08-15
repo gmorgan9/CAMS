@@ -222,8 +222,8 @@ $all = mysqli_query($conn, $sql);
         <div class="modal-body">
 
         <?php 
-            $id = $_GET['courseID'];
-            $select = " SELECT * FROM course WHERE courseID = '$id' ";
+            $id = $_GET['course_idno'];
+            $select = " SELECT * FROM course WHERE idno = '$id' ";
             $result = mysqli_query($conn, $select);
 
             if (mysqli_num_rows($result) > 0) {
