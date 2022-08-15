@@ -237,8 +237,8 @@ if (isset($_POST['terminated'])) {
         <div class="modal-body">
 
         <?php 
-            $id = $_GET['course_idno'];
-            $select = " SELECT * FROM course WHERE idno = '$id' ";
+            $id = $_GET['assignmentID'];
+            $select = " SELECT * FROM assignment WHERE assignmentID = '$id' ";
             $result = mysqli_query($conn, $select);
 
             if (mysqli_num_rows($result) > 0) {
