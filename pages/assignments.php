@@ -175,7 +175,7 @@ if(isset($_POST['add-assignment'])){
             </div>
         </form>
         </div>
-                </div>
+      </div>
     </div>
     
   </div>
