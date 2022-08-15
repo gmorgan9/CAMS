@@ -197,43 +197,12 @@ if (isset($_POST['terminated'])) {
                                   </div>
                                 </div>
                       <hr>
-                      <div class="row">
-                                  <div class="col-sm-3">
-                                    <h6 class="mb-0">Location</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                    <?php if($row['lab_location'] == null) { ?>
-                                        <?php echo $row['location']; ?>
-                                    <?php } else { ?>
-                                        <?php echo $row['location']; ?>
-                                        <?php } ?>
-                                  </div>
-                                </div>
-                      <hr>
-                                <div class="row">
-                                  <div class="col-sm-3">
-                                    <h6 class="mb-0">Status</h6>
-                                  </div>
-                                  <div class="col-sm-9 text-secondary">
-                                    <?php if($row['approval_status'] == 'approved'){ ?>
-                                    <span class="text-capitalize text-success"><?php echo $row['approval_status']; ?><span>
-                                    <?php } if($row['approval_status'] == 'rejected') { ?>
-                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
-                                    <?php } if($row['approval_status'] == 'pending') { ?>
-                                      <span class="text-capitalize text-primary"><?php echo $row['approval_status']; ?><span>
-                                    <?php } if($row['approval_status'] == 'terminated') { ?>
-                                      <span class="text-capitalize text-danger"><?php echo $row['approval_status']; ?><span>
-                                    <?php }?>
-                                  </div>
-                                </div>
-                      <hr>
                                 <div class="row">
                                   <div class="col-sm-3">
                                     <h6 class="mb-0">Actions</h6>
                                   </div>
                                   <div class="col-sm-9 text-secondary">
-                                  <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#addLab" href="#">Add Lab</a>
-                                  <a class="text-decoration-none badge text-bg-warning" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">Edit</a>
+                                  <a class="text-decoration-none badge text-bg-success" data-bs-toggle="modal" data-bs-target="#updateAssignment" href="#">Update</a>
                                   </div>
                                 </div>
                     </div>
@@ -258,64 +227,80 @@ if (isset($_POST['terminated'])) {
 
 
 <!-- EDIT ASSIGNMENT MODAL -->
-<div class="modal fade" id="editAssignment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade" id="updateAssignment" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Course Change Request</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Add Assignment</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
 
-            <?php 
-            $id = $_GET['assignmentID'];
-            $select = " SELECT * FROM assignment WHERE assignmentID = '$id' ";
+        <?php 
+            $id = $_GET['course_idno'];
+            $select = " SELECT * FROM course WHERE idno = '$id' ";
             $result = mysqli_query($conn, $select);
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_assoc($result)) {
+                  $coursename     = $row['coursename'];
+                  $course_idno    = $row['idno'];
+                  $professorname  = $row['professorname'];
+                  $student_fname  = $row['student_fname'];
+                  $student_lname  = $row['student_lname'];
+                  $student_idno   = $row['student_idno'];
+                }
+              }
             ?>
 
             <form action="" method="post">
                 <div class="section-header pt-2 text-center fs-5">
-                    <span class="text-muted pt-4" style="width: 95%;">Course Lab Requests</span>
+                    <span class="text-muted pt-4" style="width: 95%;">Add Assignment</span>
                 </div>
                 <hr style="margin-bottom: -5px; margin-top: 5px;">
+                <!-- hidden -->
+                <input class="form-control" id="coursename" type="hidden" name="coursename" value="<?php echo $coursename; ?>">
+                <input class="form-control" id="course_idno" type="hidden" name="course_idno" value="<?php echo $course_idno; ?>">
+                <input class="form-control" id="professorname" type="hidden" name="professorname" value="<?php echo $professorname; ?>">
+                <input class="form-control" id="student_fname" type="hidden" name="student_fname" value="<?php echo $student_fname; ?>">
+                <input class="form-control" id="student_lname" type="hidden" name="student_lname" value="<?php echo $student_lname; ?>">
+                <input class="form-control" id="student_idno" type="hidden" name="student_idno" value="<?php echo $student_idno; ?>">
+                <!-- end hidden -->
                 <div class="form-group pt-3 mx-auto">
-                    <label for="lab_start_time" style="font-size: 14px;">Lab Start Time</label>
-                    <input class="form-control" id="lab_start_time" type="time" name="lab_start_time" value="<?php echo $row['lab_start_time']; ?>" required>
+                    <label for="title" style="font-size: 14px;">Title</label>
+                    <input class="form-control" id="title" type="text" name="title" required>
                 </div>
                 <div class="form-group pt-3 mx-auto">
-                    <label for="lab_end_time" style="font-size: 14px;">Lab End Time</label>
-                    <input class="form-control" id="lab_end_time" type="time" name="lab_end_time" value="<?php echo $row['lab_end_time']; ?>" required>
+                    <label for="description" style="font-size: 14px;">Description <span class="text-muted" style="font-size: 10px;">Explain assignment.</span></label>
+                    <textarea class="form-control" id="description" type="text" name="description" value=""></textarea>
                 </div>
                 <div class="form-group pt-3 mx-auto">
-                    <label style="font-size: 14px;">Lab Days <br><span class="text-muted" style="font-size: 10px;">For changing lab days, please list in reason field.</span></label>
+                    <label for="category" style="font-size: 14px;">Category <span class="text-muted" style="font-size: 10px;">e.g. "Quizzes"</span></label>
+                    <input class="form-control" id="category" type="text" name="category" required>
                 </div>
-                <div class="form-group pt-3 mx-auto">
-                    <label for="lab_location" style="font-size: 14px;">Lab Location</label>
-                    <input class="form-control" id="lab_location" type="text" name="lab_location" value="<?php echo $row['lab_location'] ?>" required>
+                <div class="row">
+                  <div class="form-group pt-3 mx-auto" style="width: 50%;">
+                    <label for="duedate" style="font-size: 14px;">Due Date</label>
+                    <input class="form-control" id="duedate" type="date" name="duedate" required>
+                  </div>
+                  <div class="form-group pt-3 mx-auto" style="width: 50%;">
+                    <label for="duetime" style="font-size: 14px;">Due Time</label>
+                    <input class="form-control" id="duetime" type="time" name="duetime" required>
+                  </div>
                 </div>
-                <div class="form-group pt-3 mx-auto">
-                    <label for="notes" style="font-size: 14px;">Reason <span class="text-muted" style="font-size: 10px;">List dates and times wanted to be changed. Give reason behind change.</span></label>
-                    <textarea class="form-control" id="reason" type="text" name="reason" value=""></textarea>
-                </div> 
-                <?php }} ?>
-
-        </div>
-    
+    <br>
         <div class="modal-footer">
             <div class="form-group pt-3 mx-auto d-grid d-md-flex justify-content-md-end" style="width: 95%; margin-bottom: 10px;">
                 <button type="button" style="border-color: rgba(0,0,0,0);" class="badge text-bg-secondary" data-bs-dismiss="modal">Close</button> &nbsp;
-                <button type="submit" style="border-color: rgba(0,0,0,0);" name="update-lab" class="badge text-bg-secondary">Update Course</button>
+                <button type="submit" style="border-color: rgba(0,0,0,0);" name="add-assignment" class="badge text-bg-secondary">Update Schedule</button>
             </div>
         </form>
         </div>
-                </div>
+      </div>
     </div>
-    
+            </div>
   </div>
-<!-- END EDIT LAB MODAL -->
+<!-- END EDIT MODAL -->
 
 <?php include(ROOT_PATH . "/app/includes/footer.php"); ?>
 
