@@ -14,32 +14,32 @@ if(!isLoggedIn()){
 }
 
 
-// /// ADD JOB
-// if(isset($_POST['add-assignment'])){
-//     $assignmentID = mysqli_real_escape_string($conn, $_POST['assignmentID']);
-//     $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
-//     $title = mysqli_real_escape_string($conn, $_POST['title']);
-//     $description = mysqli_real_escape_string($conn, $_POST['description']);
-//     $duedate = mysqli_real_escape_string($conn, $_POST['duedate']);
-//     $duetime = mysqli_real_escape_string($conn, $_POST['duetime']);
-//     $category = mysqli_real_escape_string($conn, $_POST['category']);
-//     //$days = mysqli_real_escape_string($conn, $_POST['days']);
-//     $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
-//     $course_idno = mysqli_real_escape_string($conn, $_POST['course_idno']);
-//     $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
-//     $student_idno = mysqli_real_escape_string($conn, $_POST['student_idno']);
-//     $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
-//     $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
+/// ADD ASSIGNMENT
+if(isset($_POST['add-assignment'])){
+    $assignmentID = mysqli_real_escape_string($conn, $_POST['assignmentID']);
+    $idno  = rand(1000000, 9999999); // figure how to not allow duplicates
+    $title = mysqli_real_escape_string($conn, $_POST['title']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
+    $duedate = mysqli_real_escape_string($conn, $_POST['duedate']);
+    $duetime = mysqli_real_escape_string($conn, $_POST['duetime']);
+    $category = mysqli_real_escape_string($conn, $_POST['category']);
+    //$days = mysqli_real_escape_string($conn, $_POST['days']);
+    $coursename = mysqli_real_escape_string($conn, $_POST['coursename']);
+    $course_idno = mysqli_real_escape_string($conn, $_POST['course_idno']);
+    $professorname = mysqli_real_escape_string($conn, $_POST['professorname']);
+    $student_idno = mysqli_real_escape_string($conn, $_POST['student_idno']);
+    $student_fname = mysqli_real_escape_string($conn, $_POST['student_fname']);
+    $student_lname = mysqli_real_escape_string($conn, $_POST['student_lname']);
 
 
-//     $select = " SELECT * FROM assignment";
-//     $result = mysqli_query($conn, $select);
+    $select = " SELECT * FROM assignment";
+    $result = mysqli_query($conn, $select);
 
-//     $insert = "INSERT INTO assignment (idno, title, description, duedate, duetime, category, coursename, course_idno, professorname, student_fname, student_lname, student_idno) VALUES('$idno', '$title', '$description', '$duedate', '$duetime', '$category', '$coursename', '$course_idno', '$professorname', '$student_fname', '$student_lname', '$student_idno')";
-//     mysqli_query($conn, $insert);
-//     header('location: view-course-assignments.php');
-//   };
-// // END ADD JOB
+    $insert = "INSERT INTO assignment (idno, title, description, duedate, duetime, category, coursename, course_idno, professorname, student_fname, student_lname, student_idno) VALUES('$idno', '$title', '$description', '$duedate', '$duetime', '$category', '$coursename', '$course_idno', '$professorname', '$student_fname', '$student_lname', '$student_idno')";
+    mysqli_query($conn, $insert);
+    header('location: view-course-assignments.php');
+  };
+// END ADD ASSIGNMENT
 
 // UPDATE LAB FUNCTION
     if(isset($_POST['update-lab'])){

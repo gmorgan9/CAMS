@@ -51,7 +51,7 @@ if(!isLoggedIn()){
     $days=implode(", ", $_POST['days']);
     $insert = "INSERT INTO course (idno, coursename, shortcourse, start_time, end_time, days, location, credits, section, professorname, student_fname, student_lname, student_idno, semestername, semester_start, semester_end) VALUES('$idno', '$coursename', '$shortcourse', '$start_time', '$end_time', '$days', '$location', '$credits', '$section', '$professorname', '$student_fname', '$student_lname', '$student_idno', '$semestername', '$semester_start', '$semester_end')";
     mysqli_query($conn, $insert);
-    header('location: course-request.php');
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
   };
 // END ADD JOB
 
